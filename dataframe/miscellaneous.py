@@ -9,7 +9,7 @@ from data_source.all_dataframe import (
     cccs_container_stuffing,
 )
 from type_casting.dates import SPECIAL_DAYS
-from type_casting.customers import bycatch, client_shore_cost
+from type_casting.customers import get_customer_by_type, client_shore_cost
 from type_casting.validations import (
     MOVEMENT_TYPE,
     UNLOADING_SERVICE,
@@ -298,7 +298,8 @@ cross_stuffing: pl.LazyFrame = (
 )
 
 # BY CATCH RECORDS
-by_catch_companies = bycatch  # To make this workable
+by_catch_companies = bycatch 
+ # To make this workable
 
 # Filter only bycatch services
 __by_catch = (

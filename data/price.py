@@ -18,10 +18,10 @@ PRICE_SHEET_NAME: str = price_sheet
 
 
 # Function to load unique services
-def __load_unique_services(sheet_id: str, sheet_name: str):
+async def __load_unique_services(sheet_id: str, sheet_name: str):
     """Loads unique service name from a specific gsheet"""
     return (
-        load_gsheet_data(sheet_id, sheet_name)
+        await load_gsheet_data(sheet_id, sheet_name)
         .select(pl.col("Service").unique())
         .collect()
         .to_series()
@@ -30,14 +30,19 @@ def __load_unique_services(sheet_id: str, sheet_name: str):
 
 
 # Load unique services at runtime
-services = __load_unique_services(VALIDATION_ID, PRICE_SHEET_NAME)
+
+
+async def services()->list:
+    """Services"""
+    service_list = await __load_unique_services(VALIDATION_ID, PRICE_SHEET_NAME)
+    return service_list
 
 
 # Function to get the price based on service class and optional service
-def get_price(service: Union[list[str], None] = None) -> pl.LazyFrame:
+async def get_price(service: Union[list[str], None] = None) -> pl.LazyFrame:
     """Gets the price"""
     df = (
-        load_gsheet_data(VALIDATION_ID, PRICE_SHEET_NAME)
+        await load_gsheet_data(VALIDATION_ID, PRICE_SHEET_NAME)
         .with_columns(
             pl.col("StartingDate").alias("Date"),
             pl.col("EndingDate")
@@ -45,7 +50,7 @@ def get_price(service: Union[list[str], None] = None) -> pl.LazyFrame:
             .alias("end"),
         )
         .filter(
-            pl.col("Service").is_in(services)
+            pl.col("Service").is_in(services())
             if service is None
             else pl.col("Service").is_in(service)
         )

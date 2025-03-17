@@ -108,7 +108,7 @@ coa: pl.LazyFrame = (
         pl.col("vessel_client").str.to_uppercase().cast(dtype=enum_customer()),
         pl.col("customer").cast(dtype=pl.Enum(shipper)),
         pl.col("date_plugged"),
-        pl.col("time_plugged"),
+        pl.col("time_plugged").str.to_time(format="%H:%M:%S",strict=False),
         pl.col("container_number").cast(dtype=containers_enum),
         pl.col("operation_type"),
         pl.col("shipping_line").cast(dtype=pl.Enum(shipping_line)),

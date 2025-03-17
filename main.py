@@ -1,14 +1,16 @@
 """Main module"""
 import pretty_errors
 
+import asyncio
+
 from app.app import App
 
 pretty_errors.activate()
 
-def main():
+async def main():
     """main function"""
     test = App()
-    test.run()
+    await test.run()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

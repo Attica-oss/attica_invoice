@@ -13,25 +13,51 @@ from type_casting.containers import containers_enum
 
 # Price
 
-MAGNUM_PTI_ELECTRICITY = (
-    get_price(["PTI Magnum"]).select(pl.col("Price")).collect().to_series()[0]
-)
-PLUGIN = get_price(["Plugin"]).select(pl.col("Price")).collect().to_series()[0]
-S_FREEZER_PTI_ELECTRICITY = (
-    get_price(["PTI S Freezer"]).select(pl.col("Price")).collect().to_series()[0]
-)
-SHIFTING = get_price(["Shifting"]).select(pl.col("Price")).collect().to_series()[0]
-STANDARD_PTI_ELECTRICITY = (
-    get_price(["PTI Standard"]).select(pl.col("Price")).collect().to_series()[0]
-)
-WASHING = (
-    get_price(["Container Cleaning"]).select(pl.col("Price")).collect().to_series()[0]
-)
+
+async def price_list() -> dict[str, float]:
+    """price dictionary"""
+    magnum_pti_electricity = await (
+        get_price(["PTI Magnum"]).select(pl.col("Price")).collect().to_series()[0]
+    )
+    plugin = (
+        await get_price(["Plugin"]).select(pl.col("Price")).collect().to_series()[0]
+    )
+    s_freezer_pti_electricity = await (
+        get_price(["PTI S Freezer"]).select(pl.col("Price")).collect().to_series()[0]
+    )
+    shifting_price = (
+        await get_price(["Shifting"]).select(pl.col("Price")).collect().to_series()[0]
+    )
+    standard_pti_electricity = await (
+        get_price(["PTI Standard"]).select(pl.col("Price")).collect().to_series()[0]
+    )
+    washing_price = await (
+        get_price(["Container Cleaning"])
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
+    )
+
+    return {
+        "washing_price": washing_price,
+        "standard_pti_electricity": standard_pti_electricity,
+        "s_freezer_pti_electricity": s_freezer_pti_electricity,
+        "magnum_pti_electricity": magnum_pti_electricity,
+        "shifting": shifting_price,
+        "plugin": plugin,
+    }
+
+
 
 
 # Shifting Data Set
-shifting: LazyFrame = (
-    load_gsheet_data(sheet_id=EMR_SHEET_ID, sheet_name=shifting_sheet)
+
+
+async def shifting()->LazyFrame:
+    """Shifting dataframe"""
+
+    return (
+    await load_gsheet_data(sheet_id=EMR_SHEET_ID, sheet_name=shifting_sheet)
     .with_columns(
         day_name=when(col("date").is_in(public_holiday()))
         .then(lit("PH"))
@@ -40,7 +66,7 @@ shifting: LazyFrame = (
     .select(
         col("day_name"),
         col("date"),
-        col("container_number").cast(dtype=containers_enum),
+        col("container_number").cast(dtype=containers_enum()),
         col("invoice_to"),
         col("service_remarks"),
     )
@@ -48,18 +74,22 @@ shifting: LazyFrame = (
         price=when(col("invoice_to") == "INVALID")
         .then(FREE)
         .when(col("day_name").is_in(SPECIAL_DAYS))
-        .then(SHIFTING * OVERTIME_150)
-        .otherwise(SHIFTING)
+        .then(price_list().get("shifting") * OVERTIME_150)
+        .otherwise(price_list().get("shifting"))
     )
 )
 
 
 # PTI records
-_pti: LazyFrame = (
+
+
+async def _pti()->LazyFrame:
+    """Initital pti dataset"""
+    return await (
     load_gsheet_data(EMR_SHEET_ID, pti_sheet)
     .select(
         col("datetime_start"),
-        col("container_number").cast(dtype=containers_enum),
+        col("container_number").cast(dtype=containers_enum()),
         col("set_point").cast(Utf8).cast(dtype=Enum(SETPOINTS)),
         col("unit_manufacturer"),
         col("datetime_end"),
@@ -69,7 +99,7 @@ _pti: LazyFrame = (
     )
     .with_columns(
         hours=(pl.col("datetime_end") - col("datetime_start")).dt.total_minutes() / 60,
-        plugin_price=PLUGIN,
+        plugin_price=price_list().get("plugin"),
     )
     .with_columns(above_8_hours=when(col("hours").gt(lit(8))).then(2).otherwise(1))
     .with_columns(
@@ -79,11 +109,11 @@ _pti: LazyFrame = (
                 (col("datetime_end") - col("datetime_start")).dt.total_hours() / 24 + 1
             )
             .when(col("set_point").eq(SetPoint.s_freezer))
-            .then(S_FREEZER_PTI_ELECTRICITY)
+            .then(price_list().get("s_freezer_pti_electricity"))
             .when(pl.col("set_point") == SetPoint.magnum)
-            .then(MAGNUM_PTI_ELECTRICITY)
+            .then(price_list().get("magnum_pti_electricity"))
             .when(pl.col("set_point") == SetPoint.standard)
-            .then(STANDARD_PTI_ELECTRICITY)
+            .then(price_list().get("standard_pti_electricity"))
             .otherwise(FREE)
         )
         * pl.col("above_8_hours")
@@ -96,8 +126,11 @@ _pti: LazyFrame = (
     )
 )
 
-pti: pl.LazyFrame = (
-    _pti.with_columns((pl.col("cum_count") - 1).alias("previous"))
+async def pti()->LazyFrame:
+    """Pre-Trip Inspection dataset"""
+
+    return await (
+    _pti().with_columns((pl.col("cum_count") - 1).alias("previous"))
     .join(
         _pti,
         left_on=["container_number", "previous"],
@@ -131,7 +164,9 @@ pti: pl.LazyFrame = (
         )
     )
     .with_columns(
-        shifting_price=pl.when(pl.col("no_shifting")).then(SHIFTING).otherwise(FREE)
+        shifting_price=pl.when(pl.col("no_shifting"))
+        .then(price_list().get("shifting"))
+        .otherwise(FREE)
     )
     .with_columns(
         (
@@ -143,11 +178,14 @@ pti: pl.LazyFrame = (
 )
 
 
-washing = (
+
+async def washing()->LazyFrame:
+    """Washing Dataset"""
+    return await (
     load_gsheet_data(EMR_SHEET_ID, washing_sheet)
     .select(
         pl.col("date"),
-        pl.col("container_number").cast(dtype=containers_enum),
+        pl.col("container_number").cast(dtype=containers_enum()),
         pl.col("invoice_to").cast(
             dtype=pl.Enum(
                 [
@@ -171,7 +209,7 @@ washing = (
     )
     .with_columns(
         price=pl.when(pl.col("invoice_to") != "INVALID")
-        .then(WASHING)
+        .then(price_list().get("washing"))
         .otherwise(FREE)
         .cast(pl.Int64)
     )

@@ -5,7 +5,7 @@ from data.price import ALL_PRICE, OVERTIME_150, OVERTIME_200, NORMAL_HOUR
 
 # from dataframe import shore_handling
 from dataframe.transport import scow_transfer
-from data_source.make_dataset import load_gsheet_data
+from data_source.make_dataset import load_gsheet_data_async
 from data_source.sheet_ids import (
     MISC_SHEET_ID,
     ALL_CCCS_DATA_SHEET,
@@ -38,7 +38,7 @@ SCOW_TRANSFER = ALL_PRICE.filter(
 
 # Full Scows
 bin_dispatch: pl.LazyFrame = (
-    load_gsheet_data(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET)
+    load_gsheet_data_async(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET)
     .filter(
         pl.col("operation_type").is_in(BIN_DISPATCH_SERVICE),
         pl.col("date").dt.year() >= CURRENT_YEAR - 1,

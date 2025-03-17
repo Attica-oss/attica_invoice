@@ -41,7 +41,7 @@ ops: pl.LazyFrame = load_gsheet_data(
 ).select(
     pl.col("Day"),
     pl.col("Date"),
-    pl.col("Time"),
+    pl.col("Time").str.to_time(format="%H:%M:%S"),
     pl.col("Vessel").str.to_uppercase(),
     pl.col("Species").str.extract(r"^(.*?)(\s-\s)"),
     pl.col("Details").str.to_uppercase(),

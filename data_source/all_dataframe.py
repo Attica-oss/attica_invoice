@@ -15,9 +15,9 @@ from type_casting.containers import containers_enum
 
 
 # Miscellaneous Main Sheet clean up
-def miscellaneous()->pl.LazyFrame:
+async def miscellaneous()->pl.LazyFrame:
     """Miscellaneous main sheet"""
-    return (load_gsheet_data(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET).select(
+    return await (load_gsheet_data(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET).select(
     pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
     pl.col("date"),
     pl.col("movement_type"),
@@ -33,9 +33,9 @@ def miscellaneous()->pl.LazyFrame:
     pl.col("overtime_tonnage").str.replace("", "0").cast(pl.Float64),# overtime_tonnage
 ))
 
-def cross_stuffing()->pl.LazyFrame:
+async def cross_stuffing()->pl.LazyFrame:
     """Cross stuffing sheet"""
-    return (load_gsheet_data(MISC_SHEET_ID, CROSS_STUFFING_SHEET)
+    return await (load_gsheet_data(MISC_SHEET_ID, CROSS_STUFFING_SHEET)
     .filter(pl.col("day").str.replace("", "x").ne("x"))
     .select(
         pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
@@ -52,9 +52,9 @@ def cross_stuffing()->pl.LazyFrame:
         pl.col("invoiced"),
     ))
 
-def by_catch_transfer()->pl.LazyFrame:
+async def by_catch_transfer()->pl.LazyFrame:
     """by catch transfer sheet"""
-    return (
+    return await (
             load_gsheet_data(MISC_SHEET_ID, BY_CATCH_SHEET)
     .with_columns(
         day=pl.when(pl.col("date").is_in(public_holiday(CURRENT_YEAR)))
@@ -73,10 +73,10 @@ def by_catch_transfer()->pl.LazyFrame:
     )
 )
 
-def cccs_container_stuffing()->pl.LazyFrame:
+async def cccs_container_stuffing()->pl.LazyFrame:
     """CCCS container stuffing dataframe clean up"""
     return (
-            load_gsheet_data(MISC_SHEET_ID, CCCS_STUFFING_SHEET)
+           await load_gsheet_data(MISC_SHEET_ID, CCCS_STUFFING_SHEET)
     .select(
         pl.col("Day").cast(dtype=pl.Enum(DAY_NAMES)),
         pl.col("date"),
