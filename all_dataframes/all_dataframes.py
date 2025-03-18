@@ -1,77 +1,79 @@
-"""List all dataframes"""
+"""Stores all dataframes as list and dicts"""
 
 import polars as pl
-
-from dataframe.emr import washing, pti, shifting
-from dataframe.miscellaneous import (
-    by_catch,
-    cccs_stuffing,
-    cross_stuffing,
-    # full_scow_transfer,
-    static_loader,
-    truck_to_cccs,
+from dataframe import (
+    bin_dispatch,
+    emr,
+    miscellaneous,
+    netlist,
+    operations,
+    shore_handling,
+    stuffing,
+    transport
 )
-from dataframe.netlist import netList,oss,iot_stuffing
-from dataframe.stuffing import pallet, coa
-from dataframe.transport import scow_transfer, forklift, shore_crane, transfer
 
-# Type for dataframes dictionary
-DataFramesDict = dict[str, pl.LazyFrame]
+# EMR Dataframes
 
-try:
-    # EMR LazyFrames
-    emr_dataframes: DataFramesDict = {
-        "cleaning": washing,
-        "pti": pti,
-        "shifting": shifting,
-    }
-    # Transport LazyFrames
-    transport_dataframes: DataFramesDict = {
-        "shore_crane": shore_crane,
-        "transfer": transfer,
-        "forklift": forklift,
-        "scow_transfer": scow_transfer,
-    }
+emr_dataframes: dict[str, pl.LazyFrame] = {
+    "shifting": emr.shifting,
+    "washing": emr.washing,
+    "pti": emr.pti,
+}
 
-    # Operations LazyFrame
-    operations_dataframes: DataFramesDict = {
-        "netlist": netList,
-        "oss":oss,
-        "iot_stuffing": iot_stuffing,
-    }
+# Miscellaneous Daframes
 
-    # Miscellaneous LazyFrames
-    miscellaneous_dataframes: DataFramesDict = {
-        "static_loader": static_loader,
-        "by_catch": by_catch,
-        "cross_stuffing": cross_stuffing,
-        "cccs_stuffing": cccs_stuffing,
-        "scow_transfer": scow_transfer,
-        "truck_to_cccs": truck_to_cccs,
-    }
+bin_dispatch_dataframes: dict[str, pl.LazyFrame] = {
+    "full_scows_transfer": bin_dispatch.full_scows,
+    "empty_scows_transfer": bin_dispatch.empty_scows,
+}
 
-    # Stuffing LazyFrames
-    stuffing_dataframes: DataFramesDict = {
-        "liner_pallet": pallet,
-        "plugin": coa
-    }
+miscellaneous_dataframes:dict[str,pl.LazyFrame] = {
+    "static_loader":miscellaneous.static_loader,
+    "dispatch_to_cargo":miscellaneous.dispatch_to_cargo,
+    "truck_to_cccs":miscellaneous.truck_to_cccs,
+    "cross_stuffing":miscellaneous.cross_stuffing,
+    "cccs_stuffing":miscellaneous.cccs_stuffing,
+    "bycatch":miscellaneous.by_catch
+}
 
-    # All dataframes
-    all_dataframes: DataFramesDict = {
-        **emr_dataframes,
-        **operations_dataframes,
-        **transport_dataframes,
-        **miscellaneous_dataframes,
-        **stuffing_dataframes
-    }
+netlist_dataframes :dict[str,pl.LazyFrame]={
+    "net_list":netlist.netList,
+    "iot_container_stuffing":netlist.iot_stuffing,
+    "oss_stuffing":netlist.oss
+}
 
-except AttributeError as e:
-    print(f"Error importing LazyFrames: {e}")
-except ImportError as e:
-    print(f"Error importing modules: {e}")
-except KeyError as e:
-    print(f"Key error: {e}")
-except ValueError as e:
-    print(f"Value error: {e}")
-except TypeError as e:
-    print(f"Type error: {e}")
+operations_dataframes: dict[str,pl.LazyFrame]={
+    "ops":operations.ops,
+    "extramen":operations.extramen,
+    "hatch_to_hatch":operations.hatch_to_hatch,
+    # "additional_overtime":operations.additional,
+    "tare_calibration":operations.tare
+}
+
+shore_handling_dataframes:dict[str,pl.LazyFrame]={
+    "salt":shore_handling.salt,
+    "bin_tipping":shore_handling.bin_tipping
+}
+
+stuffing_dataframes:dict[str,pl.LazyFrame] = {
+    "pallet_liner":stuffing.pallet,
+    "container_plugin":stuffing.coa
+}
+
+transport_dataframes:dict[str,pl.LazyFrame]={
+    "shore_crane":transport.shore_crane,
+    "transfer":transport.transfer,
+    "scow_transfer":transport.scow_transfer,
+    "forklift":transport.forklift
+}
+
+# all_dataframes:dict[str,pl.LazyFrame] = {
+#     **emr_dataframes,
+#     **netlist_dataframes,
+#     **operations_dataframes,
+#     **transport_dataframes,
+#     **miscellaneous_dataframes,
+#     **stuffing_dataframes,
+#     **bin_dispatch_dataframes,
+#     **shore_handling_dataframes
+# }
