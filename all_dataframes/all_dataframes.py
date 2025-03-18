@@ -1,90 +1,79 @@
-"""All the dataframe call and clean up"""
+"""Stores all dataframes as list and dicts"""
 
 import polars as pl
-from data_source.make_dataset import load_gsheet_data
-from data_source.sheet_ids import (
-    MISC_SHEET_ID,
-    ALL_CCCS_DATA_SHEET,
-    CROSS_STUFFING_SHEET,
-    BY_CATCH_SHEET,
-    CCCS_STUFFING_SHEET
-)
-from type_casting.dates import CURRENT_YEAR, DAY_NAMES, public_holiday
-from type_casting.validations import FISH_STORAGE
-from type_casting.containers import containers_enum
-
-
-# Miscellaneous Main Sheet clean up
-def miscellaneous()->pl.LazyFrame:
-    """Miscellaneous main sheet"""
-    return (load_gsheet_data(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET).select(
-    pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
-    pl.col("date"),
-    pl.col("movement_type"),
-    pl.col("customer"),
-    pl.col("origin"),
-    pl.col("vessel"),
-    pl.col("storage_type").cast(dtype=pl.Enum(FISH_STORAGE)),
-    pl.col("operation_type"),
-    pl.col("total_tonnage"),
-    pl.col("bins_in").str.replace("", "0").cast(pl.Int64),
-    pl.col("bins_out").str.strip_chars("-").replace("", "0").cast(pl.Int64) * -1,
-    pl.col("static_loader").str.replace("", "0").cast(pl.Float64), # static_loader
-    pl.col("overtime_tonnage").str.replace("", "0").cast(pl.Float64),# overtime_tonnage
-))
-
-def cross_stuffing()->pl.LazyFrame:
-    """Cross stuffing sheet"""
-    return (load_gsheet_data(MISC_SHEET_ID, CROSS_STUFFING_SHEET)
-    .filter(pl.col("day").str.replace("", "x").ne("x"))
-    .select(
-        pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
-        pl.col("vessel_client"),
-        pl.col("date"),
-        pl.col("origin"),
-        pl.col("destination"),
-        pl.col("start_time"),
-        pl.col("end_time"),
-        pl.col("total_tonnage").str.replace("", "0").cast(pl.Float64).fill_null(0),
-        pl.col("overtime_tonnage").str.replace("", "0").cast(pl.Float64).fill_null(0),
-        pl.col("is_origin_empty"),
-        pl.col("service").alias("Service"),
-        pl.col("invoiced"),
-    ))
-
-def by_catch_transfer()->pl.LazyFrame:
-    """by catch transfer sheet"""
-    return (
-            load_gsheet_data(MISC_SHEET_ID, BY_CATCH_SHEET)
-    .with_columns(
-        day=pl.when(pl.col("date").is_in(public_holiday(CURRENT_YEAR)))
-        .then(pl.lit("PH"))
-        .otherwise(pl.col("date").dt.to_string(format="%a")).cast(dtype=pl.Enum(DAY_NAMES))
-    )
-    .select(
-        pl.col("day"),
-        pl.col("date"),
-        pl.col("movement_type"),
-        pl.col("customer"),
-        pl.col("vessel"),
-        pl.col("service").alias("operation_type"),
-        pl.col("total_tonnage").cast(pl.Float64).round(3),
-        pl.col("overtime_tonnage").str.replace("", "0").cast(pl.Float64).round(3),
-    )
+from dataframe import (
+    bin_dispatch,
+    emr,
+    miscellaneous,
+    netlist,
+    operations,
+    shore_handling,
+    stuffing,
+    transport
 )
 
-def cccs_container_stuffing()->pl.LazyFrame:
-    """CCCS container stuffing dataframe clean up"""
-    return (
-            load_gsheet_data(MISC_SHEET_ID, CCCS_STUFFING_SHEET)
-    .select(
-        pl.col("Day").cast(dtype=pl.Enum(DAY_NAMES)),
-        pl.col("date"),
-        pl.col("container_number").cast(dtype=containers_enum),
-        pl.col("customer"),
-        pl.col("service").alias("Service"),
-        pl.col("total_tonnage"),
-        pl.col("overtime_tonnage"),
-        pl.col("invoiced"),
-    )
-    )
+# EMR Dataframes
+
+emr_dataframes: dict[str, pl.LazyFrame] = {
+    "shifting": emr.shifting,
+    "washing": emr.washing,
+    "pti": emr.pti,
+}
+
+# Miscellaneous Daframes
+
+bin_dispatch_dataframes: dict[str, pl.LazyFrame] = {
+    "full_scows_transfer": bin_dispatch.full_scows,
+    "empty_scows_transfer": bin_dispatch.empty_scows,
+}
+
+miscellaneous_dataframes:dict[str,pl.LazyFrame] = {
+    "static_loader":miscellaneous.static_loader,
+    "dispatch_to_cargo":miscellaneous.dispatch_to_cargo,
+    "truck_to_cccs":miscellaneous.truck_to_cccs,
+    "cross_stuffing":miscellaneous.cross_stuffing,
+    "cccs_stuffing":miscellaneous.cccs_stuffing,
+    "bycatch":miscellaneous.by_catch
+}
+
+netlist_dataframes :dict[str,pl.LazyFrame]={
+    "net_list":netlist.netList,
+    "iot_container_stuffing":netlist.iot_stuffing,
+    "oss_stuffing":netlist.oss
+}
+
+operations_dataframes: dict[str,pl.LazyFrame]={
+    "ops":operations.ops,
+    "extramen":operations.extramen,
+    "hatch_to_hatch":operations.hatch_to_hatch,
+    # "additional_overtime":operations.additional,
+    "tare_calibration":operations.tare
+}
+
+shore_handling_dataframes:dict[str,pl.LazyFrame]={
+    "salt":shore_handling.salt,
+    "bin_tipping":shore_handling.bin_tipping
+}
+
+stuffing_dataframes:dict[str,pl.LazyFrame] = {
+    "pallet_liner":stuffing.pallet,
+    "container_plugin":stuffing.coa
+}
+
+transport_dataframes:dict[str,pl.LazyFrame]={
+    "shore_crane":transport.shore_crane,
+    "transfer":transport.transfer,
+    "scow_transfer":transport.scow_transfer,
+    "forklift":transport.forklift
+}
+
+# all_dataframes:dict[str,pl.LazyFrame] = {
+#     **emr_dataframes,
+#     **netlist_dataframes,
+#     **operations_dataframes,
+#     **transport_dataframes,
+#     **miscellaneous_dataframes,
+#     **stuffing_dataframes,
+#     **bin_dispatch_dataframes,
+#     **shore_handling_dataframes
+# }
