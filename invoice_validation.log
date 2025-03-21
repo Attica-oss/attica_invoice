@@ -1213,3 +1213,1690 @@
 2025-03-17 19:58:07,694 - ERROR - Unexpected error processing truck_to_cccs: cannot unpack non-iterable coroutine object
 2025-03-17 19:58:07,694 - INFO - Completed processing all categories
 2025-03-17 19:59:25,099 - INFO - Exiting application
+2025-03-21 20:58:16,649 - DEBUG - Using selector: EpollSelector
+2025-03-21 20:58:16,691 - INFO - Starting application
+2025-03-21 20:58:16,691 - INFO - Clearing screen
+2025-03-21 20:58:20,673 - INFO - Selected: Save files
+2025-03-21 20:58:20,674 - INFO - Clearing screen
+2025-03-21 20:58:25,414 - INFO - Initiating save operation for all
+2025-03-21 20:58:25,414 - INFO - Processing all dataframe categories concurrently
+2025-03-21 20:58:25,415 - INFO - Queueing category: emr
+2025-03-21 20:58:25,415 - INFO - Queueing category: operations
+2025-03-21 20:58:25,415 - INFO - Queueing category: stuffing
+2025-03-21 20:58:25,416 - INFO - Queueing category: transport
+2025-03-21 20:58:25,416 - INFO - Queueing category: miscellaneous
+2025-03-21 20:58:25,417 - ERROR - Error writing shifting: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,418 - ERROR - Error writing washing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,418 - ERROR - Error writing pti: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,419 - ERROR - Error writing ops: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,419 - ERROR - Error writing hatch_to_hatch: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,419 - ERROR - Error writing pallet_liner: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,420 - ERROR - Error writing container_plugin: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,420 - ERROR - Error writing shore_crane: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,421 - ERROR - Error writing transfer: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,421 - ERROR - Error writing scow_transfer: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,422 - ERROR - Error writing forklift: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,422 - ERROR - Error writing static_loader: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,422 - ERROR - Error writing dispatch_to_cargo: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,423 - ERROR - Error writing truck_to_cccs: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,423 - ERROR - Error writing cross_stuffing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,424 - ERROR - Error writing cccs_stuffing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,424 - ERROR - Error writing bycatch: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,425 - ERROR - Error saving shifting: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,425 - ERROR - Error saving washing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,426 - ERROR - Error saving pti: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,426 - ERROR - Error saving ops: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,426 - ERROR - Error saving hatch_to_hatch: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,427 - ERROR - Error saving pallet_liner: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,427 - ERROR - Error saving container_plugin: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,427 - ERROR - Error saving shore_crane: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,428 - ERROR - Error saving transfer: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,428 - ERROR - Error saving scow_transfer: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,428 - ERROR - Error saving forklift: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,428 - ERROR - Error saving static_loader: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,429 - ERROR - Error saving dispatch_to_cargo: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,429 - ERROR - Error saving truck_to_cccs: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,429 - ERROR - Error saving cross_stuffing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,429 - ERROR - Error saving cccs_stuffing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,429 - ERROR - Error saving bycatch: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,430 - INFO - Save completed
+2025-03-21 20:58:25,430 - INFO - Successfully saved: 0 files
+2025-03-21 20:58:25,430 - ERROR - Failed to save: 17 files
+2025-03-21 20:58:25,431 - ERROR -   - shifting: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,431 - ERROR -   - washing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,431 - ERROR -   - pti: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,431 - ERROR -   - ops: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,432 - ERROR -   - hatch_to_hatch: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,432 - ERROR -   - pallet_liner: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,432 - ERROR -   - container_plugin: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,432 - ERROR -   - shore_crane: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,433 - ERROR -   - transfer: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,433 - ERROR -   - scow_transfer: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,433 - ERROR -   - forklift: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,433 - ERROR -   - static_loader: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,434 - ERROR -   - dispatch_to_cargo: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,434 - ERROR -   - truck_to_cccs: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,434 - ERROR -   - cross_stuffing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,434 - ERROR -   - cccs_stuffing: [Errno 2] No such file or directory: ''
+2025-03-21 20:58:25,435 - ERROR -   - bycatch: [Errno 2] No such file or directory: ''
+2025-03-21 21:06:53,184 - INFO - Clearing screen
+2025-03-21 21:06:55,418 - INFO - Exiting application
+2025-03-21 21:06:58,554 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:06:58,554 - INFO - Starting application
+2025-03-21 21:06:58,554 - INFO - Clearing screen
+2025-03-21 21:07:04,730 - INFO - Clearing screen
+2025-03-21 21:07:06,828 - INFO - Clearing screen
+2025-03-21 21:07:09,966 - INFO - Clearing screen
+2025-03-21 21:07:24,822 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:07:24,822 - INFO - Starting application
+2025-03-21 21:07:24,822 - INFO - Clearing screen
+2025-03-21 21:07:32,260 - INFO - Selected: Save files
+2025-03-21 21:07:32,261 - INFO - Clearing screen
+2025-03-21 21:07:36,836 - INFO - Initiating save operation for all
+2025-03-21 21:07:36,836 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:07:36,837 - INFO - Queueing category: emr
+2025-03-21 21:07:36,837 - INFO - Queueing category: operations
+2025-03-21 21:07:36,837 - INFO - Queueing category: netlist
+2025-03-21 21:07:36,837 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:07:36,838 - INFO - Queueing category: shore_handling
+2025-03-21 21:07:36,838 - INFO - Queueing category: stuffing
+2025-03-21 21:07:36,838 - INFO - Queueing category: transport
+2025-03-21 21:07:36,838 - INFO - Queueing category: miscellaneous
+2025-03-21 21:07:36,854 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,855 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,855 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,855 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,856 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,856 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,856 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,857 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,857 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,857 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,857 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,858 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,858 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,858 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,858 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,859 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,859 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,859 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,860 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,860 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,860 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,860 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,860 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,861 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:07:36,861 - INFO - Save completed
+2025-03-21 21:07:36,861 - INFO - Successfully saved: 0 files
+2025-03-21 21:10:53,509 - INFO - Exiting application
+2025-03-21 21:10:58,056 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:10:58,056 - INFO - Starting application
+2025-03-21 21:10:58,056 - INFO - Clearing screen
+2025-03-21 21:11:00,125 - INFO - Selected: Save files
+2025-03-21 21:11:00,125 - INFO - Clearing screen
+2025-03-21 21:11:03,185 - INFO - Initiating save operation for all
+2025-03-21 21:11:03,185 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:11:03,185 - INFO - Queueing category: emr
+2025-03-21 21:11:03,186 - INFO - Queueing category: operations
+2025-03-21 21:11:03,186 - INFO - Queueing category: netlist
+2025-03-21 21:11:03,186 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:11:03,187 - INFO - Queueing category: shore_handling
+2025-03-21 21:11:03,187 - INFO - Queueing category: stuffing
+2025-03-21 21:11:03,187 - INFO - Queueing category: transport
+2025-03-21 21:11:03,188 - INFO - Queueing category: miscellaneous
+2025-03-21 21:11:03,191 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,192 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,192 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,192 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,193 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,193 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,193 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,194 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,194 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,194 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,194 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,195 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,195 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,195 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,196 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,196 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,196 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,196 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,197 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,197 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,197 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,198 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,198 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,198 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:03,198 - INFO - Save completed
+2025-03-21 21:11:03,199 - INFO - Successfully saved: 0 files
+2025-03-21 21:11:15,680 - INFO - Exiting application
+2025-03-21 21:11:19,983 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:11:19,983 - INFO - Starting application
+2025-03-21 21:11:19,983 - INFO - Clearing screen
+2025-03-21 21:11:22,010 - INFO - Selected: View dataframe
+2025-03-21 21:11:22,011 - INFO - Clearing screen
+2025-03-21 21:11:24,202 - INFO - Selected: Check logistics records
+2025-03-21 21:11:24,202 - INFO - Clearing screen
+2025-03-21 21:11:24,208 - INFO - Clearing screen
+2025-03-21 21:11:25,971 - INFO - Exiting application
+2025-03-21 21:11:35,078 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:11:35,078 - INFO - Starting application
+2025-03-21 21:11:35,078 - INFO - Clearing screen
+2025-03-21 21:11:36,982 - INFO - Selected: Save files
+2025-03-21 21:11:36,983 - INFO - Clearing screen
+2025-03-21 21:11:41,152 - INFO - Initiating save operation for all
+2025-03-21 21:11:41,153 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:11:41,153 - INFO - Queueing category: emr
+2025-03-21 21:11:41,154 - INFO - Queueing category: operations
+2025-03-21 21:11:41,154 - INFO - Queueing category: netlist
+2025-03-21 21:11:41,154 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:11:41,155 - INFO - Queueing category: shore_handling
+2025-03-21 21:11:41,155 - INFO - Queueing category: stuffing
+2025-03-21 21:11:41,155 - INFO - Queueing category: transport
+2025-03-21 21:11:41,156 - INFO - Queueing category: miscellaneous
+2025-03-21 21:11:41,161 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,161 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,162 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,162 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,162 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,163 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,163 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,163 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,164 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,164 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,164 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,164 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,165 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,165 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,165 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,166 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,166 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,166 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,167 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,167 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,167 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,167 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,168 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,168 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:11:41,168 - INFO - Save completed
+2025-03-21 21:11:41,169 - INFO - Successfully saved: 0 files
+2025-03-21 21:14:27,210 - INFO - Exiting application
+2025-03-21 21:14:30,421 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:14:30,421 - INFO - Starting application
+2025-03-21 21:14:30,421 - INFO - Clearing screen
+2025-03-21 21:14:32,265 - INFO - Selected: Save files
+2025-03-21 21:14:32,265 - INFO - Clearing screen
+2025-03-21 21:14:35,640 - INFO - Initiating save operation for all
+2025-03-21 21:14:35,640 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:14:35,641 - INFO - Queueing category: emr
+2025-03-21 21:14:35,641 - INFO - Queueing category: operations
+2025-03-21 21:14:35,642 - INFO - Queueing category: netlist
+2025-03-21 21:14:35,642 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:14:35,642 - INFO - Queueing category: shore_handling
+2025-03-21 21:14:35,643 - INFO - Queueing category: stuffing
+2025-03-21 21:14:35,643 - INFO - Queueing category: transport
+2025-03-21 21:14:35,643 - INFO - Queueing category: miscellaneous
+2025-03-21 21:14:35,660 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,661 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,661 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,661 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,662 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,662 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,662 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,662 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,663 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,663 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,663 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,663 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,664 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,664 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,664 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,664 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,665 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,665 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,665 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,665 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,666 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,666 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,666 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,666 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:14:35,666 - INFO - Save completed
+2025-03-21 21:14:35,667 - INFO - Successfully saved: 0 files
+2025-03-21 21:16:05,732 - INFO - Exiting application
+2025-03-21 21:16:08,640 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:16:08,641 - INFO - Starting application
+2025-03-21 21:16:08,641 - INFO - Clearing screen
+2025-03-21 21:16:10,427 - INFO - Selected: Save files
+2025-03-21 21:16:10,427 - INFO - Clearing screen
+2025-03-21 21:16:13,339 - INFO - Initiating save operation for all
+2025-03-21 21:16:13,340 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:16:13,340 - INFO - Queueing category: emr
+2025-03-21 21:16:13,340 - INFO - Queueing category: operations
+2025-03-21 21:16:13,341 - INFO - Queueing category: netlist
+2025-03-21 21:16:13,341 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:16:13,341 - INFO - Queueing category: shore_handling
+2025-03-21 21:16:13,342 - INFO - Queueing category: stuffing
+2025-03-21 21:16:13,342 - INFO - Queueing category: transport
+2025-03-21 21:16:13,342 - INFO - Queueing category: miscellaneous
+2025-03-21 21:16:13,358 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,359 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,359 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,359 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,359 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,360 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,360 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,360 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,361 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,361 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,361 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,361 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,362 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,362 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,362 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,362 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,362 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,363 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,363 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,363 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,363 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,364 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,364 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,364 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:16:13,364 - INFO - Save completed
+2025-03-21 21:16:13,364 - INFO - Successfully saved: 0 files
+2025-03-21 21:17:18,922 - INFO - Exiting application
+2025-03-21 21:17:23,180 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:17:23,180 - INFO - Starting application
+2025-03-21 21:17:23,180 - INFO - Clearing screen
+2025-03-21 21:17:24,544 - INFO - Selected: Save files
+2025-03-21 21:17:24,544 - INFO - Clearing screen
+2025-03-21 21:17:29,002 - INFO - Initiating save operation for all
+2025-03-21 21:17:29,002 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:17:29,003 - INFO - Queueing category: emr
+2025-03-21 21:17:29,004 - INFO - Queueing category: operations
+2025-03-21 21:17:29,004 - INFO - Queueing category: netlist
+2025-03-21 21:17:29,004 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:17:29,005 - INFO - Queueing category: shore_handling
+2025-03-21 21:17:29,005 - INFO - Queueing category: stuffing
+2025-03-21 21:17:29,005 - INFO - Queueing category: transport
+2025-03-21 21:17:29,005 - INFO - Queueing category: miscellaneous
+2025-03-21 21:17:29,020 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,020 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,020 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,021 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - ERROR - Task raised exception: 'function' object has no attribute 'collect'
+2025-03-21 21:17:29,022 - INFO - Save completed
+2025-03-21 21:17:29,022 - INFO - Successfully saved: 0 files
+2025-03-21 21:18:11,723 - INFO - Starting application
+2025-03-21 21:18:11,723 - INFO - Clearing screen
+2025-03-21 21:18:13,193 - INFO - Exiting application
+2025-03-21 21:18:15,857 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:18:15,857 - INFO - Starting application
+2025-03-21 21:18:15,857 - INFO - Clearing screen
+2025-03-21 21:18:17,333 - INFO - Selected: Save files
+2025-03-21 21:18:17,334 - INFO - Clearing screen
+2025-03-21 21:18:20,544 - INFO - Initiating save operation for all
+2025-03-21 21:18:20,544 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:18:20,544 - INFO - Queueing category: emr
+2025-03-21 21:18:20,545 - INFO - Queueing category: operations
+2025-03-21 21:18:20,545 - INFO - Queueing category: netlist
+2025-03-21 21:18:20,545 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:18:20,545 - INFO - Queueing category: shore_handling
+2025-03-21 21:18:20,545 - INFO - Queueing category: stuffing
+2025-03-21 21:18:20,546 - INFO - Queueing category: transport
+2025-03-21 21:18:20,546 - INFO - Queueing category: miscellaneous
+2025-03-21 21:18:20,560 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,561 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,561 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,561 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,561 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,562 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,562 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,562 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,562 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,562 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,562 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,563 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,563 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,563 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,563 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,564 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,564 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,564 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,564 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,564 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,565 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,565 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,565 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,565 - ERROR - Task raised exception: 'function' object has no attribute 'write_csv'
+2025-03-21 21:18:20,566 - INFO - Save completed
+2025-03-21 21:18:20,566 - INFO - Successfully saved: 0 files
+2025-03-21 21:21:51,256 - INFO - Exiting application
+2025-03-21 21:21:54,802 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:21:54,803 - INFO - Starting application
+2025-03-21 21:21:54,803 - INFO - Clearing screen
+2025-03-21 21:21:56,552 - INFO - Selected: Save files
+2025-03-21 21:21:56,553 - INFO - Clearing screen
+2025-03-21 21:22:00,091 - INFO - Initiating save operation for all
+2025-03-21 21:22:00,091 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:22:00,091 - INFO - Queueing category: emr
+2025-03-21 21:22:00,091 - INFO - Queueing category: operations
+2025-03-21 21:22:00,092 - INFO - Queueing category: netlist
+2025-03-21 21:22:00,092 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:22:00,092 - INFO - Queueing category: shore_handling
+2025-03-21 21:22:00,092 - INFO - Queueing category: stuffing
+2025-03-21 21:22:00,092 - INFO - Queueing category: transport
+2025-03-21 21:22:00,092 - INFO - Queueing category: miscellaneous
+2025-03-21 21:22:00,093 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:22:00,093 - INFO - Successfully collected dataframe shifting
+2025-03-21 21:22:00,095 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:22:00,095 - INFO - Successfully collected dataframe washing
+2025-03-21 21:22:00,095 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:22:00,096 - INFO - Successfully collected dataframe pti
+2025-03-21 21:22:00,096 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:22:00,097 - INFO - Successfully collected dataframe ops
+2025-03-21 21:22:00,098 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:22:00,098 - INFO - Successfully collected dataframe hatch_to_hatch
+2025-03-21 21:22:00,099 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:22:00,099 - INFO - Successfully collected dataframe net_list
+2025-03-21 21:22:00,099 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:22:00,100 - INFO - Successfully collected dataframe iot_container_stuffing
+2025-03-21 21:22:00,100 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:22:00,101 - INFO - Successfully collected dataframe oss_stuffing
+2025-03-21 21:22:00,101 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:22:00,101 - INFO - Successfully collected dataframe full_scows_transfer
+2025-03-21 21:22:00,101 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:22:00,102 - INFO - Successfully collected dataframe empty_scows_transfer
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe shifting: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe washing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe pti: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe ops: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe hatch_to_hatch: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe net_list: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,102 - ERROR - Error collecting dataframe iot_container_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,103 - ERROR - Error collecting dataframe oss_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,103 - ERROR - Error collecting dataframe full_scows_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,103 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:22:00,103 - INFO - Successfully collected dataframe salt
+2025-03-21 21:22:00,103 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:22:00,103 - INFO - Successfully collected dataframe bin_tipping
+2025-03-21 21:22:00,105 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:22:00,105 - INFO - Successfully collected dataframe pallet_liner
+2025-03-21 21:22:00,105 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:22:00,105 - INFO - Successfully collected dataframe container_plugin
+2025-03-21 21:22:00,106 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:22:00,106 - INFO - Successfully collected dataframe shore_crane
+2025-03-21 21:22:00,106 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:22:00,106 - INFO - Successfully collected dataframe transfer
+2025-03-21 21:22:00,107 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:22:00,107 - INFO - Successfully collected dataframe scow_transfer
+2025-03-21 21:22:00,107 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:22:00,107 - INFO - Successfully collected dataframe forklift
+2025-03-21 21:22:00,108 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:22:00,108 - INFO - Successfully collected dataframe static_loader
+2025-03-21 21:22:00,109 - ERROR - Error collecting dataframe empty_scows_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,109 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:22:00,109 - INFO - Successfully collected dataframe dispatch_to_cargo
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe salt: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe bin_tipping: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe pallet_liner: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe container_plugin: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe shore_crane: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,110 - ERROR - Error collecting dataframe scow_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,111 - ERROR - Error collecting dataframe forklift: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,111 - ERROR - Error collecting dataframe static_loader: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,111 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:22:00,111 - INFO - Successfully collected dataframe truck_to_cccs
+2025-03-21 21:22:00,111 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:22:00,111 - INFO - Successfully collected dataframe cross_stuffing
+2025-03-21 21:22:00,111 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:22:00,111 - INFO - Successfully collected dataframe cccs_stuffing
+2025-03-21 21:22:00,112 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:22:00,112 - INFO - Successfully collected dataframe bycatch
+2025-03-21 21:22:00,112 - ERROR - Error collecting dataframe dispatch_to_cargo: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,112 - ERROR - Error collecting dataframe truck_to_cccs: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,112 - ERROR - Error collecting dataframe cross_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,112 - ERROR - Error collecting dataframe cccs_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,112 - ERROR - Error collecting dataframe bycatch: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving shifting: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving washing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving pti: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving ops: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving hatch_to_hatch: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving net_list: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving iot_container_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving oss_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving full_scows_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving empty_scows_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving salt: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving bin_tipping: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving pallet_liner: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving container_plugin: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving shore_crane: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving scow_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving forklift: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving static_loader: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,113 - ERROR - Error saving dispatch_to_cargo: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR - Error saving truck_to_cccs: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR - Error saving cross_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR - Error saving cccs_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR - Error saving bycatch: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - INFO - Save completed
+2025-03-21 21:22:00,114 - INFO - Successfully saved: 0 files
+2025-03-21 21:22:00,114 - ERROR - Failed to save: 24 files
+2025-03-21 21:22:00,114 - ERROR -   - shifting: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - washing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - pti: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - ops: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - hatch_to_hatch: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - net_list: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - iot_container_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - oss_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - full_scows_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - empty_scows_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,114 - ERROR -   - salt: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - bin_tipping: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - pallet_liner: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - container_plugin: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - shore_crane: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - scow_transfer: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - forklift: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - static_loader: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - dispatch_to_cargo: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - truck_to_cccs: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - cross_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - cccs_stuffing: 'function' object has no attribute 'write_csv'
+2025-03-21 21:22:00,115 - ERROR -   - bycatch: 'function' object has no attribute 'write_csv'
+2025-03-21 21:24:31,762 - INFO - Exiting application
+2025-03-21 21:24:35,096 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:24:35,096 - INFO - Starting application
+2025-03-21 21:24:35,096 - INFO - Clearing screen
+2025-03-21 21:24:36,996 - INFO - Selected: Save files
+2025-03-21 21:24:36,996 - INFO - Clearing screen
+2025-03-21 21:24:43,295 - INFO - Initiating save operation for all
+2025-03-21 21:24:43,296 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:24:43,296 - INFO - Queueing category: emr
+2025-03-21 21:24:43,296 - INFO - Queueing category: operations
+2025-03-21 21:24:43,296 - INFO - Queueing category: netlist
+2025-03-21 21:24:43,297 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:24:43,297 - INFO - Queueing category: shore_handling
+2025-03-21 21:24:43,297 - INFO - Queueing category: stuffing
+2025-03-21 21:24:43,297 - INFO - Queueing category: transport
+2025-03-21 21:24:43,297 - INFO - Queueing category: miscellaneous
+2025-03-21 21:24:43,298 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:24:43,298 - INFO - Calling function to get dataframe for shifting
+2025-03-21 21:24:43,298 - INFO - Successfully processed dataframe shifting
+2025-03-21 21:24:43,299 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,299 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:24:43,300 - INFO - Calling function to get dataframe for washing
+2025-03-21 21:24:43,300 - INFO - Successfully processed dataframe washing
+2025-03-21 21:24:43,300 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:24:43,301 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,301 - INFO - Calling function to get dataframe for pti
+2025-03-21 21:24:43,301 - INFO - Successfully processed dataframe pti
+2025-03-21 21:24:43,302 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:24:43,302 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,302 - INFO - Calling function to get dataframe for ops
+2025-03-21 21:24:43,302 - INFO - Successfully processed dataframe ops
+2025-03-21 21:24:43,302 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,302 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:24:43,302 - INFO - Calling function to get dataframe for hatch_to_hatch
+2025-03-21 21:24:43,302 - INFO - Successfully processed dataframe hatch_to_hatch
+2025-03-21 21:24:43,303 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:24:43,303 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,303 - INFO - Calling function to get dataframe for net_list
+2025-03-21 21:24:43,303 - INFO - Successfully processed dataframe net_list
+2025-03-21 21:24:43,303 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,303 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:24:43,303 - INFO - Calling function to get dataframe for iot_container_stuffing
+2025-03-21 21:24:43,303 - INFO - Successfully processed dataframe iot_container_stuffing
+2025-03-21 21:24:43,303 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,304 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:24:43,304 - INFO - Calling function to get dataframe for oss_stuffing
+2025-03-21 21:24:43,304 - INFO - Successfully processed dataframe oss_stuffing
+2025-03-21 21:24:43,304 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:24:43,304 - INFO - Calling function to get dataframe for full_scows_transfer
+2025-03-21 21:24:43,304 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,304 - INFO - Successfully processed dataframe full_scows_transfer
+2025-03-21 21:24:43,304 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,304 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:24:43,305 - INFO - Calling function to get dataframe for empty_scows_transfer
+2025-03-21 21:24:43,305 - INFO - Successfully processed dataframe empty_scows_transfer
+2025-03-21 21:24:43,305 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,305 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,305 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,305 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,305 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,305 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,306 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,306 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,306 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,306 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,306 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:24:43,306 - INFO - Calling function to get dataframe for salt
+2025-03-21 21:24:43,306 - INFO - Successfully processed dataframe salt
+2025-03-21 21:24:43,306 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,306 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:24:43,306 - INFO - Calling function to get dataframe for bin_tipping
+2025-03-21 21:24:43,306 - INFO - Successfully processed dataframe bin_tipping
+2025-03-21 21:24:43,307 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:24:43,307 - INFO - Calling function to get dataframe for pallet_liner
+2025-03-21 21:24:43,307 - INFO - Successfully processed dataframe pallet_liner
+2025-03-21 21:24:43,307 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,307 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,307 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:24:43,309 - INFO - Calling function to get dataframe for container_plugin
+2025-03-21 21:24:43,309 - INFO - Successfully processed dataframe container_plugin
+2025-03-21 21:24:43,309 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,309 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:24:43,309 - INFO - Calling function to get dataframe for shore_crane
+2025-03-21 21:24:43,309 - INFO - Successfully processed dataframe shore_crane
+2025-03-21 21:24:43,310 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:24:43,310 - INFO - Calling function to get dataframe for transfer
+2025-03-21 21:24:43,310 - INFO - Successfully processed dataframe transfer
+2025-03-21 21:24:43,310 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,310 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,310 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:24:43,310 - INFO - Calling function to get dataframe for scow_transfer
+2025-03-21 21:24:43,310 - INFO - Successfully processed dataframe scow_transfer
+2025-03-21 21:24:43,311 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,311 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:24:43,311 - INFO - Calling function to get dataframe for forklift
+2025-03-21 21:24:43,311 - INFO - Successfully processed dataframe forklift
+2025-03-21 21:24:43,311 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:24:43,311 - INFO - Calling function to get dataframe for static_loader
+2025-03-21 21:24:43,311 - INFO - Successfully processed dataframe static_loader
+2025-03-21 21:24:43,311 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,311 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:24:43,312 - INFO - Calling function to get dataframe for dispatch_to_cargo
+2025-03-21 21:24:43,312 - INFO - Successfully processed dataframe dispatch_to_cargo
+2025-03-21 21:24:43,312 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,312 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,312 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,312 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,312 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:24:43,313 - INFO - Calling function to get dataframe for truck_to_cccs
+2025-03-21 21:24:43,313 - INFO - Successfully processed dataframe truck_to_cccs
+2025-03-21 21:24:43,313 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,313 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:24:43,314 - INFO - Calling function to get dataframe for cross_stuffing
+2025-03-21 21:24:43,314 - INFO - Successfully processed dataframe cross_stuffing
+2025-03-21 21:24:43,314 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,314 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:24:43,314 - INFO - Calling function to get dataframe for cccs_stuffing
+2025-03-21 21:24:43,314 - INFO - Successfully processed dataframe cccs_stuffing
+2025-03-21 21:24:43,315 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:24:43,315 - INFO - Calling function to get dataframe for bycatch
+2025-03-21 21:24:43,315 - INFO - Successfully processed dataframe bycatch
+2025-03-21 21:24:43,315 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,315 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving washing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving pti: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving ops: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving salt: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,316 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - INFO - Save completed
+2025-03-21 21:24:43,317 - INFO - Successfully saved: 0 files
+2025-03-21 21:24:43,317 - ERROR - Failed to save: 24 files
+2025-03-21 21:24:43,317 - ERROR -   - shifting: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - washing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - pti: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - ops: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - net_list: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,317 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - salt: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - forklift: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - static_loader: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:24:43,318 - ERROR -   - bycatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-21 21:31:01,065 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:31:01,066 - INFO - Starting application
+2025-03-21 21:31:01,066 - INFO - Clearing screen
+2025-03-21 21:31:03,527 - INFO - Selected: Save files
+2025-03-21 21:31:03,527 - INFO - Clearing screen
+2025-03-21 21:31:07,340 - INFO - Initiating save operation for all
+2025-03-21 21:31:07,340 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:31:07,341 - INFO - Queueing category: emr
+2025-03-21 21:31:07,341 - INFO - Queueing category: operations
+2025-03-21 21:31:07,341 - INFO - Queueing category: netlist
+2025-03-21 21:31:07,342 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:31:07,342 - INFO - Queueing category: shore_handling
+2025-03-21 21:31:07,342 - INFO - Queueing category: stuffing
+2025-03-21 21:31:07,343 - INFO - Queueing category: transport
+2025-03-21 21:31:07,343 - INFO - Queueing category: miscellaneous
+2025-03-21 21:31:07,344 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:31:07,344 - INFO - Callable found for shifting, checking if it's a coroutine
+2025-03-21 21:31:07,344 - INFO - Awaiting coroutine to get dataframe for shifting
+2025-03-21 21:31:07,345 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,345 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:31:07,345 - INFO - Callable found for washing, checking if it's a coroutine
+2025-03-21 21:31:07,345 - INFO - Awaiting coroutine to get dataframe for washing
+2025-03-21 21:31:07,345 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,346 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:31:07,346 - INFO - Callable found for pti, checking if it's a coroutine
+2025-03-21 21:31:07,346 - INFO - Awaiting coroutine to get dataframe for pti
+2025-03-21 21:31:07,346 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,347 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:31:07,347 - INFO - Callable found for ops, checking if it's a coroutine
+2025-03-21 21:31:07,347 - INFO - Awaiting coroutine to get dataframe for ops
+2025-03-21 21:31:07,347 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,348 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:31:07,348 - INFO - Callable found for hatch_to_hatch, checking if it's a coroutine
+2025-03-21 21:31:07,348 - INFO - Awaiting coroutine to get dataframe for hatch_to_hatch
+2025-03-21 21:31:07,348 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,348 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:31:07,348 - INFO - Callable found for net_list, checking if it's a coroutine
+2025-03-21 21:31:07,349 - INFO - Awaiting coroutine to get dataframe for net_list
+2025-03-21 21:31:07,349 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,349 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:31:07,349 - INFO - Callable found for iot_container_stuffing, checking if it's a coroutine
+2025-03-21 21:31:07,349 - INFO - Awaiting coroutine to get dataframe for iot_container_stuffing
+2025-03-21 21:31:07,349 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,350 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:31:07,350 - INFO - Callable found for oss_stuffing, checking if it's a coroutine
+2025-03-21 21:31:07,350 - INFO - Awaiting coroutine to get dataframe for oss_stuffing
+2025-03-21 21:31:07,350 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,350 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:31:07,350 - INFO - Callable found for full_scows_transfer, checking if it's a coroutine
+2025-03-21 21:31:07,350 - INFO - Awaiting coroutine to get dataframe for full_scows_transfer
+2025-03-21 21:31:07,350 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,351 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:31:07,351 - INFO - Callable found for empty_scows_transfer, checking if it's a coroutine
+2025-03-21 21:31:07,351 - INFO - Awaiting coroutine to get dataframe for empty_scows_transfer
+2025-03-21 21:31:07,351 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,351 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:31:07,351 - INFO - Callable found for salt, checking if it's a coroutine
+2025-03-21 21:31:07,351 - INFO - Awaiting coroutine to get dataframe for salt
+2025-03-21 21:31:07,352 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,352 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:31:07,352 - INFO - Callable found for bin_tipping, checking if it's a coroutine
+2025-03-21 21:31:07,352 - INFO - Awaiting coroutine to get dataframe for bin_tipping
+2025-03-21 21:31:07,352 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,352 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:31:07,352 - INFO - Callable found for pallet_liner, checking if it's a coroutine
+2025-03-21 21:31:07,352 - INFO - Awaiting coroutine to get dataframe for pallet_liner
+2025-03-21 21:31:07,353 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,353 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:31:07,353 - INFO - Callable found for container_plugin, checking if it's a coroutine
+2025-03-21 21:31:07,353 - INFO - Awaiting coroutine to get dataframe for container_plugin
+2025-03-21 21:31:07,353 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,353 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:31:07,353 - INFO - Callable found for shore_crane, checking if it's a coroutine
+2025-03-21 21:31:07,354 - INFO - Awaiting coroutine to get dataframe for shore_crane
+2025-03-21 21:31:07,354 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,354 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:31:07,354 - INFO - Callable found for transfer, checking if it's a coroutine
+2025-03-21 21:31:07,354 - INFO - Awaiting coroutine to get dataframe for transfer
+2025-03-21 21:31:07,354 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:31:07,354 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:31:07,354 - INFO - Callable found for scow_transfer, checking if it's a coroutine
+2025-03-21 21:31:07,354 - INFO - Awaiting coroutine to get dataframe for scow_transfer
+2025-03-21 21:31:07,354 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,355 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:31:07,355 - INFO - Callable found for forklift, checking if it's a coroutine
+2025-03-21 21:31:07,355 - INFO - Awaiting coroutine to get dataframe for forklift
+2025-03-21 21:31:07,355 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,355 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:31:07,355 - INFO - Callable found for static_loader, checking if it's a coroutine
+2025-03-21 21:31:07,355 - INFO - Awaiting coroutine to get dataframe for static_loader
+2025-03-21 21:31:07,355 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,355 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:31:07,355 - INFO - Callable found for dispatch_to_cargo, checking if it's a coroutine
+2025-03-21 21:31:07,355 - INFO - Awaiting coroutine to get dataframe for dispatch_to_cargo
+2025-03-21 21:31:07,355 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,356 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:31:07,356 - INFO - Callable found for truck_to_cccs, checking if it's a coroutine
+2025-03-21 21:31:07,356 - INFO - Awaiting coroutine to get dataframe for truck_to_cccs
+2025-03-21 21:31:07,356 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,356 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:31:07,356 - INFO - Callable found for cross_stuffing, checking if it's a coroutine
+2025-03-21 21:31:07,356 - INFO - Awaiting coroutine to get dataframe for cross_stuffing
+2025-03-21 21:31:07,356 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:31:07,356 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:31:07,356 - INFO - Callable found for cccs_stuffing, checking if it's a coroutine
+2025-03-21 21:31:07,356 - INFO - Awaiting coroutine to get dataframe for cccs_stuffing
+2025-03-21 21:31:07,356 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:31:07,357 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:31:07,357 - INFO - Callable found for bycatch, checking if it's a coroutine
+2025-03-21 21:31:07,357 - INFO - Awaiting coroutine to get dataframe for bycatch
+2025-03-21 21:31:07,357 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:31:07,357 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,357 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,357 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,357 - ERROR - Error saving ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,357 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,358 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,358 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,358 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,360 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,360 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,360 - ERROR - Error saving salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,360 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,360 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,360 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,360 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,361 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:31:07,361 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,361 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,361 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,361 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,361 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,361 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:31:07,361 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:31:07,361 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:31:07,361 - INFO - Save completed
+2025-03-21 21:31:07,361 - INFO - Successfully saved: 0 files
+2025-03-21 21:31:07,361 - ERROR - Failed to save: 24 files
+2025-03-21 21:31:07,362 - ERROR -   - shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,362 - ERROR -   - washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,362 - ERROR -   - pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,362 - ERROR -   - ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,362 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,362 - ERROR -   - net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,362 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,362 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,362 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,362 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,362 - ERROR -   - salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,362 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,362 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:31:07,363 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,363 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,363 - ERROR -   - transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:31:07,363 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,363 - ERROR -   - forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,364 - ERROR -   - static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:31:07,364 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,364 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:31:07,364 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:31:07,364 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:31:07,364 - ERROR -   - bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:33:19,076 - INFO - Exiting application
+2025-03-21 21:33:21,246 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:33:21,246 - INFO - Starting application
+2025-03-21 21:33:21,246 - INFO - Clearing screen
+2025-03-21 21:33:24,042 - INFO - Selected: Save files
+2025-03-21 21:33:24,043 - INFO - Clearing screen
+2025-03-21 21:33:28,796 - INFO - Initiating save operation for all
+2025-03-21 21:33:28,797 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:33:28,797 - INFO - Queueing category: emr
+2025-03-21 21:33:28,797 - INFO - Queueing category: operations
+2025-03-21 21:33:28,798 - INFO - Queueing category: netlist
+2025-03-21 21:33:28,798 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:33:28,798 - INFO - Queueing category: shore_handling
+2025-03-21 21:33:28,798 - INFO - Queueing category: stuffing
+2025-03-21 21:33:28,799 - INFO - Queueing category: transport
+2025-03-21 21:33:28,799 - INFO - Queueing category: miscellaneous
+2025-03-21 21:33:28,800 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:33:28,800 - INFO - Callable found for shifting, checking if it's a coroutine function
+2025-03-21 21:33:28,801 - INFO - shifting is a coroutine function, awaiting it
+2025-03-21 21:33:28,801 - ERROR - Error in get_actual_df for shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,801 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,802 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:33:28,802 - INFO - Callable found for washing, checking if it's a coroutine function
+2025-03-21 21:33:28,803 - INFO - washing is a coroutine function, awaiting it
+2025-03-21 21:33:28,803 - ERROR - Error in get_actual_df for washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,803 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,804 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:33:28,804 - INFO - Callable found for pti, checking if it's a coroutine function
+2025-03-21 21:33:28,805 - INFO - pti is a coroutine function, awaiting it
+2025-03-21 21:33:28,805 - ERROR - Error in get_actual_df for pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,805 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,805 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:33:28,806 - INFO - Callable found for ops, checking if it's a coroutine function
+2025-03-21 21:33:28,806 - INFO - ops is a coroutine function, awaiting it
+2025-03-21 21:33:28,806 - ERROR - Error in get_actual_df for ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,806 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,807 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:33:28,807 - INFO - Callable found for hatch_to_hatch, checking if it's a coroutine function
+2025-03-21 21:33:28,807 - INFO - hatch_to_hatch is a coroutine function, awaiting it
+2025-03-21 21:33:28,807 - ERROR - Error in get_actual_df for hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,808 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,808 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:33:28,808 - INFO - Callable found for net_list, checking if it's a coroutine function
+2025-03-21 21:33:28,809 - INFO - net_list is a coroutine function, awaiting it
+2025-03-21 21:33:28,809 - ERROR - Error in get_actual_df for net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,809 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,809 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:33:28,810 - INFO - Callable found for iot_container_stuffing, checking if it's a coroutine function
+2025-03-21 21:33:28,810 - INFO - iot_container_stuffing is a coroutine function, awaiting it
+2025-03-21 21:33:28,810 - ERROR - Error in get_actual_df for iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,810 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,811 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:33:28,811 - INFO - Callable found for oss_stuffing, checking if it's a coroutine function
+2025-03-21 21:33:28,811 - INFO - oss_stuffing is a coroutine function, awaiting it
+2025-03-21 21:33:28,811 - ERROR - Error in get_actual_df for oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,812 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,812 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:33:28,812 - INFO - Callable found for full_scows_transfer, checking if it's a coroutine function
+2025-03-21 21:33:28,813 - INFO - full_scows_transfer is a coroutine function, awaiting it
+2025-03-21 21:33:28,813 - ERROR - Error in get_actual_df for full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,813 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,813 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:33:28,814 - INFO - Callable found for empty_scows_transfer, checking if it's a coroutine function
+2025-03-21 21:33:28,814 - INFO - empty_scows_transfer is a coroutine function, awaiting it
+2025-03-21 21:33:28,814 - ERROR - Error in get_actual_df for empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,815 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,815 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:33:28,815 - INFO - Callable found for salt, checking if it's a coroutine function
+2025-03-21 21:33:28,815 - INFO - salt is a coroutine function, awaiting it
+2025-03-21 21:33:28,815 - ERROR - Error in get_actual_df for salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,816 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,816 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:33:28,816 - INFO - Callable found for bin_tipping, checking if it's a coroutine function
+2025-03-21 21:33:28,816 - INFO - bin_tipping is a coroutine function, awaiting it
+2025-03-21 21:33:28,816 - ERROR - Error in get_actual_df for bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,816 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,817 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:33:28,817 - INFO - Callable found for pallet_liner, checking if it's a coroutine function
+2025-03-21 21:33:28,817 - INFO - pallet_liner is a coroutine function, awaiting it
+2025-03-21 21:33:28,817 - ERROR - Error in get_actual_df for pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,817 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,818 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:33:28,818 - INFO - Callable found for container_plugin, checking if it's a coroutine function
+2025-03-21 21:33:28,818 - INFO - container_plugin is a coroutine function, awaiting it
+2025-03-21 21:33:28,818 - ERROR - Error in get_actual_df for container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,818 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,819 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:33:28,819 - INFO - Callable found for shore_crane, checking if it's a coroutine function
+2025-03-21 21:33:28,819 - INFO - shore_crane is a coroutine function, awaiting it
+2025-03-21 21:33:28,819 - ERROR - Error in get_actual_df for shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,819 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,820 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:33:28,820 - INFO - Callable found for transfer, checking if it's a coroutine function
+2025-03-21 21:33:28,820 - INFO - transfer is a coroutine function, awaiting it
+2025-03-21 21:33:28,820 - ERROR - Error in get_actual_df for transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:33:28,821 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:33:28,821 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:33:28,821 - INFO - Callable found for scow_transfer, checking if it's a coroutine function
+2025-03-21 21:33:28,821 - INFO - scow_transfer is a coroutine function, awaiting it
+2025-03-21 21:33:28,821 - ERROR - Error in get_actual_df for scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,822 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,822 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:33:28,822 - INFO - Callable found for forklift, checking if it's a coroutine function
+2025-03-21 21:33:28,822 - INFO - forklift is a coroutine function, awaiting it
+2025-03-21 21:33:28,822 - ERROR - Error in get_actual_df for forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,823 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,823 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:33:28,823 - INFO - Callable found for static_loader, checking if it's a coroutine function
+2025-03-21 21:33:28,823 - INFO - static_loader is a coroutine function, awaiting it
+2025-03-21 21:33:28,824 - ERROR - Error in get_actual_df for static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,824 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,824 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:33:28,824 - INFO - Callable found for dispatch_to_cargo, checking if it's a coroutine function
+2025-03-21 21:33:28,825 - INFO - dispatch_to_cargo is a coroutine function, awaiting it
+2025-03-21 21:33:28,825 - ERROR - Error in get_actual_df for dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,825 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,825 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:33:28,826 - INFO - Callable found for truck_to_cccs, checking if it's a coroutine function
+2025-03-21 21:33:28,826 - INFO - truck_to_cccs is a coroutine function, awaiting it
+2025-03-21 21:33:28,826 - ERROR - Error in get_actual_df for truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,826 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,827 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:33:28,827 - INFO - Callable found for cross_stuffing, checking if it's a coroutine function
+2025-03-21 21:33:28,827 - INFO - cross_stuffing is a coroutine function, awaiting it
+2025-03-21 21:33:28,827 - ERROR - Error in get_actual_df for cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,828 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,828 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:33:28,829 - INFO - Callable found for cccs_stuffing, checking if it's a coroutine function
+2025-03-21 21:33:28,829 - INFO - cccs_stuffing is a coroutine function, awaiting it
+2025-03-21 21:33:28,829 - ERROR - Error in get_actual_df for cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,829 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,829 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:33:28,830 - INFO - Callable found for bycatch, checking if it's a coroutine function
+2025-03-21 21:33:28,830 - INFO - bycatch is a coroutine function, awaiting it
+2025-03-21 21:33:28,830 - ERROR - Error in get_actual_df for bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:33:28,830 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:33:28,831 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,831 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,831 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,831 - ERROR - Error saving ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,832 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,832 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,832 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,832 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,832 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,832 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,833 - ERROR - Error saving salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,833 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,833 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,833 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,833 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,834 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:33:28,834 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,834 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,834 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,834 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,834 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,835 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,835 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,835 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:33:28,835 - INFO - Save completed
+2025-03-21 21:33:28,835 - INFO - Successfully saved: 0 files
+2025-03-21 21:33:28,836 - ERROR - Failed to save: 24 files
+2025-03-21 21:33:28,836 - ERROR -   - shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,836 - ERROR -   - washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,836 - ERROR -   - pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,836 - ERROR -   - ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,836 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,837 - ERROR -   - net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,837 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,837 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,837 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,837 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,837 - ERROR -   - salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,837 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,838 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:33:28,838 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,838 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,838 - ERROR -   - transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:33:28,838 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,838 - ERROR -   - forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,838 - ERROR -   - static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:33:28,839 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,839 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:33:28,839 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,839 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:33:28,839 - ERROR -   - bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:33:45,459 - INFO - Exiting application
+2025-03-21 21:33:59,696 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:33:59,696 - INFO - Starting application
+2025-03-21 21:33:59,696 - INFO - Clearing screen
+2025-03-21 21:34:01,988 - INFO - Selected: Save files
+2025-03-21 21:34:01,988 - INFO - Clearing screen
+2025-03-21 21:34:07,343 - INFO - Initiating save operation for all
+2025-03-21 21:34:07,343 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:34:07,344 - INFO - Queueing category: emr
+2025-03-21 21:34:07,344 - INFO - Queueing category: operations
+2025-03-21 21:34:07,344 - INFO - Queueing category: netlist
+2025-03-21 21:34:07,345 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:34:07,345 - INFO - Queueing category: shore_handling
+2025-03-21 21:34:07,345 - INFO - Queueing category: stuffing
+2025-03-21 21:34:07,345 - INFO - Queueing category: transport
+2025-03-21 21:34:07,346 - INFO - Queueing category: miscellaneous
+2025-03-21 21:34:07,347 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:34:07,347 - INFO - Callable found for shifting, checking if it's a coroutine function
+2025-03-21 21:34:07,347 - INFO - shifting is a coroutine function, awaiting it
+2025-03-21 21:34:07,347 - ERROR - Error in get_actual_df for shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,348 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,348 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:34:07,348 - INFO - Callable found for washing, checking if it's a coroutine function
+2025-03-21 21:34:07,349 - INFO - washing is a coroutine function, awaiting it
+2025-03-21 21:34:07,349 - ERROR - Error in get_actual_df for washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,349 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,350 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:34:07,350 - INFO - Callable found for pti, checking if it's a coroutine function
+2025-03-21 21:34:07,350 - INFO - pti is a coroutine function, awaiting it
+2025-03-21 21:34:07,350 - ERROR - Error in get_actual_df for pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,351 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,351 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:34:07,351 - INFO - Callable found for ops, checking if it's a coroutine function
+2025-03-21 21:34:07,352 - INFO - ops is a coroutine function, awaiting it
+2025-03-21 21:34:07,352 - ERROR - Error in get_actual_df for ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,352 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,352 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:34:07,353 - INFO - Callable found for hatch_to_hatch, checking if it's a coroutine function
+2025-03-21 21:34:07,353 - INFO - hatch_to_hatch is a coroutine function, awaiting it
+2025-03-21 21:34:07,353 - ERROR - Error in get_actual_df for hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,353 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,354 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:34:07,354 - INFO - Callable found for net_list, checking if it's a coroutine function
+2025-03-21 21:34:07,354 - INFO - net_list is a coroutine function, awaiting it
+2025-03-21 21:34:07,354 - ERROR - Error in get_actual_df for net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,355 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,355 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:34:07,355 - INFO - Callable found for iot_container_stuffing, checking if it's a coroutine function
+2025-03-21 21:34:07,356 - INFO - iot_container_stuffing is a coroutine function, awaiting it
+2025-03-21 21:34:07,356 - ERROR - Error in get_actual_df for iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,356 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,356 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:34:07,357 - INFO - Callable found for oss_stuffing, checking if it's a coroutine function
+2025-03-21 21:34:07,357 - INFO - oss_stuffing is a coroutine function, awaiting it
+2025-03-21 21:34:07,357 - ERROR - Error in get_actual_df for oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,357 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,358 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:34:07,358 - INFO - Callable found for full_scows_transfer, checking if it's a coroutine function
+2025-03-21 21:34:07,358 - INFO - full_scows_transfer is a coroutine function, awaiting it
+2025-03-21 21:34:07,358 - ERROR - Error in get_actual_df for full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,359 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,359 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:34:07,359 - INFO - Callable found for empty_scows_transfer, checking if it's a coroutine function
+2025-03-21 21:34:07,359 - INFO - empty_scows_transfer is a coroutine function, awaiting it
+2025-03-21 21:34:07,360 - ERROR - Error in get_actual_df for empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,360 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,360 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:34:07,360 - INFO - Callable found for salt, checking if it's a coroutine function
+2025-03-21 21:34:07,361 - INFO - salt is a coroutine function, awaiting it
+2025-03-21 21:34:07,361 - ERROR - Error in get_actual_df for salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,361 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,361 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:34:07,362 - INFO - Callable found for bin_tipping, checking if it's a coroutine function
+2025-03-21 21:34:07,362 - INFO - bin_tipping is a coroutine function, awaiting it
+2025-03-21 21:34:07,362 - ERROR - Error in get_actual_df for bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,362 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,363 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:34:07,363 - INFO - Callable found for pallet_liner, checking if it's a coroutine function
+2025-03-21 21:34:07,363 - INFO - pallet_liner is a coroutine function, awaiting it
+2025-03-21 21:34:07,363 - ERROR - Error in get_actual_df for pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,363 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,364 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:34:07,364 - INFO - Callable found for container_plugin, checking if it's a coroutine function
+2025-03-21 21:34:07,364 - INFO - container_plugin is a coroutine function, awaiting it
+2025-03-21 21:34:07,365 - ERROR - Error in get_actual_df for container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,365 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,365 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:34:07,365 - INFO - Callable found for shore_crane, checking if it's a coroutine function
+2025-03-21 21:34:07,366 - INFO - shore_crane is a coroutine function, awaiting it
+2025-03-21 21:34:07,366 - ERROR - Error in get_actual_df for shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,366 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,367 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:34:07,367 - INFO - Callable found for transfer, checking if it's a coroutine function
+2025-03-21 21:34:07,367 - INFO - transfer is a coroutine function, awaiting it
+2025-03-21 21:34:07,367 - ERROR - Error in get_actual_df for transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:34:07,368 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:34:07,368 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:34:07,368 - INFO - Callable found for scow_transfer, checking if it's a coroutine function
+2025-03-21 21:34:07,368 - INFO - scow_transfer is a coroutine function, awaiting it
+2025-03-21 21:34:07,369 - ERROR - Error in get_actual_df for scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,369 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,369 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:34:07,369 - INFO - Callable found for forklift, checking if it's a coroutine function
+2025-03-21 21:34:07,370 - INFO - forklift is a coroutine function, awaiting it
+2025-03-21 21:34:07,370 - ERROR - Error in get_actual_df for forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,370 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,370 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:34:07,371 - INFO - Callable found for static_loader, checking if it's a coroutine function
+2025-03-21 21:34:07,371 - INFO - static_loader is a coroutine function, awaiting it
+2025-03-21 21:34:07,371 - ERROR - Error in get_actual_df for static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,371 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,372 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:34:07,372 - INFO - Callable found for dispatch_to_cargo, checking if it's a coroutine function
+2025-03-21 21:34:07,372 - INFO - dispatch_to_cargo is a coroutine function, awaiting it
+2025-03-21 21:34:07,372 - ERROR - Error in get_actual_df for dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,373 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,373 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:34:07,373 - INFO - Callable found for truck_to_cccs, checking if it's a coroutine function
+2025-03-21 21:34:07,373 - INFO - truck_to_cccs is a coroutine function, awaiting it
+2025-03-21 21:34:07,373 - ERROR - Error in get_actual_df for truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,374 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,374 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:34:07,374 - INFO - Callable found for cross_stuffing, checking if it's a coroutine function
+2025-03-21 21:34:07,374 - INFO - cross_stuffing is a coroutine function, awaiting it
+2025-03-21 21:34:07,375 - ERROR - Error in get_actual_df for cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,375 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,375 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:34:07,376 - INFO - Callable found for cccs_stuffing, checking if it's a coroutine function
+2025-03-21 21:34:07,376 - INFO - cccs_stuffing is a coroutine function, awaiting it
+2025-03-21 21:34:07,376 - ERROR - Error in get_actual_df for cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,376 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,376 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:34:07,376 - INFO - Callable found for bycatch, checking if it's a coroutine function
+2025-03-21 21:34:07,376 - INFO - bycatch is a coroutine function, awaiting it
+2025-03-21 21:34:07,377 - ERROR - Error in get_actual_df for bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:34:07,377 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:34:07,377 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,377 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,377 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,377 - ERROR - Error saving ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,377 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,377 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,378 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,378 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,378 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,378 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,378 - ERROR - Error saving salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,378 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,378 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,378 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,378 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,379 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:34:07,379 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,379 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,379 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,379 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,379 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,379 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,379 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,379 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:34:07,380 - INFO - Save completed
+2025-03-21 21:34:07,380 - INFO - Successfully saved: 0 files
+2025-03-21 21:34:07,380 - ERROR - Failed to save: 24 files
+2025-03-21 21:34:07,380 - ERROR -   - shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,380 - ERROR -   - washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,380 - ERROR -   - pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,380 - ERROR -   - ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,380 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,381 - ERROR -   - net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,381 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,381 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,381 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,381 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,381 - ERROR -   - salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,381 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,381 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:34:07,381 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,381 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,381 - ERROR -   - transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:34:07,381 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,382 - ERROR -   - forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,382 - ERROR -   - static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:34:07,382 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,382 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:34:07,382 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,382 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:34:07,382 - ERROR -   - bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:36:12,988 - INFO - Exiting application
+2025-03-21 21:36:18,469 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:36:18,469 - INFO - Starting application
+2025-03-21 21:36:18,469 - INFO - Clearing screen
+2025-03-21 21:36:20,398 - INFO - Selected: Save files
+2025-03-21 21:36:20,398 - INFO - Clearing screen
+2025-03-21 21:36:24,448 - INFO - Initiating save operation for all
+2025-03-21 21:36:24,448 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:36:24,448 - INFO - Queueing category: emr
+2025-03-21 21:36:24,449 - INFO - Queueing category: operations
+2025-03-21 21:36:24,449 - INFO - Queueing category: netlist
+2025-03-21 21:36:24,449 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:36:24,449 - INFO - Queueing category: shore_handling
+2025-03-21 21:36:24,450 - INFO - Queueing category: stuffing
+2025-03-21 21:36:24,450 - INFO - Queueing category: transport
+2025-03-21 21:36:24,450 - INFO - Queueing category: miscellaneous
+2025-03-21 21:36:24,451 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:36:24,451 - INFO - Callable found for shifting, checking if it's a coroutine function
+2025-03-21 21:36:24,451 - INFO - shifting is a coroutine function, using special handling
+2025-03-21 21:36:24,452 - INFO - Coroutine locals for shifting: []
+2025-03-21 21:36:24,452 - INFO - Attempting to await coroutine for shifting
+2025-03-21 21:36:24,452 - ERROR - Error in call_async_function for shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,452 - ERROR - Error in get_actual_df for shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,453 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,453 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:36:24,453 - INFO - Callable found for washing, checking if it's a coroutine function
+2025-03-21 21:36:24,453 - INFO - washing is a coroutine function, using special handling
+2025-03-21 21:36:24,454 - INFO - Coroutine locals for washing: []
+2025-03-21 21:36:24,454 - INFO - Attempting to await coroutine for washing
+2025-03-21 21:36:24,454 - ERROR - Error in call_async_function for washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,455 - ERROR - Error in get_actual_df for washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,455 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,455 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:36:24,455 - INFO - Callable found for pti, checking if it's a coroutine function
+2025-03-21 21:36:24,456 - INFO - pti is a coroutine function, using special handling
+2025-03-21 21:36:24,456 - INFO - Coroutine locals for pti: []
+2025-03-21 21:36:24,456 - INFO - Attempting to await coroutine for pti
+2025-03-21 21:36:24,457 - ERROR - Error in call_async_function for pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,457 - ERROR - Error in get_actual_df for pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,457 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,457 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:36:24,458 - INFO - Callable found for ops, checking if it's a coroutine function
+2025-03-21 21:36:24,458 - INFO - ops is a coroutine function, using special handling
+2025-03-21 21:36:24,458 - INFO - Coroutine locals for ops: []
+2025-03-21 21:36:24,458 - INFO - Attempting to await coroutine for ops
+2025-03-21 21:36:24,458 - ERROR - Error in call_async_function for ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,458 - ERROR - Error in get_actual_df for ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,459 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,459 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:36:24,459 - INFO - Callable found for hatch_to_hatch, checking if it's a coroutine function
+2025-03-21 21:36:24,459 - INFO - hatch_to_hatch is a coroutine function, using special handling
+2025-03-21 21:36:24,460 - INFO - Coroutine locals for hatch_to_hatch: []
+2025-03-21 21:36:24,460 - INFO - Attempting to await coroutine for hatch_to_hatch
+2025-03-21 21:36:24,460 - ERROR - Error in call_async_function for hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,460 - ERROR - Error in get_actual_df for hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,461 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,461 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:36:24,461 - INFO - Callable found for net_list, checking if it's a coroutine function
+2025-03-21 21:36:24,462 - INFO - net_list is a coroutine function, using special handling
+2025-03-21 21:36:24,462 - INFO - Coroutine locals for net_list: []
+2025-03-21 21:36:24,462 - INFO - Attempting to await coroutine for net_list
+2025-03-21 21:36:24,462 - ERROR - Error in call_async_function for net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,462 - ERROR - Error in get_actual_df for net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,463 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,463 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:36:24,463 - INFO - Callable found for iot_container_stuffing, checking if it's a coroutine function
+2025-03-21 21:36:24,463 - INFO - iot_container_stuffing is a coroutine function, using special handling
+2025-03-21 21:36:24,464 - INFO - Coroutine locals for iot_container_stuffing: []
+2025-03-21 21:36:24,464 - INFO - Attempting to await coroutine for iot_container_stuffing
+2025-03-21 21:36:24,464 - ERROR - Error in call_async_function for iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,464 - ERROR - Error in get_actual_df for iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,465 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,465 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:36:24,465 - INFO - Callable found for oss_stuffing, checking if it's a coroutine function
+2025-03-21 21:36:24,465 - INFO - oss_stuffing is a coroutine function, using special handling
+2025-03-21 21:36:24,466 - INFO - Coroutine locals for oss_stuffing: []
+2025-03-21 21:36:24,466 - INFO - Attempting to await coroutine for oss_stuffing
+2025-03-21 21:36:24,466 - ERROR - Error in call_async_function for oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,466 - ERROR - Error in get_actual_df for oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,466 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,467 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:36:24,467 - INFO - Callable found for full_scows_transfer, checking if it's a coroutine function
+2025-03-21 21:36:24,467 - INFO - full_scows_transfer is a coroutine function, using special handling
+2025-03-21 21:36:24,467 - INFO - Coroutine locals for full_scows_transfer: []
+2025-03-21 21:36:24,468 - INFO - Attempting to await coroutine for full_scows_transfer
+2025-03-21 21:36:24,468 - ERROR - Error in call_async_function for full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,468 - ERROR - Error in get_actual_df for full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,468 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,469 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:36:24,469 - INFO - Callable found for empty_scows_transfer, checking if it's a coroutine function
+2025-03-21 21:36:24,469 - INFO - empty_scows_transfer is a coroutine function, using special handling
+2025-03-21 21:36:24,469 - INFO - Coroutine locals for empty_scows_transfer: []
+2025-03-21 21:36:24,469 - INFO - Attempting to await coroutine for empty_scows_transfer
+2025-03-21 21:36:24,470 - ERROR - Error in call_async_function for empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,470 - ERROR - Error in get_actual_df for empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,470 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,470 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:36:24,470 - INFO - Callable found for salt, checking if it's a coroutine function
+2025-03-21 21:36:24,471 - INFO - salt is a coroutine function, using special handling
+2025-03-21 21:36:24,471 - INFO - Coroutine locals for salt: []
+2025-03-21 21:36:24,471 - INFO - Attempting to await coroutine for salt
+2025-03-21 21:36:24,471 - ERROR - Error in call_async_function for salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,471 - ERROR - Error in get_actual_df for salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,472 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,472 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:36:24,472 - INFO - Callable found for bin_tipping, checking if it's a coroutine function
+2025-03-21 21:36:24,472 - INFO - bin_tipping is a coroutine function, using special handling
+2025-03-21 21:36:24,473 - INFO - Coroutine locals for bin_tipping: []
+2025-03-21 21:36:24,473 - INFO - Attempting to await coroutine for bin_tipping
+2025-03-21 21:36:24,473 - ERROR - Error in call_async_function for bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,473 - ERROR - Error in get_actual_df for bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,473 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,474 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:36:24,474 - INFO - Callable found for pallet_liner, checking if it's a coroutine function
+2025-03-21 21:36:24,474 - INFO - pallet_liner is a coroutine function, using special handling
+2025-03-21 21:36:24,474 - INFO - Coroutine locals for pallet_liner: []
+2025-03-21 21:36:24,474 - INFO - Attempting to await coroutine for pallet_liner
+2025-03-21 21:36:24,475 - ERROR - Error in call_async_function for pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,475 - ERROR - Error in get_actual_df for pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,475 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,475 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:36:24,475 - INFO - Callable found for container_plugin, checking if it's a coroutine function
+2025-03-21 21:36:24,476 - INFO - container_plugin is a coroutine function, using special handling
+2025-03-21 21:36:24,476 - INFO - Coroutine locals for container_plugin: []
+2025-03-21 21:36:24,476 - INFO - Attempting to await coroutine for container_plugin
+2025-03-21 21:36:24,476 - ERROR - Error in call_async_function for container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,476 - ERROR - Error in get_actual_df for container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,477 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,477 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:36:24,477 - INFO - Callable found for shore_crane, checking if it's a coroutine function
+2025-03-21 21:36:24,477 - INFO - shore_crane is a coroutine function, using special handling
+2025-03-21 21:36:24,478 - INFO - Coroutine locals for shore_crane: []
+2025-03-21 21:36:24,478 - INFO - Attempting to await coroutine for shore_crane
+2025-03-21 21:36:24,478 - ERROR - Error in call_async_function for shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,478 - ERROR - Error in get_actual_df for shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,478 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,479 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:36:24,479 - INFO - Callable found for transfer, checking if it's a coroutine function
+2025-03-21 21:36:24,479 - INFO - transfer is a coroutine function, using special handling
+2025-03-21 21:36:24,480 - INFO - Coroutine locals for transfer: []
+2025-03-21 21:36:24,480 - INFO - Attempting to await coroutine for transfer
+2025-03-21 21:36:24,480 - ERROR - Error in call_async_function for transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:36:24,480 - ERROR - Error in get_actual_df for transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:36:24,480 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:36:24,481 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:36:24,481 - INFO - Callable found for scow_transfer, checking if it's a coroutine function
+2025-03-21 21:36:24,481 - INFO - scow_transfer is a coroutine function, using special handling
+2025-03-21 21:36:24,481 - INFO - Coroutine locals for scow_transfer: []
+2025-03-21 21:36:24,482 - INFO - Attempting to await coroutine for scow_transfer
+2025-03-21 21:36:24,482 - ERROR - Error in call_async_function for scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,482 - ERROR - Error in get_actual_df for scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,483 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,483 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:36:24,483 - INFO - Callable found for forklift, checking if it's a coroutine function
+2025-03-21 21:36:24,483 - INFO - forklift is a coroutine function, using special handling
+2025-03-21 21:36:24,484 - INFO - Coroutine locals for forklift: []
+2025-03-21 21:36:24,484 - INFO - Attempting to await coroutine for forklift
+2025-03-21 21:36:24,484 - ERROR - Error in call_async_function for forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,484 - ERROR - Error in get_actual_df for forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,485 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,485 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:36:24,485 - INFO - Callable found for static_loader, checking if it's a coroutine function
+2025-03-21 21:36:24,485 - INFO - static_loader is a coroutine function, using special handling
+2025-03-21 21:36:24,486 - INFO - Coroutine locals for static_loader: []
+2025-03-21 21:36:24,486 - INFO - Attempting to await coroutine for static_loader
+2025-03-21 21:36:24,486 - ERROR - Error in call_async_function for static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,486 - ERROR - Error in get_actual_df for static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,486 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,487 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:36:24,487 - INFO - Callable found for dispatch_to_cargo, checking if it's a coroutine function
+2025-03-21 21:36:24,487 - INFO - dispatch_to_cargo is a coroutine function, using special handling
+2025-03-21 21:36:24,487 - INFO - Coroutine locals for dispatch_to_cargo: []
+2025-03-21 21:36:24,488 - INFO - Attempting to await coroutine for dispatch_to_cargo
+2025-03-21 21:36:24,488 - ERROR - Error in call_async_function for dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,488 - ERROR - Error in get_actual_df for dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,488 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,488 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:36:24,489 - INFO - Callable found for truck_to_cccs, checking if it's a coroutine function
+2025-03-21 21:36:24,489 - INFO - truck_to_cccs is a coroutine function, using special handling
+2025-03-21 21:36:24,489 - INFO - Coroutine locals for truck_to_cccs: []
+2025-03-21 21:36:24,489 - INFO - Attempting to await coroutine for truck_to_cccs
+2025-03-21 21:36:24,489 - ERROR - Error in call_async_function for truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,490 - ERROR - Error in get_actual_df for truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,490 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,490 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:36:24,490 - INFO - Callable found for cross_stuffing, checking if it's a coroutine function
+2025-03-21 21:36:24,491 - INFO - cross_stuffing is a coroutine function, using special handling
+2025-03-21 21:36:24,491 - INFO - Coroutine locals for cross_stuffing: []
+2025-03-21 21:36:24,491 - INFO - Attempting to await coroutine for cross_stuffing
+2025-03-21 21:36:24,491 - ERROR - Error in call_async_function for cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,491 - ERROR - Error in get_actual_df for cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,492 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,492 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:36:24,492 - INFO - Callable found for cccs_stuffing, checking if it's a coroutine function
+2025-03-21 21:36:24,492 - INFO - cccs_stuffing is a coroutine function, using special handling
+2025-03-21 21:36:24,492 - INFO - Coroutine locals for cccs_stuffing: []
+2025-03-21 21:36:24,493 - INFO - Attempting to await coroutine for cccs_stuffing
+2025-03-21 21:36:24,493 - ERROR - Error in call_async_function for cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,493 - ERROR - Error in get_actual_df for cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,493 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,493 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:36:24,494 - INFO - Callable found for bycatch, checking if it's a coroutine function
+2025-03-21 21:36:24,494 - INFO - bycatch is a coroutine function, using special handling
+2025-03-21 21:36:24,494 - INFO - Coroutine locals for bycatch: []
+2025-03-21 21:36:24,494 - INFO - Attempting to await coroutine for bycatch
+2025-03-21 21:36:24,494 - ERROR - Error in call_async_function for bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:36:24,494 - ERROR - Error in get_actual_df for bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:36:24,495 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:36:24,495 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,495 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,495 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,496 - ERROR - Error saving ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,496 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,496 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,496 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,496 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,496 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,497 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,497 - ERROR - Error saving salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,497 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,497 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,497 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,497 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,498 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:36:24,498 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,498 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,498 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,498 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,498 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,498 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,499 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,499 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:36:24,499 - INFO - Save completed
+2025-03-21 21:36:24,499 - INFO - Successfully saved: 0 files
+2025-03-21 21:36:24,500 - ERROR - Failed to save: 24 files
+2025-03-21 21:36:24,500 - ERROR -   - shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,500 - ERROR -   - washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,500 - ERROR -   - pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,500 - ERROR -   - ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,500 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,501 - ERROR -   - net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,501 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,501 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,501 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,501 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,501 - ERROR -   - salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,501 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,502 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:36:24,502 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,502 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,502 - ERROR -   - transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:36:24,502 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,502 - ERROR -   - forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,502 - ERROR -   - static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:36:24,503 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,503 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:36:24,503 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,503 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:36:24,503 - ERROR -   - bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:39:53,086 - INFO - Exiting application
+2025-03-21 21:39:56,927 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:39:56,927 - INFO - Starting application
+2025-03-21 21:39:56,927 - INFO - Clearing screen
+2025-03-21 21:39:58,591 - INFO - Selected: Save files
+2025-03-21 21:39:58,591 - INFO - Clearing screen
+2025-03-21 21:40:02,206 - INFO - Initiating save operation for all
+2025-03-21 21:40:02,207 - INFO - Processing all dataframe categories concurrently
+2025-03-21 21:40:02,207 - INFO - Queueing category: emr
+2025-03-21 21:40:02,208 - INFO - Queueing category: operations
+2025-03-21 21:40:02,208 - INFO - Queueing category: netlist
+2025-03-21 21:40:02,208 - INFO - Queueing category: bin_dispatch
+2025-03-21 21:40:02,208 - INFO - Queueing category: shore_handling
+2025-03-21 21:40:02,209 - INFO - Queueing category: stuffing
+2025-03-21 21:40:02,209 - INFO - Queueing category: transport
+2025-03-21 21:40:02,209 - INFO - Queueing category: miscellaneous
+2025-03-21 21:40:02,210 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:40:02,211 - INFO - Calling function for shifting
+2025-03-21 21:40:02,211 - INFO - Awaiting result for shifting
+2025-03-21 21:40:02,211 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,212 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:40:02,212 - INFO - Calling function for washing
+2025-03-21 21:40:02,212 - INFO - Awaiting result for washing
+2025-03-21 21:40:02,212 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,213 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:40:02,213 - INFO - Calling function for pti
+2025-03-21 21:40:02,213 - INFO - Awaiting result for pti
+2025-03-21 21:40:02,214 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,214 - INFO - Processing dataframe ops of type <class 'function'>
+2025-03-21 21:40:02,214 - INFO - Calling function for ops
+2025-03-21 21:40:02,215 - INFO - Awaiting result for ops
+2025-03-21 21:40:02,215 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,215 - INFO - Processing dataframe hatch_to_hatch of type <class 'function'>
+2025-03-21 21:40:02,215 - INFO - Calling function for hatch_to_hatch
+2025-03-21 21:40:02,216 - INFO - Awaiting result for hatch_to_hatch
+2025-03-21 21:40:02,216 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,216 - INFO - Processing dataframe net_list of type <class 'function'>
+2025-03-21 21:40:02,217 - INFO - Calling function for net_list
+2025-03-21 21:40:02,217 - INFO - Awaiting result for net_list
+2025-03-21 21:40:02,217 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,218 - INFO - Processing dataframe iot_container_stuffing of type <class 'function'>
+2025-03-21 21:40:02,218 - INFO - Calling function for iot_container_stuffing
+2025-03-21 21:40:02,218 - INFO - Awaiting result for iot_container_stuffing
+2025-03-21 21:40:02,219 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,219 - INFO - Processing dataframe oss_stuffing of type <class 'function'>
+2025-03-21 21:40:02,219 - INFO - Calling function for oss_stuffing
+2025-03-21 21:40:02,220 - INFO - Awaiting result for oss_stuffing
+2025-03-21 21:40:02,220 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,221 - INFO - Processing dataframe full_scows_transfer of type <class 'function'>
+2025-03-21 21:40:02,221 - INFO - Calling function for full_scows_transfer
+2025-03-21 21:40:02,221 - INFO - Awaiting result for full_scows_transfer
+2025-03-21 21:40:02,222 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,222 - INFO - Processing dataframe empty_scows_transfer of type <class 'function'>
+2025-03-21 21:40:02,222 - INFO - Calling function for empty_scows_transfer
+2025-03-21 21:40:02,223 - INFO - Awaiting result for empty_scows_transfer
+2025-03-21 21:40:02,223 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,223 - INFO - Processing dataframe salt of type <class 'function'>
+2025-03-21 21:40:02,224 - INFO - Calling function for salt
+2025-03-21 21:40:02,224 - INFO - Awaiting result for salt
+2025-03-21 21:40:02,224 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,224 - INFO - Processing dataframe bin_tipping of type <class 'function'>
+2025-03-21 21:40:02,225 - INFO - Calling function for bin_tipping
+2025-03-21 21:40:02,225 - INFO - Awaiting result for bin_tipping
+2025-03-21 21:40:02,225 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,226 - INFO - Processing dataframe pallet_liner of type <class 'function'>
+2025-03-21 21:40:02,226 - INFO - Calling function for pallet_liner
+2025-03-21 21:40:02,226 - INFO - Awaiting result for pallet_liner
+2025-03-21 21:40:02,226 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,227 - INFO - Processing dataframe container_plugin of type <class 'function'>
+2025-03-21 21:40:02,227 - INFO - Calling function for container_plugin
+2025-03-21 21:40:02,227 - INFO - Awaiting result for container_plugin
+2025-03-21 21:40:02,227 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,228 - INFO - Processing dataframe shore_crane of type <class 'function'>
+2025-03-21 21:40:02,228 - INFO - Calling function for shore_crane
+2025-03-21 21:40:02,228 - INFO - Awaiting result for shore_crane
+2025-03-21 21:40:02,228 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,229 - INFO - Processing dataframe transfer of type <class 'function'>
+2025-03-21 21:40:02,229 - INFO - Calling function for transfer
+2025-03-21 21:40:02,229 - INFO - Awaiting result for transfer
+2025-03-21 21:40:02,229 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:40:02,230 - INFO - Processing dataframe scow_transfer of type <class 'function'>
+2025-03-21 21:40:02,230 - INFO - Calling function for scow_transfer
+2025-03-21 21:40:02,230 - INFO - Awaiting result for scow_transfer
+2025-03-21 21:40:02,230 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,230 - INFO - Processing dataframe forklift of type <class 'function'>
+2025-03-21 21:40:02,231 - INFO - Calling function for forklift
+2025-03-21 21:40:02,231 - INFO - Awaiting result for forklift
+2025-03-21 21:40:02,231 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,231 - INFO - Processing dataframe static_loader of type <class 'function'>
+2025-03-21 21:40:02,232 - INFO - Calling function for static_loader
+2025-03-21 21:40:02,232 - INFO - Awaiting result for static_loader
+2025-03-21 21:40:02,232 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,233 - INFO - Processing dataframe dispatch_to_cargo of type <class 'function'>
+2025-03-21 21:40:02,233 - INFO - Calling function for dispatch_to_cargo
+2025-03-21 21:40:02,233 - INFO - Awaiting result for dispatch_to_cargo
+2025-03-21 21:40:02,233 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,234 - INFO - Processing dataframe truck_to_cccs of type <class 'function'>
+2025-03-21 21:40:02,234 - INFO - Calling function for truck_to_cccs
+2025-03-21 21:40:02,234 - INFO - Awaiting result for truck_to_cccs
+2025-03-21 21:40:02,234 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,234 - INFO - Processing dataframe cross_stuffing of type <class 'function'>
+2025-03-21 21:40:02,235 - INFO - Calling function for cross_stuffing
+2025-03-21 21:40:02,235 - INFO - Awaiting result for cross_stuffing
+2025-03-21 21:40:02,235 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:40:02,235 - INFO - Processing dataframe cccs_stuffing of type <class 'function'>
+2025-03-21 21:40:02,236 - INFO - Calling function for cccs_stuffing
+2025-03-21 21:40:02,236 - INFO - Awaiting result for cccs_stuffing
+2025-03-21 21:40:02,236 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:40:02,236 - INFO - Processing dataframe bycatch of type <class 'function'>
+2025-03-21 21:40:02,236 - INFO - Calling function for bycatch
+2025-03-21 21:40:02,236 - INFO - Awaiting result for bycatch
+2025-03-21 21:40:02,236 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:40:02,237 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,237 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,237 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,237 - ERROR - Error saving ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,237 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,237 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,238 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,238 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,238 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,238 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,238 - ERROR - Error saving salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,238 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,238 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,238 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,239 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,239 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:40:02,239 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,239 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,239 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,239 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,239 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,240 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:40:02,240 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:40:02,240 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:40:02,240 - INFO - Save completed
+2025-03-21 21:40:02,240 - INFO - Successfully saved: 0 files
+2025-03-21 21:40:02,241 - ERROR - Failed to save: 24 files
+2025-03-21 21:40:02,241 - ERROR -   - shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,241 - ERROR -   - washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,241 - ERROR -   - pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,241 - ERROR -   - ops: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,241 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,242 - ERROR -   - net_list: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,242 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,242 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,242 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,242 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,242 - ERROR -   - salt: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,242 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,243 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:02,243 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,243 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,243 - ERROR -   - transfer: 'coroutine' object has no attribute 'get'
+2025-03-21 21:40:02,243 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,243 - ERROR -   - forklift: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,244 - ERROR -   - static_loader: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:02,244 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,244 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'filter'
+2025-03-21 21:40:02,244 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:40:02,244 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'join_asof'
+2025-03-21 21:40:02,244 - ERROR -   - bycatch: 'coroutine' object has no attribute 'join'
+2025-03-21 21:40:17,582 - INFO - Starting application
+2025-03-21 21:40:17,582 - INFO - Clearing screen
+2025-03-21 21:40:21,737 - INFO - Selected: Save files
+2025-03-21 21:40:21,737 - INFO - Clearing screen
+2025-03-21 21:40:25,847 - INFO - Initiating save operation for emr
+2025-03-21 21:40:25,847 - INFO - Processing dataframe category: emr
+2025-03-21 21:40:25,848 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-03-21 21:40:25,853 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:40:25,854 - INFO - Calling function for shifting
+2025-03-21 21:40:25,854 - INFO - Awaiting result for shifting
+2025-03-21 21:40:25,854 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:25,855 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:40:25,855 - INFO - Calling function for washing
+2025-03-21 21:40:25,856 - INFO - Awaiting result for washing
+2025-03-21 21:40:25,856 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:25,856 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:40:25,857 - INFO - Calling function for pti
+2025-03-21 21:40:25,857 - INFO - Awaiting result for pti
+2025-03-21 21:40:25,857 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:25,858 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:25,858 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:40:25,858 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:40:25,859 - INFO - Save completed
+2025-03-21 21:40:25,859 - INFO - Successfully saved: 
+2025-03-21 21:40:25,859 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'with_columns', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'with_columns'

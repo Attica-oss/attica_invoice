@@ -105,7 +105,7 @@ class App:
             DataFrameType.TRANSPORT:"Haulage,Shore Crane and Forklift data",
             DataFrameType.MISCELLANEOUS:"CCCS and Cross stuffing data"
         }
-        return descriptions.get(df_type, "")            
+        return descriptions.get(df_type, "")
 
     async def handle_save(self) -> None:
         """Handles the save operation with proper validation"""
@@ -119,7 +119,7 @@ class App:
                     await save_df_to_csv_async(data)
                 menu = input("Return to the main menu [Y/n]").lower()
                 if menu in ('y', 'yes'):
-                    self.run()
+                    await self.run()
                 else:
                     self.exit_application()
             elif choice in ('n', 'no'):
@@ -159,14 +159,11 @@ class App:
                         self.clear_screen()
                         # check_data()
                     case MenuOption.EXIT:
-                        self.exit_application()   
+                        self.exit_application()
             except KeyboardInterrupt:
                 logger.info("Received interrupt signal")
                 self.exit_application()
-            except Exception as e:
+            except IOError as e:
                 logger.error("Unexpected error: %s", str(e))
                 print(f"An error occurred: {str(e)}")
                 sleep(2)
-
-
-   

@@ -3,7 +3,7 @@
 import polars as pl
 from data_source.make_dataset import load_gsheet_data
 from data_source.sheet_ids import SHORE_HANDLING_ID, salt_sheet, bin_tipping_sheet
-from type_casting.customers import ship_owner, purseiner
+from type_casting.customers import get_customer_by_type, ship_owner
 from type_casting.validations import MOVEMENT_TYPE, OvertimePerc
 from type_casting.dates import (
     SPECIAL_DAYS,
@@ -16,16 +16,26 @@ from type_casting.dates import (
 # from data_source import expressions as exp
 from data.price import get_price
 
-BIN_TIPPING_PRICE = (
-    get_price(["CCCS Movement in/out"]).select(pl.col("Price")).collect().to_series()[0]
-)
 
-SALT_PRICE = (
-    get_price(["Loading (Quay to Ship)", "Loading @ Zone 14"])
-    .select(pl.col("Price"))
-    .collect()
-    .to_series()[0]
-)
+# Price
+async def price_list() -> dict[str, float | pl.LazyFrame]:
+    """price dictionary"""
+
+    bin_tipping_price: pl.Float32 = (
+        await get_price(["CCCS Movement in/out"])
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
+    )
+
+    salt_price: pl.Float32 = (
+        get_price(["Loading (Quay to Ship)", "Loading @ Zone 14"])
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
+    )
+
+    return {"bin_tipping_price": bin_tipping_price, "salt_price": salt_price}
 
 
 ph_list: pl.Series = public_holiday()
@@ -92,54 +102,72 @@ durations = pl.col("date").dt.combine(pl.col("end_time")) - pl.col("date").dt.co
 )
 
 
-salt: pl.LazyFrame = (
-    load_gsheet_data(sheet_id=SHORE_HANDLING_ID, sheet_name=salt_sheet)
-    .select(
-        pl.col("day_name").cast(dtype=pl.Enum(DAY_NAMES)),
-        pl.col("date"),
-        pl.col("vessel").cast(dtype=pl.Enum(purseiner)),
-        pl.col("customer").str.strip_chars().cast(dtype=pl.Enum(ship_owner())),
-        pl.col("start_time"),
-        pl.col("end_time"),
-        pl.col("duration"),
-        pl.col("operation_type"),
-        pl.col("tonnage"),
+async def salt() -> pl.LazyFrame:
+    """salt dataset"""
+    return (
+        await load_gsheet_data(sheet_id=SHORE_HANDLING_ID, sheet_name=salt_sheet)
+        .select(
+            pl.col("day_name").cast(dtype=pl.Enum(DAY_NAMES)),
+            pl.col("date"),
+            pl.col("vessel").cast(
+                dtype=pl.Enum(await get_customer_by_type().get("purseiner"))
+            ),
+            pl.col("customer")
+            .str.strip_chars()
+            .cast(dtype=pl.Enum(await ship_owner())),
+            pl.col("start_time"),
+            pl.col("end_time"),
+            pl.col("duration"),
+            pl.col("operation_type"),
+            pl.col("tonnage"),
+        )
+        .with_columns(
+            normal=pl.when(is_not_special_day & end_time_after_cut_off)
+            .then(normal_duration)
+            .when(is_not_special_day & before_cut_off_normal_day)
+            .then(durations)
+            .otherwise(pl.duration()),
+            normal_150=pl.when(is_not_special_day & start_after_cut_off_normal_day)
+            .then(durations)
+            .when(is_not_special_day & stop_after_cut_off_normal_day)
+            .then(hours_after_cut_off_normal_day)
+            .otherwise(pl.duration()),
+            sun_150=pl.when(is_special_day & stop_after_cut_off_special_day)
+            .then(normal_duration_special_day)
+            .when(is_special_day & stop_before_cut_off_special_day)
+            .then(durations)
+            .otherwise(pl.duration()),
+            overtime_200=pl.when(is_special_day & start_after_cut_off_special_day)
+            .then(durations)
+            .when(is_special_day & stop_after_cut_off_special_day)
+            .then(hours_after_cut_off_special_day)
+            .otherwise(pl.duration()),
+        )
+        .with_columns(
+            normal=(pl.col("normal") / durations) * pl.col("tonnage"),
+            overtime_150=(pl.col("normal_150") / durations) * pl.col("tonnage")
+            + (pl.col("sun_150") / durations) * pl.col("tonnage"),
+            overtime_200=(pl.col("overtime_200") / durations) * pl.col("tonnage"),
+        )
+        .with_columns(
+            price=(
+                pl.col("normal")
+                * await price_list().get("salt_price")
+                * OvertimePerc.normal_hour
+            )
+            + (
+                pl.col("overtime_150")
+                * await price_list().get("salt_price")
+                * OvertimePerc.overtime_150
+            )
+            + (
+                pl.col("overtime_200")
+                * await price_list().get("salt_price")
+                * OvertimePerc.overtime_200
+            )
+        )
+        .select(pl.all().exclude(["normal_150", "sun_150"]))
     )
-    .with_columns(
-        normal=pl.when(is_not_special_day & end_time_after_cut_off)
-        .then(normal_duration)
-        .when(is_not_special_day & before_cut_off_normal_day)
-        .then(durations)
-        .otherwise(pl.duration()),
-        normal_150=pl.when(is_not_special_day & start_after_cut_off_normal_day)
-        .then(durations)
-        .when(is_not_special_day & stop_after_cut_off_normal_day)
-        .then(hours_after_cut_off_normal_day)
-        .otherwise(pl.duration()),
-        sun_150=pl.when(is_special_day & stop_after_cut_off_special_day)
-        .then(normal_duration_special_day)
-        .when(is_special_day & stop_before_cut_off_special_day)
-        .then(durations)
-        .otherwise(pl.duration()),
-        overtime_200=pl.when(is_special_day & start_after_cut_off_special_day)
-        .then(durations)
-        .when(is_special_day & stop_after_cut_off_special_day)
-        .then(hours_after_cut_off_special_day)
-        .otherwise(pl.duration()),
-    )
-    .with_columns(
-        normal=(pl.col("normal") / durations) * pl.col("tonnage"),
-        overtime_150=(pl.col("normal_150") / durations) * pl.col("tonnage")
-        + (pl.col("sun_150") / durations) * pl.col("tonnage"),
-        overtime_200=(pl.col("overtime_200") / durations) * pl.col("tonnage"),
-    )
-    .with_columns(
-        price=(pl.col("normal") * SALT_PRICE * OvertimePerc.normal_hour)
-        + (pl.col("overtime_150") * SALT_PRICE * OvertimePerc.overtime_150)
-        + (pl.col("overtime_200") * SALT_PRICE * OvertimePerc.overtime_200)
-    )
-    .select(pl.all().exclude(["normal_150", "sun_150"]))
-)
 
 
 add_day_name_col: pl.Expr = (
@@ -149,38 +177,48 @@ add_day_name_col: pl.Expr = (
 )
 
 
-bin_tipping: pl.LazyFrame = (
-    load_gsheet_data(sheet_id=SHORE_HANDLING_ID, sheet_name=bin_tipping_sheet)
-    .filter(pl.col("Tonnage Tipped") > 0)
-    .with_columns(day_name=add_day_name_col, Service=pl.lit("IPHS Bin Tipping"))
-    .select(
-        pl.col("day_name").cast(dtype=pl.Enum(DAY_NAMES)),
-        pl.col("Date"),
-        pl.col("Customer"),
-        pl.col("movement_type").cast(dtype=pl.Enum(MOVEMENT_TYPE)),
-        pl.col("Service"),
-        pl.col("IOT Scows (Tipping)").alias("number_of_scows_tipped"),
-        pl.col("Tonnage Tipped").cast(pl.Float64),
-        pl.col("Overtime"),
-    )
-    .with_columns(
-        price=BIN_TIPPING_PRICE,
-        total_price=pl.when(pl.col("day_name").is_in(SPECIAL_DAYS))
-        .then(
-            (
-                BIN_TIPPING_PRICE
-                * OvertimePerc.overtime_150
-                * (pl.col("Tonnage Tipped") - pl.col("Overtime"))
-            )
-            + (BIN_TIPPING_PRICE * OvertimePerc.overtime_200 * pl.col("Overtime"))
+async def bin_tipping() -> pl.LazyFrame:
+    """Bin Tipping dataset"""
+    return (
+        await load_gsheet_data(sheet_id=SHORE_HANDLING_ID, sheet_name=bin_tipping_sheet)
+        .filter(pl.col("Tonnage Tipped") > 0)
+        .with_columns(day_name=add_day_name_col, Service=pl.lit("IPHS Bin Tipping"))
+        .select(
+            pl.col("day_name").cast(dtype=pl.Enum(DAY_NAMES)),
+            pl.col("Date"),
+            pl.col("Customer"),
+            pl.col("movement_type").cast(dtype=pl.Enum(MOVEMENT_TYPE)),
+            pl.col("Service"),
+            pl.col("IOT Scows (Tipping)").alias("number_of_scows_tipped"),
+            pl.col("Tonnage Tipped").cast(pl.Float64),
+            pl.col("Overtime"),
         )
-        .otherwise(
-            (
-                BIN_TIPPING_PRICE
-                * OvertimePerc.normal_hour
-                * (pl.col("Tonnage Tipped") - pl.col("Overtime"))
+        .with_columns(
+            price=await price_list().get("bin_tipping_price"),
+            total_price=pl.when(pl.col("day_name").is_in(SPECIAL_DAYS))
+            .then(
+                (
+                    await price_list().get("bin_tipping_price")
+                    * OvertimePerc.overtime_150
+                    * (pl.col("Tonnage Tipped") - pl.col("Overtime"))
+                )
+                + (
+                    await price_list().get("bin_tipping_price")
+                    * OvertimePerc.overtime_200
+                    * pl.col("Overtime")
+                )
             )
-            + (BIN_TIPPING_PRICE * OvertimePerc.overtime_150 * pl.col("Overtime"))
-        ),
+            .otherwise(
+                (
+                    await price_list().get("bin_tipping_price")
+                    * OvertimePerc.normal_hour
+                    * (pl.col("Tonnage Tipped") - pl.col("Overtime"))
+                )
+                + (
+                    await price_list().get("bin_tipping_price")
+                    * OvertimePerc.overtime_150
+                    * pl.col("Overtime")
+                )
+            ),
+        )
     )
-)

@@ -1,7 +1,8 @@
 """Main module"""
+import asyncio
 import pretty_errors
 
-import asyncio
+
 
 from app.app import App
 

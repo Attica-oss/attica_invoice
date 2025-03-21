@@ -33,7 +33,7 @@ async def miscellaneous()->pl.LazyFrame:
     pl.col("overtime_tonnage").str.replace("", "0").cast(pl.Float64),# overtime_tonnage
 ))
 
-async def cross_stuffing()->pl.LazyFrame:
+async def _cross_stuffing()->pl.LazyFrame:
     """Cross stuffing sheet"""
     return await (load_gsheet_data(MISC_SHEET_ID, CROSS_STUFFING_SHEET)
     .filter(pl.col("day").str.replace("", "x").ne("x"))

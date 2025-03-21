@@ -37,17 +37,17 @@ miscellaneous_dataframes:dict[str,pl.LazyFrame] = {
 }
 
 netlist_dataframes :dict[str,pl.LazyFrame]={
-    "net_list":netlist.netList,
+    "net_list":netlist.net_list,
     "iot_container_stuffing":netlist.iot_stuffing,
     "oss_stuffing":netlist.oss
 }
 
 operations_dataframes: dict[str,pl.LazyFrame]={
     "ops":operations.ops,
-    "extramen":operations.extramen,
+    # "extramen":operations.extramen,
     "hatch_to_hatch":operations.hatch_to_hatch,
     # "additional_overtime":operations.additional,
-    "tare_calibration":operations.tare
+    # "tare_calibration":operations.tare
 }
 
 shore_handling_dataframes:dict[str,pl.LazyFrame]={
@@ -66,14 +66,3 @@ transport_dataframes:dict[str,pl.LazyFrame]={
     "scow_transfer":transport.scow_transfer,
     "forklift":transport.forklift
 }
-
-# all_dataframes:dict[str,pl.LazyFrame] = {
-#     **emr_dataframes,
-#     **netlist_dataframes,
-#     **operations_dataframes,
-#     **transport_dataframes,
-#     **miscellaneous_dataframes,
-#     **stuffing_dataframes,
-#     **bin_dispatch_dataframes,
-#     **shore_handling_dataframes
-# }

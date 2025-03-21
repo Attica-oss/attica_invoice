@@ -38,6 +38,7 @@ OPS_SHEET_ID:str ="1PvTkl6DYZdhtaiNshz0qwtSPxC8S1OOeu905NmhFKNs"
 
 net_list_sheet = "UnloadingSummary"
 raw_sheet = "RawData"
+WELL_TO_WELL:str = "WelltoWell"
 
 # Master Validation / Pricing
 MASTER_ID:str = "1ai-zQMtbPUx0LeQeLmXcpPgKvL5cyvwDfSJqRzxfUQg"

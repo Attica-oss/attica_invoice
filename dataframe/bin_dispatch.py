@@ -1,11 +1,11 @@
 "Bin dispatch to and from IOT"
 from datetime import date
 import polars as pl
-from data.price import ALL_PRICE, OVERTIME_150, OVERTIME_200, NORMAL_HOUR
+from data.price import get_price, OVERTIME_150, OVERTIME_200, NORMAL_HOUR
 
 # from dataframe import shore_handling
 from dataframe.transport import scow_transfer
-from data_source.make_dataset import load_gsheet_data_async
+from data_source.make_dataset import load_gsheet_data
 from data_source.sheet_ids import (
     MISC_SHEET_ID,
     ALL_CCCS_DATA_SHEET,
@@ -31,14 +31,30 @@ ph_list: list[date] = public_holiday()
 
 
 # Price
-SCOW_TRANSFER = ALL_PRICE.filter(
-    pl.col("Service").eq(pl.lit("CCCS Movement in/out"))
-)
+
+async def price_list() -> dict[str, float | pl.LazyFrame]:
+    """price dictionary"""
+
+    transfer_price = await get_price(["CCCS Movement in/out"])
+
+    return {
+
+        "scow_transfer": transfer_price,
+    }
+
+
+
 
 
 # Full Scows
-bin_dispatch: pl.LazyFrame = (
-    load_gsheet_data_async(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET)
+
+
+async def bin_dispatch()->pl.LazyFrame:
+
+    """Bin Dispatch"""
+
+    return await (
+    load_gsheet_data(MISC_SHEET_ID, ALL_CCCS_DATA_SHEET)
     .filter(
         pl.col("operation_type").is_in(BIN_DISPATCH_SERVICE),
         pl.col("date").dt.year() >= CURRENT_YEAR - 1,
@@ -55,8 +71,12 @@ bin_dispatch: pl.LazyFrame = (
     .with_columns(normal_tonnage=(pl.col("total_tonnage") - pl.col("overtime_tonnage")))
 )
 
-full_scows: pl.LazyFrame = (
-    scow_transfer.filter(pl.col("status") == Status.full)
+
+async def full_scows()->pl.LazyFrame:
+    """Full Scow Transfer"""
+
+    return await (
+    await scow_transfer().filter(pl.col("status") == Status.full)
     .with_columns(
         movement_type=pl.when(pl.col("movement_type") == MovementType.delivery)
         .then(pl.lit(MovementType.out))
@@ -114,7 +134,7 @@ full_scows: pl.LazyFrame = (
     )
     .sort(by=pl.col("date"))
     .join_asof(
-        SCOW_TRANSFER.lazy(),
+        await price_list().get("scow_transfer"),
         by=None,
         left_on="date",
         right_on="Date",
@@ -150,8 +170,11 @@ full_scows: pl.LazyFrame = (
 )
 
 # Empty Scows
-empty_scows: pl.LazyFrame = (
-    scow_transfer.filter(pl.col("status") == Status.empty)
+
+async def empty_scows()->pl.LazyFrame:
+    """Empty scow transfer"""
+    return await (
+    await scow_transfer().filter(pl.col("status").eq(Status.empty))
     .with_columns(
         movement_type=pl.when(pl.col("movement_type") == MovementType.delivery)
         .then(pl.lit(MovementType.out))
@@ -185,7 +208,7 @@ empty_scows: pl.LazyFrame = (
     )
     .sort(by="date")
     .join_asof(
-        SCOW_TRANSFER.lazy(),
+        await price_list().get("scow_transfer"),
         by=None,
         left_on="date",
         right_on="Date",
