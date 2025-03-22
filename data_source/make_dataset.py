@@ -1,7 +1,4 @@
-# 
-
 """Make the dataset (LazyFrame) from a google sheet id and sheet names with async support"""
-
 import logging
 from io import StringIO
 import aiohttp
@@ -17,15 +14,13 @@ logger = logging.getLogger(__name__)
 # Cache for loaded datasets to avoid redundant requests
 data_cache: Dict[str, pl.LazyFrame] = {}
 
-@lru_cache()
+# Remove the lru_cache decorator - it doesn't work well with async functions
 async def load_gsheet_data(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
     """
     Loads a Google Sheet as a Polars LazyFrame asynchronously.
-
     Args:
         sheet_id (str): The ID of the Google Sheet.
         sheet_name (str): The name of the sheet to load.
-
     Returns:
         pl.LazyFrame: A LazyFrame containing the sheet data, or empty LazyFrame if an error occurred.
     """
@@ -34,12 +29,12 @@ async def load_gsheet_data(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
     
     # Check if data is already in cache
     if cache_key in data_cache:
-        logger.info("Using cached data for %s",sheet_name)
+        logger.info("Using cached data for %s", sheet_name)
         return data_cache[cache_key]
-    
+        
     link: str = "https://docs.google.com/spreadsheets"
     url: str = f"{link}/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-
+    
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(url, timeout=15) as response:
@@ -50,33 +45,32 @@ async def load_gsheet_data(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
                 # Cache the result for future use
                 data_cache[cache_key] = result
                 return result
-
+                
     except aiohttp.ClientError as e:
         logger.error(
             "An error occurred while trying to access the Google Sheet: %s", e
         )
         return pl.LazyFrame()
+        
     except pl.exceptions.ComputeError as e:
         logger.error("An error occurred while parsing the CSV data: %s", e)
         return pl.LazyFrame()
+        
     except Exception as e:
-        logger.error("Unexpected error in load_gsheet_data_async: %s", e)
+        logger.error("Unexpected error in load_gsheet_data: %s", e)
         return pl.LazyFrame()
 
 # Batch load multiple sheets concurrently
 async def load_multiple_sheets_async(sheets_info: list[tuple[str, str]]) -> dict[str, pl.LazyFrame]:
     """
     Load multiple sheets concurrently.
-    
     Args:
         sheets_info: List of tuples containing (sheet_id, sheet_name)
-        
     Returns:
         Dictionary mapping sheet names to their LazyFrames
     """
     tasks = [load_gsheet_data(sheet_id, sheet_name) for sheet_id, sheet_name in sheets_info]
     results = await asyncio.gather(*tasks)
-    
     return {sheet_name: result for (_, sheet_name), result in zip(sheets_info, results)}
 
 # Async wrapper for synchronous implementations (for backward compatibility)

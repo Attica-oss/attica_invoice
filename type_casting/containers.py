@@ -7,28 +7,30 @@ from data_source.sheet_ids import TRANSPORT_SHEET_ID, transfer_sheet
 
 async def containers() -> pl.LazyFrame:
     """LazyFrame of containers"""
-
-    container_lists = await load_gsheet_data(TRANSPORT_SHEET_ID, transfer_sheet).filter(
-        pl.col("movement_type") != "Delivery"
-    )
+    df = await load_gsheet_data(TRANSPORT_SHEET_ID, transfer_sheet)
+    container_lists = df.filter(pl.col("movement_type") != "Delivery")
     return container_lists
 
 
 async def containers_enum() -> pl.Enum:
     """All container numbers"""
-    return await pl.Enum(
-        containers()
-        .select(pl.col("container_number").unique())
+    container_list = await containers()
+
+    return pl.Enum(
+        container_list.select(pl.col("container_number").unique())
         .collect()
         .to_series()
         .to_list()
     )
 
 
-async def iot_soc_enum()-> pl.Enum:
+async def iot_soc_enum() -> pl.Enum:
     """IOT SOC containers"""
-    return await pl.Enum(
-        containers()
+
+    container_list = await containers()
+
+    return pl.Enum(
+        container_list
         .filter(pl.col("line").eq(pl.lit("IOT")))
         .select(pl.col("container_number").unique())
         .collect()

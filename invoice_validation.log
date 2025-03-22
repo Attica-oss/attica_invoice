@@ -2900,3 +2900,139 @@
 2025-03-21 21:40:25,859 - INFO - Save completed
 2025-03-21 21:40:25,859 - INFO - Successfully saved: 
 2025-03-21 21:40:25,859 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'with_columns', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:45:58,508 - INFO - Exiting application
+2025-03-21 21:46:02,070 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:46:02,071 - INFO - Starting application
+2025-03-21 21:46:02,071 - INFO - Clearing screen
+2025-03-21 21:46:03,729 - INFO - Selected: Save files
+2025-03-21 21:46:03,729 - INFO - Clearing screen
+2025-03-21 21:46:07,104 - INFO - Initiating save operation for emr
+2025-03-21 21:46:07,105 - INFO - Processing dataframe category: emr
+2025-03-21 21:46:07,105 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-03-21 21:46:07,106 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:46:07,106 - INFO - Calling function for shifting
+2025-03-21 21:46:07,107 - INFO - Awaiting result for shifting
+2025-03-21 21:46:07,107 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:46:07,108 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:46:07,108 - INFO - Calling function for washing
+2025-03-21 21:46:07,108 - INFO - Awaiting result for washing
+2025-03-21 21:46:07,108 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:46:07,109 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:46:07,109 - INFO - Calling function for pti
+2025-03-21 21:46:07,109 - INFO - Awaiting result for pti
+2025-03-21 21:46:07,110 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:46:07,110 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:46:07,111 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:46:07,111 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:46:07,111 - INFO - Save completed
+2025-03-21 21:46:07,111 - INFO - Successfully saved: 
+2025-03-21 21:46:07,112 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'with_columns', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:49:10,988 - INFO - Exiting application
+2025-03-21 21:49:14,471 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:49:14,471 - INFO - Starting application
+2025-03-21 21:49:14,471 - INFO - Clearing screen
+2025-03-21 21:49:17,256 - INFO - Selected: Save files
+2025-03-21 21:49:17,256 - INFO - Clearing screen
+2025-03-21 21:49:21,128 - INFO - Initiating save operation for emr
+2025-03-21 21:49:21,128 - INFO - Processing dataframe category: emr
+2025-03-21 21:49:21,129 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-03-21 21:49:21,129 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:49:21,130 - INFO - Calling function for shifting
+2025-03-21 21:49:21,130 - INFO - Awaiting result for shifting
+2025-03-21 21:49:21,130 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:49:21,130 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:49:21,131 - INFO - Calling function for washing
+2025-03-21 21:49:21,131 - INFO - Awaiting result for washing
+2025-03-21 21:49:21,131 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:49:21,131 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:49:21,132 - INFO - Calling function for pti
+2025-03-21 21:49:21,132 - INFO - Awaiting result for pti
+2025-03-21 21:49:21,132 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:49:21,132 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:49:21,133 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:49:21,133 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:49:21,133 - INFO - Save completed
+2025-03-21 21:49:21,133 - INFO - Successfully saved: 
+2025-03-21 21:49:21,134 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'with_columns', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:52:22,643 - INFO - Exiting application
+2025-03-21 21:52:25,198 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:52:25,198 - INFO - Starting application
+2025-03-21 21:52:25,198 - INFO - Clearing screen
+2025-03-21 21:52:26,798 - INFO - Selected: Save files
+2025-03-21 21:52:26,799 - INFO - Clearing screen
+2025-03-21 21:52:30,502 - INFO - Initiating save operation for emr
+2025-03-21 21:52:30,503 - INFO - Processing dataframe category: emr
+2025-03-21 21:52:30,503 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-03-21 21:52:30,504 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:52:30,504 - INFO - Calling function for shifting
+2025-03-21 21:52:30,505 - INFO - Awaiting result for shifting
+2025-03-21 21:52:30,505 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'select'
+2025-03-21 21:52:30,506 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:52:30,506 - INFO - Calling function for washing
+2025-03-21 21:52:30,506 - INFO - Awaiting result for washing
+2025-03-21 21:52:30,507 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:52:30,507 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:52:30,507 - INFO - Calling function for pti
+2025-03-21 21:52:30,507 - INFO - Awaiting result for pti
+2025-03-21 21:52:30,508 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:52:30,508 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'select'
+2025-03-21 21:52:30,509 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:52:30,509 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:52:30,509 - INFO - Save completed
+2025-03-21 21:52:30,509 - INFO - Successfully saved: 
+2025-03-21 21:52:30,510 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'select', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:53:47,062 - INFO - Exiting application
+2025-03-21 21:53:49,621 - DEBUG - Using selector: EpollSelector
+2025-03-21 21:53:49,621 - INFO - Starting application
+2025-03-21 21:53:49,621 - INFO - Clearing screen
+2025-03-21 21:53:51,442 - INFO - Selected: Save files
+2025-03-21 21:53:51,442 - INFO - Clearing screen
+2025-03-21 21:53:55,149 - INFO - Initiating save operation for emr
+2025-03-21 21:53:55,149 - INFO - Processing dataframe category: emr
+2025-03-21 21:53:55,150 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-03-21 21:53:55,150 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 21:53:55,151 - INFO - Calling function for shifting
+2025-03-21 21:53:55,151 - INFO - Awaiting result for shifting
+2025-03-21 21:53:55,151 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'select'
+2025-03-21 21:53:55,152 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 21:53:55,152 - INFO - Calling function for washing
+2025-03-21 21:53:55,152 - INFO - Awaiting result for washing
+2025-03-21 21:53:55,153 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:53:55,153 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 21:53:55,153 - INFO - Calling function for pti
+2025-03-21 21:53:55,153 - INFO - Awaiting result for pti
+2025-03-21 21:53:55,154 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:53:55,154 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'select'
+2025-03-21 21:53:55,154 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 21:53:55,154 - ERROR - Error saving pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 21:53:55,155 - INFO - Save completed
+2025-03-21 21:53:55,155 - INFO - Successfully saved: 
+2025-03-21 21:53:55,155 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'select', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'with_columns'
+2025-03-21 22:05:42,241 - INFO - Exiting application
+2025-03-21 22:05:51,318 - DEBUG - Using selector: EpollSelector
+2025-03-21 22:05:51,318 - INFO - Starting application
+2025-03-21 22:05:51,318 - INFO - Clearing screen
+2025-03-21 22:05:53,221 - INFO - Selected: Save files
+2025-03-21 22:05:53,221 - INFO - Clearing screen
+2025-03-21 22:05:56,625 - INFO - Initiating save operation for emr
+2025-03-21 22:05:56,626 - INFO - Processing dataframe category: emr
+2025-03-21 22:05:56,626 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-03-21 22:05:56,627 - INFO - Processing dataframe shifting of type <class 'function'>
+2025-03-21 22:05:56,628 - INFO - Calling function for shifting
+2025-03-21 22:05:56,628 - INFO - Awaiting result for shifting
+2025-03-21 22:05:56,628 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'select'
+2025-03-21 22:05:56,628 - INFO - Processing dataframe washing of type <class 'function'>
+2025-03-21 22:05:56,629 - INFO - Calling function for washing
+2025-03-21 22:05:56,629 - INFO - Awaiting result for washing
+2025-03-21 22:05:56,632 - INFO - Processing dataframe pti of type <class 'function'>
+2025-03-21 22:05:56,632 - INFO - Calling function for pti
+2025-03-21 22:05:56,633 - INFO - Awaiting result for pti
+2025-03-21 22:05:58,667 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'select'
+2025-03-21 22:05:58,882 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'select'
+2025-03-21 22:05:58,883 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'select'
+2025-03-21 22:05:58,883 - ERROR - Error saving washing: 'coroutine' object has no attribute 'select'
+2025-03-21 22:05:58,883 - ERROR - Error saving pti: 'coroutine' object has no attribute 'select'
+2025-03-21 22:05:58,883 - INFO - Save completed
+2025-03-21 22:05:58,883 - INFO - Successfully saved: 
+2025-03-21 22:05:58,883 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'select', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'select'
+2025-03-21 22:17:11,055 - INFO - Exiting application

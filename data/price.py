@@ -20,9 +20,10 @@ PRICE_SHEET_NAME: str = price_sheet
 # Function to load unique services
 async def __load_unique_services(sheet_id: str, sheet_name: str):
     """Loads unique service name from a specific gsheet"""
+
+    df = await load_gsheet_data(sheet_id, sheet_name)
     return (
-        await load_gsheet_data(sheet_id, sheet_name)
-        .select(pl.col("Service").unique())
+        df.select(pl.col("Service").unique())
         .collect()
         .to_series()
         .to_list()
@@ -41,16 +42,19 @@ async def services()->list:
 # Function to get the price based on service class and optional service
 async def get_price(service: Union[list[str], None] = None) -> pl.LazyFrame:
     """Gets the price"""
+
+    price_df = await load_gsheet_data(VALIDATION_ID, PRICE_SHEET_NAME)
+    service_df = await services()
+
     df = (
-        await load_gsheet_data(VALIDATION_ID, PRICE_SHEET_NAME)
-        .with_columns(
+        price_df.with_columns(
             pl.col("StartingDate").alias("Date"),
             pl.col("EndingDate")
             .str.to_date(format="%d/%m/%Y", strict=False)
             .alias("end"),
         )
         .filter(
-            pl.col("Service").is_in(services())
+            pl.col("Service").is_in(service_df)
             if service is None
             else pl.col("Service").is_in(service)
         )
@@ -96,7 +100,7 @@ list_of_services = [
     "Container Stuffing - Dry",  # OSS_PRICE
 ]
 
-ALL_PRICE = get_price(list_of_services)
+# ALL_PRICE = get_price(list_of_services)
 
 DARDANEL_DISCOUNT: float = 4.0  # Need a better way to represent this
 
