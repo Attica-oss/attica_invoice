@@ -3036,3 +3036,189 @@
 2025-03-21 22:05:58,883 - INFO - Successfully saved: 
 2025-03-21 22:05:58,883 - ERROR - Failed to save: shifting: 'coroutine' object has no attribute 'select', washing: 'coroutine' object has no attribute 'select', pti: 'coroutine' object has no attribute 'select'
 2025-03-21 22:17:11,055 - INFO - Exiting application
+2025-03-22 08:05:49,833 - DEBUG - Using selector: EpollSelector
+2025-03-22 08:05:49,833 - INFO - Starting application
+2025-03-22 08:05:49,833 - INFO - Clearing screen
+2025-03-22 08:05:52,001 - INFO - Selected: Save files
+2025-03-22 08:05:52,001 - INFO - Clearing screen
+2025-03-22 08:05:55,915 - INFO - Initiating save operation for all
+2025-03-22 08:05:55,915 - INFO - Processing all dataframe categories concurrently
+2025-03-22 08:05:55,916 - INFO - Queueing category: emr
+2025-03-22 08:05:55,916 - INFO - Queueing category: operations
+2025-03-22 08:05:55,916 - INFO - Queueing category: netlist
+2025-03-22 08:05:55,916 - INFO - Queueing category: bin_dispatch
+2025-03-22 08:05:55,917 - INFO - Queueing category: shore_handling
+2025-03-22 08:05:55,917 - INFO - Queueing category: stuffing
+2025-03-22 08:05:55,917 - INFO - Queueing category: transport
+2025-03-22 08:05:55,917 - INFO - Queueing category: miscellaneous
+2025-03-22 08:05:55,918 - INFO - Processing dataframe shifting of type <class 'coroutine'>
+2025-03-22 08:05:55,919 - INFO - Successfully processed dataframe shifting
+2025-03-22 08:05:55,920 - INFO - Writing to output/csv/shifting.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,920 - INFO - Processing dataframe washing of type <class 'coroutine'>
+2025-03-22 08:05:55,921 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,921 - INFO - Successfully processed dataframe washing
+2025-03-22 08:05:55,923 - INFO - Writing to output/csv/washing.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,924 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,925 - INFO - Processing dataframe pti of type <class 'coroutine'>
+2025-03-22 08:05:55,925 - INFO - Successfully processed dataframe pti
+2025-03-22 08:05:55,926 - INFO - Writing to output/csv/pti.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,927 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,927 - INFO - Processing dataframe ops of type <class 'coroutine'>
+2025-03-22 08:05:55,928 - INFO - Successfully processed dataframe ops
+2025-03-22 08:05:55,929 - INFO - Processing dataframe hatch_to_hatch of type <class 'coroutine'>
+2025-03-22 08:05:55,929 - INFO - Writing to output/csv/ops.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,929 - INFO - Successfully processed dataframe hatch_to_hatch
+2025-03-22 08:05:55,930 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,931 - INFO - Processing dataframe net_list of type <class 'coroutine'>
+2025-03-22 08:05:55,931 - INFO - Writing to output/csv/hatch_to_hatch.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,932 - INFO - Successfully processed dataframe net_list
+2025-03-22 08:05:55,933 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,933 - INFO - Processing dataframe iot_container_stuffing of type <class 'coroutine'>
+2025-03-22 08:05:55,934 - INFO - Writing to output/csv/net_list.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,935 - INFO - Successfully processed dataframe iot_container_stuffing
+2025-03-22 08:05:55,936 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,937 - INFO - Writing to output/csv/iot_container_stuffing.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,937 - INFO - Processing dataframe oss_stuffing of type <class 'coroutine'>
+2025-03-22 08:05:55,937 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,938 - INFO - Successfully processed dataframe oss_stuffing
+2025-03-22 08:05:55,939 - INFO - Writing to output/csv/oss_stuffing.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,940 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,941 - INFO - Processing dataframe full_scows_transfer of type <class 'coroutine'>
+2025-03-22 08:05:55,941 - INFO - Successfully processed dataframe full_scows_transfer
+2025-03-22 08:05:55,942 - INFO - Processing dataframe empty_scows_transfer of type <class 'coroutine'>
+2025-03-22 08:05:55,942 - INFO - Writing to output/csv/full_scows_transfer.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,942 - INFO - Successfully processed dataframe empty_scows_transfer
+2025-03-22 08:05:55,943 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,944 - INFO - Writing to output/csv/empty_scows_transfer.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,946 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,946 - ERROR - Error processing dataframe shifting: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,947 - ERROR - Error processing dataframe washing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,947 - ERROR - Error processing dataframe pti: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,947 - ERROR - Error processing dataframe ops: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,947 - ERROR - Error processing dataframe hatch_to_hatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,947 - ERROR - Error processing dataframe net_list: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,948 - ERROR - Error processing dataframe iot_container_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,948 - ERROR - Error processing dataframe oss_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,948 - ERROR - Error processing dataframe full_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,948 - INFO - Processing dataframe salt of type <class 'coroutine'>
+2025-03-22 08:05:55,948 - INFO - Successfully processed dataframe salt
+2025-03-22 08:05:55,949 - INFO - Processing dataframe bin_tipping of type <class 'coroutine'>
+2025-03-22 08:05:55,949 - INFO - Writing to output/csv/salt.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,949 - INFO - Successfully processed dataframe bin_tipping
+2025-03-22 08:05:55,949 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,950 - INFO - Writing to output/csv/bin_tipping.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,951 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,950 - INFO - Processing dataframe pallet_liner of type <class 'coroutine'>
+2025-03-22 08:05:55,951 - INFO - Successfully processed dataframe pallet_liner
+2025-03-22 08:05:55,951 - INFO - Processing dataframe container_plugin of type <class 'coroutine'>
+2025-03-22 08:05:55,951 - INFO - Successfully processed dataframe container_plugin
+2025-03-22 08:05:55,951 - INFO - Processing dataframe shore_crane of type <class 'coroutine'>
+2025-03-22 08:05:55,951 - INFO - Successfully processed dataframe shore_crane
+2025-03-22 08:05:55,952 - INFO - Processing dataframe transfer of type <class 'coroutine'>
+2025-03-22 08:05:55,952 - INFO - Successfully processed dataframe transfer
+2025-03-22 08:05:55,952 - INFO - Writing to output/csv/pallet_liner.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,952 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,952 - INFO - Writing to output/csv/container_plugin.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,952 - INFO - Writing to output/csv/shore_crane.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,952 - INFO - Writing to output/csv/transfer.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,952 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,952 - INFO - Processing dataframe scow_transfer of type <class 'coroutine'>
+2025-03-22 08:05:55,953 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,953 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,953 - INFO - Successfully processed dataframe scow_transfer
+2025-03-22 08:05:55,953 - INFO - Processing dataframe forklift of type <class 'coroutine'>
+2025-03-22 08:05:55,953 - INFO - Writing to output/csv/scow_transfer.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,954 - INFO - Successfully processed dataframe forklift
+2025-03-22 08:05:55,954 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,954 - INFO - Processing dataframe static_loader of type <class 'coroutine'>
+2025-03-22 08:05:55,954 - INFO - Successfully processed dataframe static_loader
+2025-03-22 08:05:55,954 - INFO - Writing to output/csv/forklift.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,954 - ERROR - Error processing dataframe empty_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,955 - INFO - Processing dataframe dispatch_to_cargo of type <class 'coroutine'>
+2025-03-22 08:05:55,954 - INFO - Writing to output/csv/static_loader.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,955 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,954 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,955 - INFO - Successfully processed dataframe dispatch_to_cargo
+2025-03-22 08:05:55,955 - INFO - Writing to output/csv/dispatch_to_cargo.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,955 - ERROR - Error processing dataframe salt: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,955 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - ERROR - Error processing dataframe bin_tipping: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - ERROR - Error processing dataframe pallet_liner: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - ERROR - Error processing dataframe container_plugin: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - ERROR - Error processing dataframe transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - ERROR - Error processing dataframe shore_crane: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - ERROR - Error processing dataframe scow_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,956 - INFO - Processing dataframe truck_to_cccs of type <class 'coroutine'>
+2025-03-22 08:05:55,957 - INFO - Successfully processed dataframe truck_to_cccs
+2025-03-22 08:05:55,957 - INFO - Processing dataframe cross_stuffing of type <class 'coroutine'>
+2025-03-22 08:05:55,957 - INFO - Successfully processed dataframe cross_stuffing
+2025-03-22 08:05:55,957 - INFO - Processing dataframe cccs_stuffing of type <class 'coroutine'>
+2025-03-22 08:05:55,957 - INFO - Successfully processed dataframe cccs_stuffing
+2025-03-22 08:05:55,957 - INFO - Processing dataframe bycatch of type <class 'coroutine'>
+2025-03-22 08:05:55,957 - INFO - Successfully processed dataframe bycatch
+2025-03-22 08:05:55,957 - INFO - Writing to output/csv/truck_to_cccs.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,957 - INFO - Writing to output/csv/cross_stuffing.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,957 - INFO - Writing to output/csv/cccs_stuffing.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,957 - ERROR - Error processing dataframe static_loader: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,958 - INFO - Writing to output/csv/bycatch.csv, df type: <class 'coroutine'>
+2025-03-22 08:05:55,958 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,958 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,958 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,958 - ERROR - Error processing dataframe forklift: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,959 - ERROR - Error processing dataframe dispatch_to_cargo: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error processing dataframe bycatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error processing dataframe cross_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error processing dataframe cccs_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,958 - ERROR - Error in write_df_to_csv: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error processing dataframe truck_to_cccs: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error saving shifting: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error saving washing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,960 - ERROR - Error saving pti: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving ops: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving hatch_to_hatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving net_list: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving iot_container_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving oss_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving full_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving empty_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving salt: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving bin_tipping: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,961 - ERROR - Error saving pallet_liner: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving container_plugin: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving shore_crane: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving scow_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving forklift: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving static_loader: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving dispatch_to_cargo: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving truck_to_cccs: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving cross_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving cccs_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR - Error saving bycatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - INFO - Save completed
+2025-03-22 08:05:55,962 - INFO - Successfully saved: 0 files
+2025-03-22 08:05:55,962 - ERROR - Failed to save: 24 files
+2025-03-22 08:05:55,962 - ERROR -   - shifting: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR -   - washing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR -   - pti: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,962 - ERROR -   - ops: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - hatch_to_hatch: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - net_list: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - iot_container_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - oss_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - full_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - empty_scows_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - salt: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - bin_tipping: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - pallet_liner: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - container_plugin: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - shore_crane: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - scow_transfer: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - forklift: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - static_loader: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - dispatch_to_cargo: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - truck_to_cccs: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - cross_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - cccs_stuffing: 'coroutine' object has no attribute 'write_csv'
+2025-03-22 08:05:55,963 - ERROR -   - bycatch: 'coroutine' object has no attribute 'write_csv'
