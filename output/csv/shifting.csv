@@ -1,0 +1,436 @@
+day_name,date,container_number,invoice_to,service_remarks,price
+Sat,2024-01-06,SUDU8165310,INVALID,Shifted from yard to CCCS for unstuffing operation,0.0
+Sat,2024-01-06,SUDU8164041,INVALID,Shifted from yard to CCCS for unstuffing operation,0.0
+Sat,2024-01-06,MNBU4051951,INVALID,Shifted from yard to CCCS for unstuffing operation,0.0
+Sat,2024-01-06,MNBU3591868,INVALID,Shifted from yard to CCCS for unstuffing operation,0.0
+Mon,2024-01-15,MNBU0365276,IOT,Shifted to access unit TTNU8204288 for transfer,35.0
+Mon,2024-01-15,MNBU0438053,IOT,Shifted to access unit TTNU8204288 for transfer,35.0
+Mon,2024-01-15,TCLU1228570,IOT,Shifted to access unit TCLU1217149 & TTNU8192612 for transfer,35.0
+Mon,2024-01-15,TRIU8011175,IOT,Shifted to access unit TCLU1217149 & TTNU8192612 for transfer,35.0
+Mon,2024-01-15,GESU9511496,IOT,Shifted to access unit TRIU8881637 for transfer,35.0
+Mon,2024-01-15,TCLU1148351,IOT,Shifted to access unit TRIU8881637 for transfer,35.0
+Mon,2024-01-15,TTNU8204420,IOT,Shifted to access unit TTNU8193049 for transfer,35.0
+Mon,2024-01-15,TTNU8204204,IOT,Shifted to access unit TTNU8193049 for transfer,35.0
+Mon,2024-01-15,TTNU8031834,IOT,Shifted to access unit TTNU8193049 for transfer,35.0
+Mon,2024-01-15,TTNU8203430,IOT,Shifted to access unit TRIU8897567 for transfer,35.0
+Mon,2024-01-15,TTNU8203975,IOT,Shifted to access unit TRIU8897567 for transfer,35.0
+Mon,2024-01-15,TTNU8202515,IOT,Shifted to access unit TRIU8897567 for transfer,35.0
+Sat,2024-01-20,CMAU0666352,INVALID,Shifted from dock to HD trailers by reach stacker,0.0
+Sat,2024-01-20,CMAU2239658,INVALID,Shifted from dock to HD trailers by reach stacker,0.0
+Sat,2024-01-20,APZU4890853,INVALID,Shifted from dock to HD trailers by reach stacker,0.0
+Sat,2024-01-20,APZU3226222,INVALID,Shifted from dock to HD trailers by reach stacker,0.0
+Mon,2024-01-22,MNBU3054684,INVALID,"Shifted from yard to dock for collection, then back to yard for re-plug-in as ACL side loader left",0.0
+Wed,2024-01-24,TTNU8757112,CCCS,Shifted from CCCS yard to IPHS yard for plugin,35.0
+Wed,2024-01-24,TRIU6611150,CCCS,Shifted from CCCS yard to IPHS yard for plugin - overtime,35.0
+Thu,2024-01-25,TRDU8737426,CCCS,Shifted at CCCS to reposition for loading,35.0
+Thu,2024-01-25,TTNU8757112,CCCS,Shifted from IPHS Yard to CCCS Yard for unstuffing,35.0
+Thu,2024-01-25,TRIU6824601,CCCS,Shifted from CCCS yard to IPHS yard for plugin,35.0
+Thu,2024-01-25,TRDU8737426,CCCS,Shifted from CCCS yard to IPHS yard for plugin - overtime,35.0
+Fri,2024-01-26,TRIU6611150,CCCS,Shifted from IPHS Yard to CCCS Yard for transfer,35.0
+Fri,2024-01-26,TRDU8737426,CCCS,Shifted from IPHS Yard to CCCS Yard for transfer,35.0
+Sat,2024-01-27,TRIU6824601,CCCS,Shifted from IPHS Yard to CCCS Yard for unstuffing - Frozen Chicken,35.0
+Mon,2024-01-29,TTNU8204478,IOT,Shifted to access unit TTNU8202515 & TTNU8203975 for transfer,35.0
+Mon,2024-01-29,TRIU8897567,IOT,Shifted to access unit TTNU8202515 & TTNU8203975 for transfer,35.0
+Mon,2024-01-29,TRIU8898310,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,CGMU5528987,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,TCLU1265342,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,TTNU8057021,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,MMAU1173469,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,MNBU3656948,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,MMAU1188052,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Mon,2024-01-29,TRIU8030806,IOT,Shifted to access unit TTNU8203342 for transfer,35.0
+Wed,2024-02-07,MNBU3323720,IOT,Shifted to access unit TRIU8897567 for unstuffing at CCCS,35.0
+Wed,2024-02-07,TRIU8897567,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TRIU8898310,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TCLU1265804,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TTNU8056832,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TTNU8203105,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TTNU8203358,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TTNU8204478,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-07,TTNU8204903,INVALID,Shifted from IPHS Yard to dock for unstuffing ops at CCCS,0.0
+Wed,2024-02-21,TCLU1265804,INVALID,Shifted to access unit TTNU8034880 for stuffing for IZARO,0.0
+Wed,2024-02-21,TTNU8034849,INVALID,Shifted to access unit TTNU8034880 for stuffing for IZARO,0.0
+Thu,2024-02-22,MNBU9052420,INVALID,Shifted to access unit MNBU3072245 for stuffing for IZARO,0.0
+Thu,2024-02-22,MMAU1298825,INVALID,Shifted to access unit MNBU3361320 for stuffing for IZARO,0.0
+Thu,2024-02-22,MNBU0322187,INVALID,Shifted to access unit MNBU9049875 for stuffing for IZARO,0.0
+Thu,2024-02-22,SUDU8202373,INVALID,Shifted to access unit MNBU4164198 for stuffing for IZARO,0.0
+Thu,2024-02-22,MNBU0387362,INVALID,Shifted to access unit MNBU4164198 for stuffing for IZARO,0.0
+Thu,2024-02-22,SUDU8001569,INVALID,Shifted to access unit MNBU4164198 for stuffing for IZARO,0.0
+Thu,2024-02-22,TTNU8034880,IOT,Shifted to access unit TRIU8898265  for transfer,35.0
+Thu,2024-02-22,TRIU8880815,IOT,Shifted to access unit TRIU8897567,35.0
+Thu,2024-02-22,TTNU8204903,IOT,Shifted to access unit TRIU8897568,35.0
+Tue,2024-02-27,TTNU8203960,IOT,Shifted to access unit TCLU1263735 /TCLU1215531 for transfer by HD to IOT,35.0
+Tue,2024-02-27,TTNU8203825,IOT,Shifted to access unit TCLU1263735 /TCLU1215531 for transfer by HD to IOT,35.0
+Wed,2024-02-28,TTNU8194786,IOT,Shifted to access unit TTNU8204903 for transfer,35.0
+Wed,2024-02-28,TTNU8034880,IOT,Shifted to access unit TTNU8204903 for transfer,35.0
+Wed,2024-02-28,TRIU8880815,IOT,Shifted to access unit TTNU8204903 for transfer,35.0
+Thu,2024-02-29,TTNU8034880,IOT,"Shifted to access unit TCLU1228570,TTNU8203527,TTNU8016059 & TTNU8203492 for transfer",35.0
+Thu,2024-02-29,TRIU8880815,IOT,"Shifted to access unit TCLU1228570,TTNU8203527,TTNU8016059 & TTNU8203492 for transfer",35.0
+Thu,2024-02-29,TTNU8194786,IOT,"Shifted to access unit TCLU1228570,TTNU8203527,TTNU8016059 & TTNU8203492 for transfer",35.0
+Fri,2024-03-01,TTNU8203825,IOT,"Shifted to access unit TTNU8202515,TTNU8204478,TRIU8011175 & TTNU8339350",35.0
+Fri,2024-03-01,TTNU8203548,IOT,"Shifted to access unit TTNU8202515,TTNU8204478,TRIU8011175 & TTNU8339350",35.0
+Sat,2024-03-02,MNBU3441976,MAERSKLINE,Shifted  and put on the ground for repairs by HD technician,35.0
+Sat,2024-03-02,SUDU8066220,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,MNBU3814180,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,TTNU8203825,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,TTNU8203548,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,TLLU1046110,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,MNBU0306057,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,DAYU6718420,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sat,2024-03-02,CGMU6943025,MAERSKLINE,Shifted to access unit MNBU3441976 for repairs,35.0
+Sun,2024-03-03,CGMU6912765,INVALID,Shifted from IPHS Yard to dock for additional stuffing,0.0
+Sun,2024-03-03,CGMU6900764,INVALID,Shifted from IPHS Yard to dock for additional stuffing,0.0
+Sun,2024-03-03,CGMU6919923,INVALID,Shifted from IPHS Yard to dock for additional stuffing,0.0
+Wed,2024-03-13,TCLU1342243,CMA CGM,Shifted to access unit SEGU9318310 for repairs,35.0
+Wed,2024-03-13,SEGU9318310,CMA CGM,Grounded for repairs,35.0
+Thu,2024-03-28,TRIU8030072,IOT,Shifted from yard to CCCS for unstuffing operation,35.0
+Fri,2024-04-19,TEMU9178107,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,CGMU9346276,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,APRU6113124,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,TTNU8256363,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,TTNU8875861,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,CXRU1635779,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,CGMU5337872,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,GESU9553613,CMA CGM,Shifted to access unit TTNU8424472 To put on ground so that data logger could be removed from container,35.0
+Fri,2024-04-19,TTNU8424472,CMA CGM,Shifted to put on the ground so that data logger could be removed from the container,35.0
+Sat,2024-05-04,MNBU3501020,INVALID,Shifted to access unit SUDU8199222 partial for completion echebastar-cccs,0.0
+Sat,2024-05-04,MNBU4086834,INVALID,Shifted to access unit SUDU8199222 partial for completion echebastar-cccs,0.0
+Sun,2024-05-05,CGMU4981983,CMA CGM,Positioned for repair,52.5
+Sun,2024-05-05,SEKU9057530,CMA CGM,Positioned for repair,52.5
+Sun,2024-05-05,TRIU8515751,CMA CGM,Positioned for repair,52.5
+Sun,2024-05-05,TTNU8372131,CMA CGM,Positioned for repair,52.5
+Wed,2024-05-08,CGMU9338901,CCCS,Shifting at CCCS Yard,35.0
+Wed,2024-05-08,MMAU1045241,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MMAU1205186,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU0020274,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU0506878,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU3092684,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU3481984,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU3614109,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU3751478,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MNBU4092251,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,MWCU5281170,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,PONU2079653,CCCS,Shifting at CCCS Yard,35.0
+Wed,2024-05-08,SUDU8069661,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Wed,2024-05-08,SUDU8249318,INVALID,"Shifted to access unit MNBU0462975, MNBU3052531, MNBU4233597 & MWCU5215516 which are all malfunction units that was to be transported to land marine limited for evacuation",0.0
+Fri,2024-05-10,MNBU4160103,CCCS,Shifted to exchange position in front of CCCS cold storage area and both switched door positioning for CCCS to be able to access,35.0
+Fri,2024-05-10,MNBU4160103,CCCS,Shifted from CCCS NorthSide to IPHS Yard And Put on plug,35.0
+Fri,2024-05-10,SZLU9872199,CCCS,Shifted to exchange position in front of CCCS cold storage area and both switched door positioning for CCCS to be able to access,35.0
+Sat,2024-05-11,MNBU4160103,CCCS,Shifted from IPHS Yard to CCCS to resume unstuffing.,35.0
+Mon,2024-05-13,MMAU1443081,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU0107667,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU0197070,INVALID,Shifted to access unit MNBU4305064 Partial  that was belonging for echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU0553720,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU3696811,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU3707808,INVALID,Shifted to access unit MNBU4305064 Partial  that was belonging for echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU3744313,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MNBU4250697,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,MWCU5226402,INVALID,Shifted to access unit MMAU1210881 Partial which belongs to echebastar for stuffing At Elai Alai,0.0
+Mon,2024-05-13,SUDU8043380,INVALID,Shifted to access unit MNBU4305064 Partial  that was belonging for echebastar for stuffing At Elai Alai,0.0
+Wed,2024-05-15,CAIU5547836,CMA CGM,Shifted from CCCS Northside to IPHS container yard to be put on ground separately for repairs,35.0
+Wed,2024-05-15,CGMU5391533,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,CGMU5609076,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,CGMU5612995,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,CXRU1591773,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,MNBU3014634,SAPMER,Shifted to access units MNBU3166529 & MNBU9003370 for cross suffing,35.0
+Wed,2024-05-15,MNBU3225616,SAPMER,Shifted to access units MNBU3166529 & MNBU9003370 for cross suffing,35.0
+Wed,2024-05-15,MNBU4157060,SAPMER,Shifted to access units MNBU3166529 & MNBU9003370 for cross suffing,35.0
+Wed,2024-05-15,MNBU4305064,SAPMER,Shifted to access units MNBU3166529 & MNBU9003370 for cross suffing,35.0
+Wed,2024-05-15,MNBU9109803,SAPMER,Shifted to access units MNBU3166529 & MNBU9003370 for cross suffing,35.0
+Wed,2024-05-15,SEKU9257950,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,SUDU5272783,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,SUDU6012292,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,SUDU6033905,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,SUDU6189919,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,SUDU8063093,INVALID,"Shifted to access malfunction unit TTNU8886721, CGMU5419841 & CGMU9321792 for reparation",0.0
+Wed,2024-05-15,TTNU8886721,CMA CGM,Shifted from CCCS Northside to IPHS container yard to be put on ground separately for repairs,35.0
+Wed,2024-05-15,SZLU9132119,CMA CGM,Shifted from CCCS Northside to IPHS container yard to be put on ground separately for repairs,35.0
+Wed,2024-05-15,TEMU9053521,CMA CGM,Shifted from CCCS Northside to IPHS container yard to be put on ground separately for repairs,35.0
+Thu,2024-05-16,CGMU5118920,CCCS,Shifted from CCCS to IPHS Yard for Plugin.,35.0
+Fri,2024-05-17,CGMU5118920,CCCS,Shifted from IPHS Yard to CCCS to resume unstuffing.,35.0
+Fri,2024-05-17,TCLU1225308,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TRIU8011175,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TTNU8202515,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TTNU8203110,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TTNU8203492,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TTNU8204061,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TTNU8204610,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Fri,2024-05-17,TTNU8336350,IOT,"Shifted to acces unit TTNU8016059, TTNU8057021, TTNU8204288, TTNU8204478, TTNU8203614 & TTNU8203358 that was for tranfering out to IOT Fishing port",35.0
+Wed,2024-05-22,TCKU7578310,CCCS,Shifting at CCCS Yard,35.0
+Thu,2024-05-23,UAFU6711128,CCCS,Shifting at CCCS Yard,35.0
+Thu,2024-05-23,TTNU8204610,INVALID,Shifted from yard to CCCS Hopper No 2 for Unstuffing,0.0
+Thu,2024-05-23,TTNU8203110,INVALID,Shifted from yard to CCCS Hopper No 2 for Unstuffing,0.0
+Thu,2024-05-23,TTNU8202515,INVALID,Shifted from yard to CCCS Hopper No 2 for Unstuffing,0.0
+Thu,2024-05-23,TTNU8204061,INVALID,Shifted from yard to CCCS Hopper No 2 for Unstuffing,0.0
+Fri,2024-05-24,SUDU6077626,CCCS,Shifted and Positioned Turning the other way around,35.0
+Sat,2024-05-25,SUDU5275571,MAERSKLINE,Shifted and put to side to get access to unit SUDU5284573 to be putted to ground for repairs by HD,35.0
+Sat,2024-05-25,SZLU9872199,MAERSKLINE,Shifted and put to side to get access to unit SUDU5284573 to be putted to ground for repairs by HD,35.0
+Sat,2024-05-25,RJCU2018700,MAERSKLINE,Shifted and put to side to get access to unit SUDU5284573 to be putted to ground for repairs by HD,35.0
+Sat,2024-05-25,MSFU0003706,MAERSKLINE,Shifted and put to side to get access to unit SUDU5284573 to be putted to ground for repairs by HD,35.0
+Sat,2024-05-25,MNBU0022301,MAERSKLINE,Shifted and put to side to get access to unit SUDU5284573 to be putted to ground for repairs by HD,35.0
+Sat,2024-05-25,SUDU5284573,MAERSKLINE,Grounded for repairs,35.0
+Sun,2024-05-26,SUDU5275571,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,SZLU9872199,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,CGMU5551014,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,RJCU2018700,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,SUDU5284573,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,MSFU0003706,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,MNBU0022301,MAERSKLINE,Shifted to be able to get access to unit MNBU3912464 to put to ground for repairs by HD,52.5
+Sun,2024-05-26,MNBU3912464,MAERSKLINE,Grounded for repairs,52.5
+Fri,2024-05-31,TRIU8898310,INVALID,Shifted and put aside to be able to get access unit PARTIAL SZLU9048883 and MNBU3155150 for completion at CCCS,0.0
+Fri,2024-05-31,MNBU0022301,INVALID,Shifted and put aside to be able to get access unit PARTIAL SZLU9048883 and MNBU3155150 for completion at CCCS,0.0
+Tue,2024-06-04,MNBU3346691,SAPMER,Shifted to access MNBU3057364 (SAPMER) for unstuffing,35.0
+Tue,2024-06-04,SUDU8070195,SAPMER,Shifted to access MNBU3057364 (SAPMER) for unstuffing,35.0
+Tue,2024-06-04,TTNU8755104,SAPMER,Shifted to access MNBU3057364 (SAPMER) for unstuffing,35.0
+Tue,2024-06-04,MWCU5334454,SAPMER,Shifted to access MNBU3057364 (SAPMER) for unstuffing,35.0
+Tue,2024-06-04,MNBU3997369,SAPMER,Shifted to access MNBU3057364 (SAPMER) for unstuffing,35.0
+Tue,2024-06-04,SEGU9182369,CMA CGM,Shifted to access APRU6119647 for repairation.,35.0
+Tue,2024-06-04,CGMU5051575,CMA CGM,Shifted to access APRU6119647 for repairation.,35.0
+Tue,2024-06-04,SZLU9048883,CMA CGM,Shifted to access APRU6119647 for repairation.,35.0
+Tue,2024-06-04,SUDU8070195,CMA CGM,Shifted to access APRU6119647 for repairation.,35.0
+Tue,2024-06-04,SUDU8064335,CMA CGM,Shifted to access APRU6119647 for repairation.,35.0
+Tue,2024-06-04,TTNU8374094,CMA CGM,Shifted to access APRU6119647 for repairation.,35.0
+Tue,2024-06-04,APRU6119647,CMA CGM,Grounded for repairs,35.0
+Sat,2024-06-08,SUDU8217429,CCCS,Shifted from CCCS to IPHS Yard for Plugin.,35.0
+Sat,2024-06-08,SUDU8217429,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Sat,2024-06-08,SUDU8217429,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Sat,2024-06-08,SUDU8217429,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Tue,2024-06-11,CXRU1001429,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Wed,2024-06-12,CXRU1001429,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Fri,2024-06-21,MNBU9076422,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Mon,2024-06-24,MNBU9076422,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Mon,2024-07-01,MNBU0630317,MAERSKLINE,Shifted to access MNBU3838710 for repairation.,35.0
+Mon,2024-07-01,MNBU4166992,MAERSKLINE,Shifted to access MNBU3838710 for repairation.,35.0
+Mon,2024-07-01,MNBU3838710,MAERSKLINE,Grounded for repairs,35.0
+Tue,2024-07-02,MNBU0553627,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Wed,2024-07-03,MNBU0553627,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Wed,2024-07-03,SUDU5198310,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Thu,2024-07-04,SUDU5198310,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Sat,2024-07-13,MNBU3112800,CCCS,Shifted from IPHS Yard for Unstuffing 1300kgs,35.0
+Sat,2024-07-13,MNBU3112800,CCCS,Shifted back to IPHS Yard after completion of unstuffing,35.0
+Wed,2024-07-17,MRKU7117203,INVALID,Shifted from trailer and positioned at CCCS North opposite the security gate,0.0
+Thu,2024-07-18,MRKU7117203,INVALID,Shifted from CCCS North to put on IPHS Trailer ,0.0
+Mon,2024-07-22,CGMU5135399,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Mon,2024-07-22,SZLU9630488,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Tue,2024-07-23,CGMU5546682,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Wed,2024-07-24,CGMU5135399,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Wed,2024-07-24,SZLU9630488,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Wed,2024-07-24,CGMU5546682,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Wed,2024-07-24,CGMU5546682,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Wed,2024-07-24,SZLU9630488,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Thu,2024-07-25,SZLU9630488,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Thu,2024-07-25,MNBU3805907,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Thu,2024-07-25,CGMU9329880,CMA CGM,Positioned for repair,35.0
+Thu,2024-07-25,CXRU1069917,CMA CGM,Positioned for repair,35.0
+Thu,2024-07-25,CGMU5253426,CMA CGM,Positioned for repair,35.0
+Fri,2024-07-26,MNBU3805907,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Sat,2024-07-27,CGMU5546682,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Tue,2024-07-30,CGMU3084029,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin - TEU,35.0
+Thu,2024-08-01,CGMU9291743,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Fri,2024-08-02,CGMU3084029,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Fri,2024-08-02,CGMU9291743,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Mon,2024-08-05,CMAU0663142,CCCS,Shifted on CCCS yard,35.0
+Mon,2024-08-05,MNBU4302147,CCCS,Rotated this unit on CCCS yard,35.0
+Mon,2024-08-05,AMCU9394839,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Mon,2024-08-05,MNBU4439757,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Tue,2024-08-06,MNBU4302147,CCCS,Shifted on CCCS yard,35.0
+Tue,2024-08-06,MNBU4439757,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Tue,2024-08-06,AMCU9394839,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Wed,2024-08-07,SEKU6377187,CCCS,Shifted on CCCS yard,35.0
+Mon,2024-08-12,APHU7251792,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Tue,2024-08-13,MNBU0408995,MAERSKLINE,Shifted to PTI Zone for repair/ No Power Plug,35.0
+Fri,2024-08-16,TTNU8203975,IOT,Positioned for repair,35.0
+Fri,2024-08-16,TTNU8202813,IOT,Shifted to access TTNU8203975 for repair,35.0
+Fri,2024-08-16,TTNU8058692,IOT,Shifted to access TTNU8203975 for repair,35.0
+Fri,2024-08-16,TTNU8203363,IOT,Shifted to access TTNU8203975 for repair,35.0
+Fri,2024-08-16,TTNU8204400,IOT,Shifted to access TTNU8203975 for repair,35.0
+Sat,2024-08-17,MNBU0061592,MAERSKLINE,Shifted to PTI Zone for repair/ No Power Plug,35.0
+Sat,2024-08-17,MNBU0408995,MAERSKLINE,Shifted to PTI Zone for repair/ No Power Plug,35.0
+Wed,2024-08-21,CGMU5004043,CCCS,Shifted to position fishloader in at CCCS North,35.0
+Wed,2024-08-21,CGMU5087325,CCCS,Shifted to position fishloader in at CCCS North,35.0
+Fri,2024-08-23,TGHU9958213,CCCS,Rotated this unit on CCCS yard,35.0
+Tue,2024-08-27,CGMU9310186,CCCS,Rotated this unit on CCCS yard,35.0
+Mon,2024-09-02,TRHU5160103,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Tue,2024-09-03,CAAU6232785,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Tue,2024-09-03,TGBU4327213,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Tue,2024-09-03,UETU5240285,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Tue,2024-09-03,GAOU6048764,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Tue,2024-09-03,TRHU5160103,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Fri,2024-09-06,BEAU4073086,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Fri,2024-09-06,TLLU8860746,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Fri,2024-09-06,CAIU7057421,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Fri,2024-09-06,TIIU4508946,INVALID,Shifted from IPHS Trailer to positioned on ground at CCCS North,0.0
+Fri,2024-09-06,TGBU4327213,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Sat,2024-09-07,TTNU8203086,IOT,Shifted at washing bay ; unable to wash due to malfunction door (handle bent),35.0
+Mon,2024-09-09,UETU5240285,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Thu,2024-09-12,TIIU4508946,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Thu,2024-09-12,CAAU6232785,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Thu,2024-09-12,CAIU7057421,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Thu,2024-09-12,BEAU4073086,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Thu,2024-09-12,MNBU0079061,MAERSKLINE,Shifted to PTI Zone for repair/ No Power Plug,35.0
+Thu,2024-09-12,TLLU8860746,INVALID,Shifted from CCCS North to put on IPHS Trailer,0.0
+Fri,2024-09-13,MNBU4258764,CCCS,Shifted this unit on CCCS yard,35.0
+Fri,2024-09-13,MNBU3021119,CCCS,Shifted this unit on CCCS yard,35.0
+Thu,2024-10-03,MNBU3851970,CCCS,Shifted to close door,35.0
+Fri,2024-10-04,TTNU8056787,IOT,Shifted to access unit TCLU1216899 for repairs,35.0
+Fri,2024-10-04,TTNU8204420,IOT,Shifted to access unit TCLU1216899 for repairs,35.0
+Fri,2024-10-04,TTNU8076079,IOT,Shifted to access unit TCLU1216899 for repairs,35.0
+Fri,2024-10-04,TTNU8203825,IOT,Shifted to access unit TCLU1216899 for repairs,35.0
+Fri,2024-10-04,TTNU8204903,IOT,Shifted to access unit TCLU1216899 for repairs,35.0
+Fri,2024-10-04,TCLU1216780,IOT,Shifted to access for repairs by HD Tech,35.0
+Fri,2024-10-04,TCLU1215531,IOT,Shifted to access for repairs by HD Tech,35.0
+Fri,2024-10-04,TTNU8202515,IOT,Shifted to access for repairs by HD Tech,35.0
+Fri,2024-10-04,TTNU8202710,IOT,Shifted to access unit TCLU1216899 for repairs,35.0
+Fri,2024-10-04,TCLU1216899,IOT,Shifted on ground for repairs by HD Tech,35.0
+Mon,2024-10-07,SEGU4961725,DONGWON,Shifted for side loader to access the container for pick up,35.0
+Tue,2024-10-08,CGMU5327302,CCCS,Shifted at CCCS North to access doors,35.0
+Tue,2024-10-08,TRIU8597410,CCCS,Shifted at CCCS North to position fish loader for stuffing,35.0
+Fri,2024-10-11,MMAU1091360,MAERSKLINE,Shifted to access unit MNBU3255919 for repairs,35.0
+Fri,2024-10-11,MNBU0275892,MAERSKLINE,Shifted to access unit MNBU3255919 for repairs,35.0
+Fri,2024-10-11,MNBU0129028,MAERSKLINE,Shifted to access unit MNBU3255919 for repairs,35.0
+Fri,2024-10-11,MNBU4294627,MAERSKLINE,Shifted to access unit MNBU3255919 for repairs,35.0
+Fri,2024-10-11,MNBU3255919,MAERSKLINE,Shifted on ground for repairs by HD Tech,35.0
+Mon,2024-10-14,MNBU0675918,CCCS,Shifted this unit on CCCS yard // Overtime,35.0
+Wed,2024-10-16,TRIU8122435,CCCS,Shifted this unit on CCCS yard,35.0
+Wed,2024-10-16,CGMU5057022,CCCS,Shifted this unit on CCCS yard,35.0
+Wed,2024-10-16,MNBU0675918,CCCS,Shifted this unit on CCCS yard,35.0
+Wed,2024-10-16,SZLU9851663,CCCS,Shifted from CCCS Yard to IPHS Yard for Plugin,35.0
+Wed,2024-10-16,TRHU8703734,CCCS,Shifted this unit on CCCS yard,35.0
+Thu,2024-10-17,TRIU8122435,CCCS,Shifted this unit on CCCS yard,35.0
+Thu,2024-10-17,SZLU9851663,CCCS,Shifted from IPHS Yard to CCCS for Unstuffing,35.0
+Sat,2024-10-19,TTNU8778054,CMA CGM,Shifted to access unit CGMU5519959 for Stuffing.,35.0
+Sat,2024-10-19,CAIU5564767,CMA CGM,Shifted to access unit CGMU5519959 for Stuffing.,35.0
+Wed,2024-10-23,MNBU3707304,MAERSKLINE,Shifted on ground for repairs by HD Tech,35.0
+Sun,2024-10-27,SUDU6271647,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,TCLU1265804,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,TTNU8054125,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,TTNU8202710,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,TTNU8016059,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,TTNU8204288,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,TTNU8031834,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Sun,2024-10-27,MNBU9143937,IOT,Shifted to access units TCLU1223305 and TCLU1216899 for unstuffing,52.5
+Tue,2024-11-05,CGMU9291743,IOT,"Shifted to transfer TRIU8881637,TTNU8203445,TTNU8338116 and TTNU8339350 to IOT.",35.0
+Tue,2024-11-05,TCLU1216899,IOT,"Shifted to transfer TRIU8881637,TTNU8203445,TTNU8338116 and TTNU8339350 to IOT.",35.0
+Tue,2024-11-05,MNBU3197411,IOT,"Shifted to transfer TRIU8881637,TTNU8203445,TTNU8338116 and TTNU8339350 to IOT.",35.0
+Tue,2024-11-05,TTNU8203358,IOT,"Shifted to transfer TRIU8881637,TTNU8203445,TTNU8338116 and TTNU8339350 to IOT.",35.0
+Tue,2024-11-05,TTNU8193347,IOT,"Shifted to transfer TRIU8881637,TTNU8203445,TTNU8338116 and TTNU8339350 to IOT.",35.0
+Wed,2024-11-06,CGMU5449189,CCCS,Shifted this unit on CCCS yard,35.0
+Wed,2024-11-06,CGMU5078529,IOT,"Shifted to transfer TRIU8881637,TTNU8203445,TTNU8338116 and TTNU8339350 to IOT.",35.0
+Wed,2024-11-06,TTNU8917442,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,TTNU8204420,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,CGMU5225949,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,MNBU9127047,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,CXRU1607925,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,MNBU0439039,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,MNBU3564800,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,MWCU5263664,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Wed,2024-11-06,MNBU0023648,IOT,"Shifted to transfer TCLU1216461, TTNU8208692,TTNU8058692 to IOT",35.0
+Thu,2024-11-14,TEMU9875483,CCCS,Shifted this unit on CCCS yard,35.0
+Tue,2024-11-19,CGMU5529582,SAPMER,Positioned for pallet removal,35.0
+Mon,2024-11-25,MNBU3466629,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,MNBU0223332,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,MNBU3423885,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,MNBU0432292,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,SUDU9303244,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,TCLU1285483,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,SEGU9539008,MAERSKLINE,Shifted to access MNBU3700320 for repairs.,35.0
+Mon,2024-11-25,MNBU3700320,MAERSKLINE,Positioned for repair,35.0
+Sat,2024-11-30,TEMU7987967,CCCS,Shifting at CCCS Yard,35.0
+Tue,2024-12-03,CGMU5463593,CCCS,Shifting at CCCS Yard,35.0
+Tue,2024-12-03,CAIU2165927,CCCS,Shifting at CCCS Yard,35.0
+Tue,2024-12-03,CGMU5463593,CCCS,Shifting at CCCS Yard near gate entrance,35.0
+Wed,2024-12-04,TRIU8033045,IOT,positioned for repair,35.0
+Fri,2024-12-06,TEMU7987967,CCCS,Shifting down on CCCS Yard.,35.0
+Tue,2024-12-17,CGMU6568578,CCCS,Shifted at CCCS yard to change door position,35.0
+Thu,2024-12-19,TLLU2417052,CCCS,Shifting at CCCS Yard near gate entrance,35.0
+Thu,2024-12-19,CGMU5418022,CCCS,Rotated this unit on CCCS yard,35.0
+Sat,2024-12-21,TCLU1112507,CCCS,Shifting at CCCS yard for unloading,35.0
+Sat,2024-12-21,SZLU9897643,CCCS,Shifting at CCCS yard for unloading,35.0
+Thu,2024-12-26,TTNU8192823,IOT EXP,Shifting to yard for re-plugin; Insufficient temperature for unloading.,35.0
+Mon,2025-01-06,MRSU5148785,CCCS,Shifting IFS container at CCCS yard,35.0
+Wed,2025-01-08,MNBU3985917,CCCS,Shifting IFS container at CCCS yard,35.0
+Fri,2025-01-10,CGMU9304270,CMA CGM,Shifted from stack to yard for plugin,35.0
+Sat,2025-01-11,CGMU9304270,CMA CGM,Shifted from yard back to stack,35.0
+Mon,2025-01-27,TTNU8203677,IOT,Shifted to access TCLU1228570 for trsnsfer,35.0
+Mon,2025-01-27,TRIU8980882,IOT,Shifted to access TCLU1228570 for trsnsfer,35.0
+Mon,2025-01-27,TTNU8374957,IOT,Shifted to access TTNU8204610 for transfer,35.0
+Mon,2025-01-27,TTNU8203825,IOT,Shifted to access TTNU8204610 for transfer,35.0
+Mon,2025-01-27,TTNU8203086,IOT,Shifted to access TTNU8204610 for transfer,35.0
+Tue,2025-01-28,MRKU2663670,CCCS,Shifting empty dry 40 ft for dispatch,35.0
+Thu,2025-01-30,CGMU5597592,CCCS,Shifting STC container from CCCS North to South,35.0
+Fri,2025-01-31,CGMU5597592,CCCS,Shifting STC container from CCCS South to North,35.0
+Fri,2025-01-31,TTNU8203070,SAPMER,Shifted to CCCS for stuffing using forklift,35.0
+Thu,2025-02-06,MNBU3963266,CCCS,Shifting and rotating GSC container on CCCS yard,35.0
+Thu,2025-02-06,FFAU4811185,PEVASA,Shifting from CCCS yard to washing area,35.0
+Thu,2025-02-06,TCNU5117799,PEVASA,Shifting from CCCS yard to washing area,35.0
+Fri,2025-02-07,MNBU3947244,CCCS,Shifting IFS container at CCCS yard,35.0
+Fri,2025-02-07,MNBU3990873,CCCS,Shifting STC container from CCCS North to South,35.0
+Fri,2025-02-07,MWCU6810025,CCCS,Shifting GSC container from CCCS South to North,35.0
+Fri,2025-02-07,MNBU0420943,CCCS,Shifting GSC container,35.0
+Sat,2025-02-08,MNBU3990873,CCCS,Shifting STC container from CCCS South to North,35.0
+Wed,2025-03-05,MNBU3525486,CCCS,Shifting GSC container further South,35.0
+Wed,2025-03-05,MSKU5203346,CCCS,Shifting IFS container at CCCS yard,35.0
+Thu,2025-03-06,MNBU3525486,CCCS,Shifting GSC container at CCCS yard,35.0
+Fri,2025-03-07,MNBU0554686,CCCS,Shifting Kannus container from CCCS North to South for plugin,35.0
+Sat,2025-03-08,SUDU7687330,PEVASA,Position on Craddle for Unloading,35.0
+Sat,2025-03-08,MNBU0554686,CCCS,Shifting Kannus container from CCCS South to North for Unloading,35.0
+Sat,2025-03-08,SUDU8073620,CCCS,Shifting to change door position.,35.0
+Mon,2025-03-10,CGMU9406890,CCCS,Shifting for closing doors,35.0
+Tue,2025-03-11,TLLU1068568,CMA CGM,Grounded for repairs,35.0
+Wed,2025-03-12,SUDU6297493,CCCS,Shifting container at canteen side,35.0
+Thu,2025-03-13,MNBU0224540,CCCS,Shifting from CCCS South to North,35.0
+Thu,2025-03-13,CGMU5331302,SAPMER,Grounded for photo by SOCOMEP,35.0
+Thu,2025-03-13,CAIU5696995,SAPMER,Shifted to access unit CGMU5331302 for photograph,35.0
+Thu,2025-03-13,TCLU1342520,SAPMER,Shifted to access unit CGMU5331302 for photograph,35.0
+Thu,2025-03-13,CGMU5180443,SAPMER,Shifted to access unit CGMU5331302 for photograph,35.0
+Sat,2025-03-15,SZLU9898249,SAPMER,Grounded to insert data logger,35.0
+Mon,2025-03-17,MNBU4035544,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,TLLU1225667,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,CGMU5064295,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,MNBU4166380,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,SUDU6023110,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,MNBU9136558,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,MNBU3690177,MAERSKLINE,Shifting to ground SUDU6016298 for repairs,35.0
+Mon,2025-03-17,SUDU6016298,MAERSKLINE,Grounded for repairs,35.0
+Thu,2025-03-20,TRDU8737426,CCCS,Rotated this Warldorf unit on CCCS yard,35.0
+Thu,2025-03-20,TRIU6611150,CCCS,Shifting Warldorf unit near the canteen,35.0
+Fri,2025-03-21,UAFU6711133,CCCS,Shifting STC container further north,35.0
+Mon,2025-03-24,MNBU4190936,CCCS,Shifting unit to rearrange container,35.0
+Tue,2025-03-25,GESU9585971,CCCS,Requesting stacker to shift this GSC container further inside,35.0
+Fri,2025-03-28,MNBU4380387,CCCS,Requesting stacker to put STC container down as landmarine truck having issue to put down,35.0
+Wed,2025-04-02,TEMU9091901,CMA CGM,Position down for repair,35.0
+Fri,2025-04-11,TCLU1194090,CCCS,Rotated this STC container,35.0
+Fri,2025-04-11,SZLU9850918,CCCS,Rotated this STC container,35.0
+Mon,2025-04-14,CGMU5541952,CCCS,Shifting FoodPro container south for plugin,35.0
+Tue,2025-04-15,CGMU5541952,CCCS,Shifting FoodPro container North,35.0
+Tue,2025-05-06,MNBU3794607,CCCS,Shifting GSC container,35.0
+Wed,2025-05-07,MNBU0218001,CCCS,Shifting STC container,35.0
+Wed,2025-05-07,CGMU5550574,CCCS,Shifting and Rotate GSC container,35.0
+Tue,2025-05-13,MRSU6476639,CCCS,Shifting INPESCA container,35.0
+Tue,2025-05-13,MRSU6476639,CCCS,Shifting back the PEVASA container,35.0
+Tue,2025-05-20,MNBU4325076,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,FBIU5226534,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,CAIU5658980,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,CGMU5297698,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,CGMU5429599,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,MNBU3628308,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,FBIU5227818,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,TLLU1196620,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Tue,2025-05-20,SZLU9610162,ECHEBASTAR,Shifted to access MNBU0107414 for unstuffing,35.0
+Wed,2025-05-21,CXRU1233640,CCCS,Shifting GSC container North for plugin,35.0
+Wed,2025-05-21,SEGU9072145,CCCS,Shifting GSC container North for plugin,35.0
+Wed,2025-05-21,FCIU2980310,CCCS,Shifting IFS container,35.0
+Sat,2025-05-24,CXRU1307759,CCCS,Shifting and Rotate GSC container,35.0
+Sat,2025-05-24,TEMU9575845,CCCS,Rotating container,35.0
+Mon,2025-06-02,MMAU1025841,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MNBU3480720,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MNBU3926848,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MNBU3399834,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MSFU0007954,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MNBU3670822,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MNBU0514615,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Mon,2025-06-02,MNBU4577226,HARTSWATER,Shifted to access MNBU4220162 for cross stuffing,35.0
+Tue,2025-06-03,TTNU8663538,CCCS,Requesting stacker to twist this IFS container canteen side,35.0
+Thu,2025-06-05,MNBU9160214,CCCS,Shifting GSC container for plugin,35.0
+Thu,2025-06-12,CGMU7022051,CCCS,Shifting GSC container for plugin,35.0
+Tue,2025-07-01,MRKU8452320,CCCS,Shifting GSC container near security office,35.0
