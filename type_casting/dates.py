@@ -14,7 +14,7 @@ from datetime import date, datetime, timedelta, time
 from enum import Enum
 from typing import Literal, List, Optional, Union, Tuple
 import polars as pl
-from dateutil.relativedelta import relativedelta
+# from dateutil.relativedelta import relativedelta
 
 
 # Type definitions
@@ -77,7 +77,8 @@ def duration_to_hhmm(
     # Define a function to format durations as HH:MM
     def format_as_hhmm(s: pl.Series) -> pl.Series:
         return s.map_elements(
-            lambda d: f"{int(d.total_seconds() // 3600):02d}:{int((d.total_seconds() % 3600) // 60):02d}"
+            lambda d: f"""{int(d.total_seconds()
+            // 3600):02d}:{int((d.total_seconds() % 3600) // 60):02d}"""
             if d is not None
             else None,
             return_dtype=pl.Utf8,
@@ -610,10 +611,11 @@ class DateCalculator:
             end_date (date): The end date
 
         Returns:
-            int: The number of business days between the dates (inclusive of start_date, exclusive of end_date)
+            int: The number of business days between the dates
+            (inclusive of start_date, exclusive of end_date)
         """
         if start_date > end_date:
-            return -DateCalculator.business_days_between(end_date, start_date)
+            return -DateCalculator.business_days_between(start_date, end_date)
 
         count = 0
         current = start_date

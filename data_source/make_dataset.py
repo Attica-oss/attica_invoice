@@ -1,11 +1,10 @@
 """Make the dataset (LazyFrame) from a google sheet id and sheet names with async support"""
 import logging
+import asyncio
 from io import StringIO
+from typing import Dict
 import aiohttp
 import polars as pl
-from typing import Dict, Optional, Union
-import asyncio
-from functools import lru_cache
 
 # Configure logging
 logging.basicConfig(level=logging.ERROR)

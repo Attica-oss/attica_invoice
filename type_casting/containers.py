@@ -5,8 +5,7 @@ This module handles loading and categorizing shipping container data from Google
 providing type-safe enumerations and filtering capabilities for container types.
 """
 
-import asyncio
-from typing import Optional, List, Dict, Any, Union, cast
+from typing import Optional, List, Dict, Any
 from functools import lru_cache
 import logging
 
@@ -30,11 +29,11 @@ class ContainerManager:
         >>> all_containers = await container_mgr.get_all_containers_enum()
         >>> iot_containers = await container_mgr.get_iot_containers()
     """
-    
+
     def __init__(self):
         """Initialize the ContainerManager with empty cache."""
         self._container_data: Optional[pl.LazyFrame] = None
-        
+
     async def _load_container_data(self, force_reload: bool = False) -> pl.LazyFrame:
         """
         Load container data from Google Sheets.
@@ -61,14 +60,14 @@ class ContainerManager:
 
                 if missing_columns:
                     raise ValueError(f"Sheet missing required columns: {missing_columns}")
-                
+
                 # Filter out delivery records
                 self._container_data = df.filter(pl.col("movement_type") != "Delivery")
-                
+
             except Exception as e:
-                logger.error(f"Error loading container data: {str(e)}")
+                logger.error("Error loading container data: %s",{str(e)})
                 raise
-                
+
         return self._container_data
 
     async def get_all_containers(self) -> pl.LazyFrame:
@@ -79,7 +78,7 @@ class ContainerManager:
             LazyFrame containing container data
         """
         return await self._load_container_data()
-    
+
     async def get_all_containers_enum(self) -> pl.Enum:
         """
         Get all container numbers as a polars Enum.
@@ -94,7 +93,7 @@ class ContainerManager:
             >>>     print(f"Processing {container}")
         """
         container_data = await self._load_container_data()
-        
+
         try:
             container_list = (
                 container_data
@@ -103,16 +102,15 @@ class ContainerManager:
                 .to_series()
                 .to_list()
             )
-            
+
             if not container_list:
                 logger.warning("No containers found in data source")
-                
             return pl.Enum(container_list)
-            
+
         except Exception as e:
-            logger.error(f"Error creating container enum: {str(e)}")
+            logger.error("Error creating container enum: %s", {str(e)})
             raise
-    
+
     async def get_containers_by_line(self, line: str) -> List[str]:
         """
         Get container numbers filtered by shipping line.
@@ -124,7 +122,7 @@ class ContainerManager:
             List of container numbers for the specified line
         """
         container_data = await self._load_container_data()
-        
+
         return (
             container_data
             .filter(pl.col("line").eq(pl.lit(line)))
@@ -133,7 +131,7 @@ class ContainerManager:
             .to_series()
             .to_list()
         )
-    
+
     async def get_iot_containers(self) -> List[str]:
         """
         Get all IOT SOC container numbers.
