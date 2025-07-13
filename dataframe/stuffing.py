@@ -7,7 +7,7 @@ from data_source.sheet_ids import STUFFING_SHEET_ID, liner_pallet_sheet, plugin_
 
 from data.price import FREE, get_price
 from type_casting.validations import PALLET_TYPE
-from type_casting.customers import enum_customer, get_customer_by_type
+from type_casting.customers import get_customer_by_type
 from type_casting.containers import containers_enum
 from type_casting.validations import PLUGGED_STATUS
 
@@ -20,42 +20,53 @@ from type_casting.validations import PLUGGED_STATUS
 async def price_list() -> dict[str, float | pl.LazyFrame]:
     """price dictionary"""
 
-    liner_price = await (
-        get_price(["Plastic Liner Installation"])
+    price = await get_price()
+
+    liner_price = (
+        price.filter(pl.col("Service").eq("Plastic Liner Installation"))
         .select(pl.col("Price"))
         .collect()
         .to_series()[0]
     )
 
-    magnum_electricity = await (
-        get_price(["Electricity Price Magnum"])
+    magnum_electricity = (
+        price.filter(pl.col("Service").eq("Electricity Price Magnum"))
         .select(pl.col("Price"))
         .collect()
         .to_series()[0]
     )
-    monitoring_price = await (
-        get_price(["Monitoring"]).select(pl.col("Price")).collect().to_series()[0]
+    monitoring_price = (
+        price.filter(pl.col("Service").eq("Monitoring"))
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
     )
-    pallet_iot_price = await (
-        get_price(["Pallets(+ Wedges) Usage"])
+    pallet_iot_price = (
+        price.filter(pl.col("Service").eq("Pallets(+ Wedges) Usage"))
         .select(pl.col("Price"))
         .collect()
         .to_series()[0]
     )
     pallet_price = (
-        await get_price(["Pallets"]).select(pl.col("Price")).collect().to_series()[0]
-    )
-    plugin_price = (
-        await get_price(["Plugin"]).select(pl.col("Price")).collect().to_series()[0]
-    )
-    s_freezer_electricity = await (
-        get_price(["Electricity Price S Freezer"])
+        price.filter(pl.col("Service").eq("Pallets"))
         .select(pl.col("Price"))
         .collect()
         .to_series()[0]
     )
-    standard_electricity = await (
-        get_price(["Electricity Price Standard"])
+    plugin_price = (
+        price.filter(pl.col("Service").eq("Plugin"))
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
+    )
+    s_freezer_electricity = (
+        price.filter(pl.col("Service").eq("Electricity Price S Freezer"))
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
+    )
+    standard_electricity = (
+        price.filter(pl.col("Service").eq("Electricity Price Standard"))
         .select(pl.col("Price"))
         .collect()
         .to_series()[0]
@@ -93,16 +104,18 @@ duration: pl.Expr = (
 
 async def load_pallet_dataset() -> pl.LazyFrame:
     """load the pallet and liner datasets"""
-    return await load_gsheet_data(
+    df = await load_gsheet_data(
         sheet_id=STUFFING_SHEET_ID, sheet_name=liner_pallet_sheet
-    ).select(
-        pl.col("date"),
-        pl.col("container_number").cast(dtype=containers_enum),
-        pl.col("shipping_line").cast(
-            dtype=pl.Enum(
-                await get_customer_by_type().get("shipping_line") + ["SAPMER"]
-            )
-        ),
+    )
+    containers = await containers_enum()
+
+    customers = await get_customer_by_type()
+    shipping_line = customers.get("shipping_line")
+
+    return df.select(
+        pl.col("date").str.to_date(format="%d/%m/%Y"),
+        pl.col("container_number").cast(dtype=containers),
+        pl.col("shipping_line").cast(dtype=pl.Enum(shipping_line + ["SAPMER"])),
         pl.col("assigned_to").str.to_uppercase(),
         pl.col("remarks").cast(dtype=pl.Enum(PALLET_TYPE)),
     )
@@ -111,7 +124,12 @@ async def load_pallet_dataset() -> pl.LazyFrame:
 # Pallet and Liner Dataframe
 async def pallet() -> pl.LazyFrame:
     """Paller and Liner Dataset"""
-    return await load_pallet_dataset().with_columns(
+    df = await load_pallet_dataset()
+    price = await price_list()
+    iot_price = price.get("pallet_iot_price")
+    pallet_price = price.get("pallet_price")
+    liner_price = price.get("liner_price")
+    return df.with_columns(
         pallet_price=pl.when(
             (
                 pl.col("remarks")
@@ -119,7 +137,7 @@ async def pallet() -> pl.LazyFrame:
                 .str.contains(pl.lit("Pallet"), strict=True)
             ).and_(pl.col("shipping_line").eq(pl.lit("IOT")))
         )
-        .then(await price_list().get("pallet_iot_price"))
+        .then(iot_price)
         .when(
             (
                 pl.col("remarks")
@@ -127,7 +145,7 @@ async def pallet() -> pl.LazyFrame:
                 .str.contains(pl.lit("Pallet"), strict=True)
             )
         )
-        .then(await price_list().get("pallet_price"))
+        .then(pallet_price)
         .otherwise(FREE),
         liner_price=pl.when(
             (
@@ -136,33 +154,53 @@ async def pallet() -> pl.LazyFrame:
                 .str.contains(pl.lit("Liner"), strict=True)
             ).and_(pl.col("shipping_line").eq(pl.lit("CMA CGM")))
         )
-        .then(await price_list().get("liner_price"))
+        .then(liner_price)
         .otherwise(FREE),
     )
 
 
 async def coa() -> pl.LazyFrame:
     """Container Operations Activity"""
+    df = await load_gsheet_data(STUFFING_SHEET_ID, plugin_sheet)
+    # customers = await enum_customer()
+
+    customer_type = await get_customer_by_type()
+    shipper = customer_type.get("ship_owner_operator")
+    by_catch_company = customer_type.get("bycatch")
+    agent = customer_type.get("agent")
+
+    shipping_line = customer_type.get("shipping_line")
+
+    containers = await containers_enum()
+
+    price = await price_list()
+    plugin_price = price.get("plugin_price")
+    monitoring_price = price.get("monitoring_price")
+    s_freezer_electricity = price.get("s_freezer_electricity")
+    magnum_electricity = price.get("magnum_electricity")
+    standard_electricity = price.get("standard_electricity")
+
     return (
-        await load_gsheet_data(STUFFING_SHEET_ID, plugin_sheet)
-        .select(
-            pl.col("vessel_client")
-            .str.to_uppercase()
-            .cast(dtype=await enum_customer()),
+        df.select(
+            pl.col("vessel_client").str.to_uppercase().cast(dtype=pl.Utf8),
             pl.col("customer").cast(
-                dtype=pl.Enum(await get_customer_by_type().get("shipper"))
+                dtype=pl.Enum(
+                    shipper
+                    + shipping_line
+                    + by_catch_company
+                    + agent
+                    + ["IOT EXPORT", "CCCS","IPHS"]
+                )
             ),
-            pl.col("date_plugged"),
+            pl.col("date_plugged").str.to_date(format="%d/%m/%Y"),
             pl.col("time_plugged").str.to_time(format="%H:%M:%S", strict=False),
-            pl.col("container_number").cast(dtype=containers_enum),
+            pl.col("container_number").cast(dtype=containers),
             pl.col("operation_type"),
-            pl.col("shipping_line").cast(
-                dtype=pl.Enum(await get_customer_by_type().get("shipping_line"))
-            ),
+            pl.col("shipping_line").cast(dtype=pl.Enum(shipping_line)),
             pl.col("plugged_status").cast(dtype=pl.Enum(PLUGGED_STATUS)),
             pl.col("tonnage"),
             pl.col("set_point"),
-            pl.col("date_out"),
+            pl.col("date_out").str.to_date(format="%d/%m/%Y",strict=False),
             pl.col("location"),
         )
         .with_columns(
@@ -173,23 +211,23 @@ async def coa() -> pl.LazyFrame:
             .otherwise(duration + 1),
             plugin_price=pl.when(transfer_direct | exchange_hands)
             .then(FREE)
-            .otherwise(await price_list().get("plugin_price")),
+            .otherwise(plugin_price),
             monitoring_price=pl.when(
                 transfer_direct | on_plug_or_partially_stuffed | plugged_only
             )
             .then(FREE)
             .otherwise(
-                await price_list().get("monitoring_price"),
+                monitoring_price,
             ),
         )
         .with_columns(
             electricity_unit_price=pl.when(plugged_only)
             .then(pl.lit(0))
             .when(pl.col("set_point").eq(-60))
-            .then(await price_list().get("s_freezer_electricity"))
+            .then(s_freezer_electricity)
             .when(pl.col("set_point").eq(-35))
-            .then(await price_list().get("magnum_electricity"))
-            .otherwise(await price_list().get("standard_electricity"))
+            .then(magnum_electricity)
+            .otherwise(standard_electricity)
         )
         .with_columns(
             total_electricity=pl.col("electricity_unit_price") * pl.col("days_on_plug")

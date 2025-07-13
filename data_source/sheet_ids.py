@@ -47,9 +47,16 @@ client_sheet:str="Client"
 
 
 SHORE_HANDLING_ID:str="1R1M5La8lqF7NjJa7qspfPYvHU_Ej2o4YX7gduxb-Zu8"
-salt_sheet="SaltOperation"
-bin_tipping_sheet="BinTipping"
+SALT_SHEET:str="SaltOperation"
+BIN_TIPPING_SHEET:str="BinTipping"
 
+
+# To change to the validation sheet
 INVOICING:str="1e1MZipsvEe5DxDaWaP2K2OBlCS_K0HEcPlFeyGzkG0s"
 invoice_status="InvoiceStatus"
 additional_stevedores="AdditionalStevedores"
+
+
+LOGISTICS_EFORM_ID :str ="1L9qkq9WlIa2j5DcvoLvxkqYogRg76S-e8OxAIyLruAE"
+PTI_SHEET:str="ContainerPTI"
+WASHING_SHEET :str ="ContainerCleaning"

@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "aiohttp>=3.11.14",
+    "fastexcel>=0.13.0",
     "ipykernel>=6.29.5",
     "polars>=1.25.2",
     "pretty-errors>=1.2.25",

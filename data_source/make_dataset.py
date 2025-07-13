@@ -3,7 +3,7 @@ import logging
 from io import StringIO
 import aiohttp
 import polars as pl
-from typing import Dict, Optional
+from typing import Dict, Optional, Union
 import asyncio
 from functools import lru_cache
 
@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 # Cache for loaded datasets to avoid redundant requests
 data_cache: Dict[str, pl.LazyFrame] = {}
 
-# Remove the lru_cache decorator - it doesn't work well with async functions
 async def load_gsheet_data(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
     """
     Loads a Google Sheet as a Polars LazyFrame asynchronously.
@@ -22,40 +21,37 @@ async def load_gsheet_data(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
         sheet_id (str): The ID of the Google Sheet.
         sheet_name (str): The name of the sheet to load.
     Returns:
-        pl.LazyFrame: A LazyFrame containing the sheet data, or empty LazyFrame if an error occurred.
+        pl.LazyFrame: A LazyFrame containing the sheet data,
+        or empty LazyFrame if an error occurred.
     """
     # Create a cache key
     cache_key = f"{sheet_id}_{sheet_name}"
-    
+
     # Check if data is already in cache
     if cache_key in data_cache:
         logger.info("Using cached data for %s", sheet_name)
         return data_cache[cache_key]
-        
+
     link: str = "https://docs.google.com/spreadsheets"
     url: str = f"{link}/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-    
+
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(url, timeout=15) as response:
                 response.raise_for_status()
                 csv_data = StringIO(await response.text())
-                result = pl.read_csv(csv_data, try_parse_dates=True).lazy()
-                
+                result = pl.read_csv(csv_data).lazy() #  try_parse_dates=True
                 # Cache the result for future use
                 data_cache[cache_key] = result
                 return result
-                
     except aiohttp.ClientError as e:
         logger.error(
             "An error occurred while trying to access the Google Sheet: %s", e
         )
         return pl.LazyFrame()
-        
     except pl.exceptions.ComputeError as e:
         logger.error("An error occurred while parsing the CSV data: %s", e)
         return pl.LazyFrame()
-        
     except Exception as e:
         logger.error("Unexpected error in load_gsheet_data: %s", e)
         return pl.LazyFrame()
@@ -73,10 +69,17 @@ async def load_multiple_sheets_async(sheets_info: list[tuple[str, str]]) -> dict
     results = await asyncio.gather(*tasks)
     return {sheet_name: result for (_, sheet_name), result in zip(sheets_info, results)}
 
-# Async wrapper for synchronous implementations (for backward compatibility)
-async def load_gsheet_data_async_wrapper(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
-    """Async wrapper for backward compatibility with synchronous code"""
-    return await load_gsheet_data(sheet_id, sheet_name)
+# Wrapper to ensure we don't return a coroutine when the function is used in the dataframes dictionary
+def get_sheet_data(sheet_id: str, sheet_name: str):
+    """
+    Non-async wrapper to use in dataframe dictionaries.
+    Instead of returning the LazyFrame directly, returns a function that when called,
+    returns a coroutine that will resolve to the LazyFrame.
+    
+    This pattern allows your existing save system to correctly detect and await the coroutine.
+    """
+    # Return a function that when called, returns the coroutine
+    return lambda: load_gsheet_data(sheet_id, sheet_name)
 
 # Clear cache function
 def clear_data_cache() -> None:
@@ -84,3 +87,8 @@ def clear_data_cache() -> None:
     global data_cache
     data_cache.clear()
     logger.info("Data cache cleared")
+
+# For backwards compatibility
+async def load_gsheet_data_async_wrapper(sheet_id: str, sheet_name: str) -> pl.LazyFrame:
+    """Async wrapper for backward compatibility with synchronous code"""
+    return await load_gsheet_data(sheet_id, sheet_name)

@@ -3,11 +3,11 @@
 # from pathlib import Path
 import polars as pl
 from data_source.make_dataset import load_gsheet_data
-from data_source.sheet_ids import OPS_SHEET_ID, raw_sheet,WELL_TO_WELL
+from data_source.sheet_ids import OPS_SHEET_ID, raw_sheet, WELL_TO_WELL
 from type_casting.validations import FISH_STORAGE
 from type_casting.validations import OvertimePerc
 
-from type_casting.dates import SPECIAL_DAYS, public_holiday, DAY_NAMES
+from type_casting.dates import SPECIAL_DAYS, DayName, DAY_NAMES
 
 # from dataframe import invoice
 
@@ -15,6 +15,7 @@ from data.price import get_price
 
 
 # To move the Price to the Price module
+
 
 # EXTRAMEN: float = get_price(["Extra Men"]).with_columns(date=pl.col("Date"))
 # Price
@@ -27,15 +28,18 @@ async def price_list() -> dict[str, float | pl.LazyFrame]:
     #     .collect()
     #     .to_series()[0]
     # )
-    well_to_well_price: pl.LazyFrame = await get_price(["Well to Well Transfer"]).with_columns(
-    date=pl.col("Date")
-)
 
+    price = await get_price([
+        "Well to Well Transfer"
+    ])
+
+    well_to_well_price: pl.LazyFrame =price.filter(pl.col("Service").eq(
+        "Well to Well Transfer"
+    )).with_columns(date=pl.col("Date"))
 
     return {
         "well_to_well_price": well_to_well_price,
     }
-
 
 
 # TARE_RATE: pl.LazyFrame = get_price(
@@ -54,35 +58,35 @@ async def price_list() -> dict[str, float | pl.LazyFrame]:
 
 # Operations Activity Unloading Lazyframe
 
-async def ops()->pl.LazyFrame:
+
+async def ops() -> pl.LazyFrame:
     """Ops Activity"""
-    return (await load_gsheet_data(
-    sheet_id=OPS_SHEET_ID, sheet_name=raw_sheet
-).select(
-    pl.col("Day"),
-    pl.col("Date"),
-    pl.col("Time").str.to_time(format="%H:%M:%S"),
-    pl.col("Vessel").str.to_uppercase(),
-    pl.col("Species").str.extract(r"^(.*?)(\s-\s)"),
-    pl.col("Details").str.to_uppercase(),
-    pl.col("Scale Reading(-Fish Net) (Cal)")
-    .str.replace(",", "")
-    .cast(pl.Int64)
-    .alias("tonnage")
-    * 0.001,
-    pl.col("Storage").cast(dtype=pl.Enum(FISH_STORAGE)),
-    pl.col("Container (Destination)").alias("destination"),
-    pl.col("overtime"),
-    pl.col("Side Working").alias("side_working")
-))
+    df = await load_gsheet_data(sheet_id=OPS_SHEET_ID, sheet_name=raw_sheet)
+    return df.select(
+        pl.col("Day"),
+        pl.col("Date"),
+        pl.col("Time"), # .str.to_time(format="%H:%M:%S")
+        pl.col("Vessel").str.to_uppercase(),
+        pl.col("Species").str.extract(r"^(.*?)(\s-\s)"),
+        pl.col("Details").str.to_uppercase(),
+        pl.col("Scale Reading(-Fish Net) (Cal)")
+        .str.replace(",", "")
+        .cast(pl.Int64)
+        .alias("tonnage")
+        * 0.001,
+        pl.col("Storage").cast(dtype=pl.Enum(FISH_STORAGE)),
+        pl.col("Container (Destination)").alias("destination"),
+        pl.col("overtime"),
+        pl.col("Side Working").alias("side_working"),
+    )
 
 
 def add_day_name_column(date_col: pl.Expr) -> pl.Expr:
     """adds the day name based on the date column name this includes public holiday (PH)"""
 
     return (
-        pl.when(date_col.is_in(public_holiday()))
-        .then(pl.lit("PH"))
+        pl.when(date_col.is_in(DayName.public_holiday_series()))
+        .then(pl.lit(DayName.PH.value))
         .otherwise(date_col.dt.to_string(format="%a"))
     ).cast(dtype=pl.Enum(DAY_NAMES))
 
@@ -145,30 +149,38 @@ def add_day_name_column(date_col: pl.Expr) -> pl.Expr:
 
 # Well to well transfer
 
-async def hatch_to_hatch()-> pl.LazyFrame:
+
+async def hatch_to_hatch() -> pl.LazyFrame:
     """Well to Well transfer"""
-    return (await load_gsheet_data(
-    sheet_id=OPS_SHEET_ID, sheet_name=WELL_TO_WELL).select(
-        pl.col("Day").alias("day_name"),
-        pl.col("Date").alias("date"),
-        pl.col("Vessel").alias("vessel_name"),
-        pl.col("Tonnage").alias("Well-to-Well Transfer"),
-    )
-    .with_columns(Service=pl.lit("Well to Well Transfer"))
-    .join_asof(WELL_TO_WELL, by="Service", on="date", strategy="backward")
-    .with_columns(
-        total_price=pl.when(pl.col("day_name").is_in(SPECIAL_DAYS))
-        .then(
-            OvertimePerc.overtime_150
-            * pl.col("Price")
-            * pl.col("Well-to-Well Transfer")
+    df = await load_gsheet_data(sheet_id=OPS_SHEET_ID, sheet_name=WELL_TO_WELL)
+    price = await price_list()
+    well_to_well = price.get("well_to_well_price")
+    return (
+        df.select(
+            pl.col("Day").alias("day_name"),
+            pl.col("Date").alias("date"),
+            pl.col("Vessel").alias("vessel_name"),
+            pl.col("Tonnage").alias("Well-to-Well Transfer"),
         )
-        .otherwise(
-            OvertimePerc.normal_hour * pl.col("Price") * pl.col("Well-to-Well Transfer")
+        .with_columns(Service=pl.lit("Well to Well Transfer"))
+        .sort(by="date")
+        .join_asof(well_to_well.sort(by="date"), by="Service", on="date", strategy="backward")
+        .with_columns(
+            total_price=pl.when(pl.col("day_name").is_in(SPECIAL_DAYS))
+            .then(
+                OvertimePerc.overtime_150
+                * pl.col("Price")
+                * pl.col("Well-to-Well Transfer")
+            )
+            .otherwise(
+                OvertimePerc.normal_hour
+                * pl.col("Price")
+                * pl.col("Well-to-Well Transfer")
+            )
         )
+        .select(pl.all().exclude(["Service", "Date"]))
     )
-    .select(pl.all().exclude(["Service", "Date"]))
-)
+
 
 # Rental of Calibration Weight Service
 

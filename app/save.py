@@ -9,16 +9,7 @@ import polars as pl
 from app.logger import logger
 
 # Import dataframes using relative imports to avoid circular dependencies
-from all_dataframes.all_dataframes import (
-    emr_dataframes,
-    netlist_dataframes,
-    bin_dispatch_dataframes,
-    shore_handling_dataframes,
-    miscellaneous_dataframes,
-    operations_dataframes,
-    stuffing_dataframes,
-    transport_dataframes,
-)
+from all_dataframes.all_dataframes import all_dataframes
 
 # Create a thread pool executor for I/O bound operations
 # Using a smaller number to avoid overwhelming the system
@@ -206,15 +197,18 @@ async def save_df_to_csv_async(dataframes: Optional[str] = None) -> None:
     Args:
         dataframes: Category of dataframes to save ('all' or specific category name)
     """
+
+    all_df = await all_dataframes()
+
     df_dict: Dict[str, DfCollection] = {
-        "emr": emr_dataframes,
-        "operations": operations_dataframes,
-        "netlist": netlist_dataframes,
-        "bin_dispatch": bin_dispatch_dataframes,
-        "shore_handling": shore_handling_dataframes,
-        "stuffing": stuffing_dataframes,
-        "transport": transport_dataframes,
-        "miscellaneous": miscellaneous_dataframes,
+        "emr": all_df.get("emr_dataframes"),
+        "operations": all_df.get("operations_dataframes"),
+        "netlist": all_df.get("netlist_dataframes"),
+        "bin_dispatch": all_df.get("bin_dispatch_dataframes"),
+        "shore_handling": all_df.get("shore_handling_dataframes"),
+        "stuffing": all_df.get("stuffing_dataframes"),
+        "transport": all_df.get("transport_dataframes"),
+        "miscellaneous": all_df.get("miscellaneous_dataframes"),
     }
 
     if dataframes == "all":

@@ -3,7 +3,7 @@
 from datetime import date
 import polars as pl
 import polars.selectors as cs
-from data.price import FREE, get_price
+from .data.price import FREE, get_price
 from data_source.make_dataset import load_gsheet_data
 from data_source.sheet_ids import (
     TRANSPORT_SHEET_ID,
@@ -17,12 +17,12 @@ from type_casting.dates import (
     SPECIAL_DAYS,
     UPPER_BOUND,
     UPPER_BOUND_SPECIAL_DAY,
-    public_holiday,
+    DayName,
 )
 from type_casting.containers import containers_enum
 from type_casting.validations import STATUS_TYPE, OvertimePerc, Status
 
-ph_list: list[date] = public_holiday()
+ph_list: list[date] = DayName.public_holiday_series()
 
 # Need to make this as a LazyFrame and do a joinasof incase there is a change in price
 
@@ -30,10 +30,17 @@ ph_list: list[date] = public_holiday()
 async def price_list() -> dict[str, float | pl.LazyFrame]:
     """price dictionary"""
 
+    price = await get_price(["Shifting", "Haulage FEU", "Haulage TEU"])
+
     shifting_price = (
-        await get_price(["Shifting"]).select(pl.col("Price")).collect().to_series()[0]
+        price.filter(pl.col("Service").eq("Shifting"))
+        .select(pl.col("Price"))
+        .collect()
+        .to_series()[0]
     )
-    transfer_price = await get_price(["Haulage FEU", "Haulage TEU"])
+    transfer_price = price.filter(
+        pl.col("Service").is_in(["Haulage FEU", "Haulage TEU"])
+    )
 
     return {
         "shifting": shifting_price,
@@ -41,22 +48,31 @@ async def price_list() -> dict[str, float | pl.LazyFrame]:
     }
 
 
-# SHIFTING_PRICE = get_price(["Shifting"]).select(pl.col("Price")).collect().to_series()[0]
-
-# TRANSFER_PRICE = get_price(["Haulage FEU","Haulage TEU"])
-
-
 async def shore_crane() -> pl.LazyFrame:
     """Load shore crane rental record"""
-    return await load_gsheet_data(TRANSPORT_SHEET_ID, shore_crane_sheet).select(
+
+    operation_type: pl.Enum = pl.Enum(
+        [
+            "Stuffing",
+            "Loading Provision",
+            "OSS Stuffing",
+            "CCCS Container Stuffing",
+            "Loading to CCCS",
+            "Cross Stuffing",
+            "By Catch",
+        ]
+    )
+
+    df = await load_gsheet_data(TRANSPORT_SHEET_ID, shore_crane_sheet)
+    return df.select(
         pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
-        cs.contains("date"),
-        pl.col("start_time"),
-        pl.col("end_time"),
-        pl.col("hours").dt.hour(),
-        pl.col("overtime_hours").dt.hour(),
+        cs.contains("date").str.to_date(format="%d/%m/%Y"),
+        pl.col("start_time").str.to_time(format="%H:%M:%S"),
+        pl.col("end_time").str.to_time(format="%H:%M:%S"),
+        pl.col("hours").str.to_time(format="%H:%M:%S").dt.hour(),
+        pl.col("overtime_hours").str.to_time(format="%H:%M").dt.hour(),
         pl.col("customer").cast(pl.Utf8),
-        pl.col("operation_type"),
+        pl.col("operation_type").cast(dtype=operation_type),
         pl.col("remarks"),
         pl.col("invoiced_to"),
         pl.col("price").cast(pl.Float64),
@@ -67,31 +83,72 @@ async def shore_crane() -> pl.LazyFrame:
 async def transfer() -> pl.LazyFrame:
     """Transfer (Haulage) dataset"""
 
-    shifting_price_float:float = await price_list().get("shifting_price")
+    df = await load_gsheet_data(TRANSPORT_SHEET_ID, transfer_sheet)
 
-    return await (
-        load_gsheet_data(TRANSPORT_SHEET_ID, transfer_sheet)
-        .with_columns(
-            pl.col("date"),
-            pl.col("container_number").cast(dtype=await containers_enum()),
-            pl.col("line"),
+    location: list[str] = [
+        "LML",
+        "HD YARD",
+        "FISHING PORT",
+        "CCCS",
+        "IPHS",
+        "IOT",
+        "JHL",
+        "Fishing Port",
+    ]
+
+    price = await price_list()
+    shifting_price_float: float = price.get("shifting")
+
+    transfer_price = price.get("transfer").with_columns(
+        Date=pl.col("Date").str.to_date(format="%d/%m/%Y")
+    )
+
+    containers = await containers_enum()
+
+    return (
+        df.with_columns(
+            pl.col("date").str.to_date(format="%d/%m/%Y"),
+            pl.col("container_number").cast(dtype=containers),
+            pl.col("line").cast(
+                dtype=pl.Enum(
+                    [
+                        "CCCS",
+                        "UAFL",
+                        "DONGWON",
+                        "SAPMER",
+                        "CMA CGM",
+                        "IPHS",
+                        "MAERSK",
+                        "IOT",
+                        "PEVASA",
+                    ]
+                )
+            ),
             pl.col("movement_type").cast(
                 dtype=pl.Enum(["Collection", "Shifting", "Delivery"])
             ),
             pl.col("driver").cast(
                 dtype=pl.Enum(["NA", "IPHS", "THIRD PARTY", "IPHS (Third Party)"])
             ),
+            pl.col("origin").cast(dtype=pl.Enum(location)),
+            pl.col("time_out").str.to_time(format="%H:%M"),
+            pl.col("destination").cast(dtype=pl.Enum(location)),
+            pl.col("time_in").str.to_time(format="%H:%M"),
+            pl.col("status").cast(dtype=pl.Enum(["Full", "Empty"])),
+            pl.col("type").cast(dtype=pl.Enum(["Reefer", "Dry"])),
+            pl.col("size").cast(dtype=pl.Enum(["20'", "40'"])),
         )
         .select(pl.all().exclude("invoice_to"))
         .with_columns(
             day_name=pl.when(pl.col("date").is_in(ph_list))
             .then(pl.lit("PH"))
-            .otherwise(pl.col("date").dt.to_string(format="%a")),
-            Service=pl.when(pl.col("size") == "40'")
+            .otherwise(pl.col("date").dt.to_string(format="%a"))
+            .cast(dtype=pl.Enum(DAY_NAMES)),
+            Service=pl.when(pl.col("size").eq(pl.lit("40'", dtype=pl.Utf8)))
             .then(pl.lit("Haulage FEU"))
-            .when(pl.col("size") == "20'")
+            .when(pl.col("size").eq(pl.lit("20'", dtype=pl.Utf8)))
             .then(pl.lit("Haulage TEU"))
-            .otherwise(pl.lit("Err")),
+            .otherwise(pl.lit("Err", dtype=pl.Utf8)),
             time=pl.when(pl.col("movement_type") == "Collection")
             .then(pl.col("time_in"))
             .when(pl.col("movement_type") == "Delivery")
@@ -99,7 +156,7 @@ async def transfer() -> pl.LazyFrame:
             .otherwise(pl.time()),
         )
         .join_asof(
-            await price_list().get("transfer_price"),
+            transfer_price,
             by="Service",
             right_on="Date",
             left_on="date",
@@ -162,91 +219,61 @@ async def transfer() -> pl.LazyFrame:
     )
 
 
-async def scow_transfer()->pl.LazyFrame:
+async def scow_transfer() -> pl.LazyFrame:
     """Scow Transfer/ Bin Dispatch dataset"""
 
-    return await load_gsheet_data(TRANSPORT_SHEET_ID, scow_sheet).select(
-    pl.col("date"),
-    pl.col("container_number").cast(dtype=pl.Enum(["STDU6536343", "STDU6536338"])),
-    pl.col("customer"),
-    pl.col("movement_type"),
-    pl.col("driver"),
-    pl.col("from"),
-    pl.col("time_out"),
-    pl.col("destination"),
-    pl.col("time_in"),
-    pl.col("status").cast(dtype=pl.Enum(STATUS_TYPE)),
-    pl.col("remarks"),
-    pl.col("num_of_scows").cast(dtype=pl.Int64),
-)
+    df = await load_gsheet_data(TRANSPORT_SHEET_ID, scow_sheet)
 
-async def forklift()->pl.LazyFrame:
+    return df.select(
+        pl.col("date").str.to_date(format="%d/%m/%Y"),
+        pl.col("container_number").cast(dtype=pl.Enum(["STDU6536343", "STDU6536338"])),
+        pl.col("customer").cast(
+            pl.Enum(
+                [
+                    "IOT",
+                    "AQUARIUS",
+                    "ECHEBASTAR",
+                    "SAPMER",
+                    "ISLAND CATCH",
+                    "INPESCA S.A",
+                ]
+            )
+        ),
+        pl.col("movement_type").cast(pl.Enum(["Collection", "Delivery"])),
+        pl.col("driver"),
+        pl.col("from").cast(pl.Enum(["CCCS", "IOT", "FISHING PORT"])),
+        pl.col("time_out").str.to_time(format="%H:%M:%S"),
+        pl.col("destination").cast(pl.Enum(["CCCS", "IOT", "FISHING PORT"])),
+        pl.col("time_in").str.to_time(format="%H:%M:%S"),
+        pl.col("status").cast(dtype=pl.Enum(STATUS_TYPE)),
+        pl.col("remarks"),
+        pl.col("num_of_scows").cast(dtype=pl.Int64),
+    ).with_columns(duration=pl.col("time_in") - pl.col("time_out"))
+
+
+async def forklift() -> pl.LazyFrame:
     """Forklift dataset"""
-
-    return await (
-    load_gsheet_data(TRANSPORT_SHEET_ID, forklift_sheet)
-    .filter(
-        ~pl.col("service_type").is_in(["Salt Loading", "Gangway"]), pl.col("day") != ""
-    )
-    .select(
-        pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
-        cs.contains("date"),
-        pl.col("start_time"),
-        pl.col("end_time"),
-        pl.col("duration"),
-        pl.col("customer").cast(pl.Utf8),
-        pl.col("invoiced_in"),
-        pl.col("service_type"),
-    )
-    .with_columns(
-        overtime_150=pl.when(
-            (pl.col("day").is_in(SPECIAL_DAYS).not_()).and_(
-                (pl.col("end_time").gt(UPPER_BOUND)).and_(
-                    pl.col("start_time").gt(UPPER_BOUND)
-                )
-            )
+    df = await load_gsheet_data(TRANSPORT_SHEET_ID, forklift_sheet)
+    return (
+        df.filter(
+            ~pl.col("service_type").is_in(["Salt Loading", "Gangway"]),
+            pl.col("day") != "",
         )
-        .then(
-            (
-                pl.col("date").dt.combine(pl.col("end_time"))
-                - pl.col("date").dt.combine(pl.col("start_time"))
-            ).dt.total_minutes()
+        .select(
+            pl.col("day").cast(dtype=pl.Enum(DAY_NAMES)),
+            cs.contains("date").str.to_date(format="%d/%m/%Y"),
+            pl.col("start_time").str.to_time(format="%H:%M:%S"),
+            pl.col("end_time").str.to_time(format="%H:%M:%S"),
+            pl.col("duration"),
+            pl.col("customer").cast(pl.Utf8),
+            pl.col("invoiced_in"),
+            pl.col("service_type"),
         )
-        .when((~pl.col("day").is_in(SPECIAL_DAYS)) & (pl.col("end_time") > UPPER_BOUND))
-        .then(
-            (
-                pl.col("date").dt.combine(pl.col("end_time"))
-                - pl.col("date").dt.combine(UPPER_BOUND)
-            ).dt.total_minutes()
-        )
-        .when(
-            (pl.col("day").is_in(SPECIAL_DAYS))
-            & (pl.col("end_time") < UPPER_BOUND_SPECIAL_DAY)
-            & (pl.col("start_time") < UPPER_BOUND_SPECIAL_DAY)
-        )
-        .then(
-            (
-                pl.col("date").dt.combine(pl.col("end_time"))
-                - pl.col("date").dt.combine(pl.col("start_time"))
-            ).dt.total_minutes()
-        )
-        .when(
-            (pl.col("day").is_in(SPECIAL_DAYS))
-            & (pl.col("end_time") > UPPER_BOUND_SPECIAL_DAY)
-            & (pl.col("start_time") < UPPER_BOUND_SPECIAL_DAY)
-        )
-        .then(
-            (
-                pl.col("date").dt.combine(UPPER_BOUND_SPECIAL_DAY)
-                - pl.col("date").dt.combine(pl.col("start_time"))
-            ).dt.total_minutes()
-        )
-        .otherwise(FREE),
-        overtime_200=pl.when(
-            (pl.col("day").is_in(SPECIAL_DAYS))
-            & (
-                (pl.col("end_time") > UPPER_BOUND_SPECIAL_DAY)
-                & (pl.col("start_time") > UPPER_BOUND_SPECIAL_DAY)
+        .with_columns(
+            overtime_150=pl.when(
+                (pl.col("day").is_in(SPECIAL_DAYS).not_())
+                .and_(pl.col("end_time").gt(UPPER_BOUND))
+                .and_(pl.col("start_time").gt(UPPER_BOUND))
             )
         )
         .then(
@@ -256,22 +283,65 @@ async def forklift()->pl.LazyFrame:
             ).dt.total_minutes()
         )
         .when(
-            (pl.col("day").is_in(SPECIAL_DAYS))
-            & (pl.col("end_time") > UPPER_BOUND_SPECIAL_DAY)
+            (pl.col("day").is_in(SPECIAL_DAYS).not_())
+            .and_((pl.col("end_time").lt(UPPER_BOUND)))
+            .then(
+                (
+                    pl.col("date").dt.combine(pl.col("end_time"))
+                    - pl.col("date").dt.combine(UPPER_BOUND)
+                ).dt.total_minutes()
+            )
+            .when(
+                (pl.col("day").is_in(SPECIAL_DAYS))
+                .and_(pl.col("end_time").gt(UPPER_BOUND_SPECIAL_DAY))
+                .and_(pl.col("start_time").gt(UPPER_BOUND_SPECIAL_DAY))
+            )
+            .then(
+                (
+                    pl.col("date").dt.combine(pl.col("end_time"))
+                    - pl.col("date").dt.combine(pl.col("start_time"))
+                ).dt.total_minutes()
+            )
+            .when(
+                (pl.col("day").is_in(SPECIAL_DAYS))
+                .and_(pl.col("end_time").lt(UPPER_BOUND_SPECIAL_DAY))
+                .and_(pl.col("start_time").gt(UPPER_BOUND_SPECIAL_DAY))
+            )
+            .then(
+                (
+                    pl.col("date").dt.combine(UPPER_BOUND_SPECIAL_DAY)
+                    - pl.col("date").dt.combine(pl.col("start_time"))
+                ).dt.total_minutes()
+            )
+            .otherwise(FREE),
+            overtime_200=pl.when(
+                (pl.col("day").is_in(SPECIAL_DAYS))
+                .and_(pl.col("end_time").lt(UPPER_BOUND_SPECIAL_DAY))
+                .and_(pl.col("start_time").lt(UPPER_BOUND_SPECIAL_DAY))
+            ),
         )
         .then(
             (
                 pl.col("date").dt.combine(pl.col("end_time"))
-                - pl.col("date").dt.combine(UPPER_BOUND_SPECIAL_DAY)
+                - pl.col("date").dt.combine(pl.col("start_time"))
             ).dt.total_minutes()
         )
-        .otherwise(FREE),
+        .when(
+            (pl.col("day").is_in(SPECIAL_DAYS))
+            .and_(pl.col("end_time").lt(UPPER_BOUND_SPECIAL_DAY))
+            .then(
+                (
+                    pl.col("date").dt.combine(pl.col("end_time"))
+                    - pl.col("date").dt.combine(UPPER_BOUND_SPECIAL_DAY)
+                ).dt.total_minutes()
+            )
+            .otherwise(FREE),
+        )
+        .with_columns(
+            normal_hours=(
+                pl.col("date").dt.combine(pl.col("end_time"))
+                - pl.col("date").dt.combine(pl.col("start_time"))
+            ).dt.total_minutes()
+            - (pl.col("overtime_150") + pl.col("overtime_200"))
+        )
     )
-    .with_columns(
-        normal_hours=(
-            pl.col("date").dt.combine(pl.col("end_time"))
-            - pl.col("date").dt.combine(pl.col("start_time"))
-        ).dt.total_minutes()
-        - (pl.col("overtime_150") + pl.col("overtime_200"))
-    )
-)

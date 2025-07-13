@@ -14,7 +14,7 @@ from data_source.sheet_ids import (
 )
 from type_casting.dates import (
     SPECIAL_DAYS,
-    public_holiday,
+    DayName,
 )
 from type_casting.validations import (
     FISH_STORAGE,
@@ -29,12 +29,14 @@ from type_casting.customers import get_customer_by_type
 from dataframe.stuffing import coa
 from data.price import FREE, get_price
 
-ph_list: list[date] = public_holiday()
+ph_list: pl.Series = DayName.public_holiday_series()
 
 
 # Price
 async def price_list() -> dict[str, float | pl.LazyFrame]:
     """price dictionary"""
+
+    price = await get_price()
 
     service_list: list[str] = [
         "Transhipment - Brine",
@@ -57,15 +59,17 @@ async def price_list() -> dict[str, float | pl.LazyFrame]:
         "Stuffing",
     ]
 
-    stuffing_price = await get_price(["Stuffing"])
+    stuffing_price = price.filter(
+        pl.col("Service").eq(pl.lit("Stuffing"))
+    ).with_columns(date=pl.col("Date").str.to_date(format="%d/%m/%Y"))
 
-    unloading_price: pl.LazyFrame = await get_price(service_list).with_columns(
-        date=pl.col("Date")
-    )
+    unloading_price: pl.LazyFrame = price.filter(
+        pl.col("Service").is_in(service_list)
+    ).with_columns(date=pl.col("Date").str.to_date(format="%d/%m/%Y"))
 
-    oss_stuffing_price: pl.LazyFrame = await get_price(oss_service_list).with_columns(
-        date=pl.col("Date")
-    )
+    oss_stuffing_price: pl.LazyFrame = price.filter(
+        pl.col("Service").is_in(oss_service_list)
+    ).with_columns(date=pl.col("Date").str.to_date(format="%d/%m/%Y"))
 
     return {
         "stuffing_price": stuffing_price,
@@ -84,9 +88,9 @@ by_catch_companies: list[str] = [
 # Container Stuffing Type
 async def stuffing_type() -> pl.LazyFrame:
     """Container Stuffing Type"""
-    return await (
-        await coa()
-        .select(
+    df = await coa()
+    return (
+        df.select(
             pl.col(
                 [
                     "vessel_client",
@@ -119,10 +123,10 @@ async def stuffing_type() -> pl.LazyFrame:
 # CCCS record from the Miscellaneous Activity
 async def cccs_record() -> pl.LazyFrame:
     """CCCS record from the Misc Activity"""
-    return await (
+    df = await miscellaneous()
+    return (
         (
-            await miscellaneous()
-            .filter(
+            df.filter(
                 pl.col("operation_type").is_in(UNLOADING_SERVICE),
                 ~pl.col("customer").is_in(by_catch_companies),
             )
@@ -148,16 +152,19 @@ async def cccs_record() -> pl.LazyFrame:
 # CCCS adjusted record in the Genesis Data
 
 
+# .str.to_date(format="%d/%m/%Y")
 async def cccs_adjusted_records() -> pl.LazyFrame:
     """CCCs adjusted records"""
 
-    return await (
-        await load_gsheet_data(OPS_SHEET_ID, raw_sheet)
-        .filter(pl.col("Container (Destination)").str.contains(pl.lit("CCCS")))
+    df = await load_gsheet_data(OPS_SHEET_ID, raw_sheet)
+    cccs = await cccs_record()
+
+    return (
+        df.filter(pl.col("Container (Destination)").str.contains(pl.lit("CCCS")))
         .select(
             pl.col("Day"),
-            pl.col("Date").alias("date"),
-            pl.col("Time"),
+            pl.col("Date").str.to_date(format="%d/%m/%Y").alias("date"),
+            pl.col("Time").str.to_time(format="%H:%M:%S"),
             pl.col("overtime"),
             pl.col("Storage").cast(dtype=pl.Enum(FISH_STORAGE)).alias("storage_type"),
             pl.col("Vessel").str.to_uppercase().alias("vessel"),
@@ -197,7 +204,7 @@ async def cccs_adjusted_records() -> pl.LazyFrame:
             .otherwise(pl.lit("ERR"))  # To modify this for the "Invalid invoice"
         )
         .join(
-            cccs_record,
+            cccs,
             on=["date", "destination", "vessel", "storage_type"],
             how="left",
         )
@@ -236,31 +243,43 @@ async def cccs_adjusted_records() -> pl.LazyFrame:
 
 async def net_list() -> pl.LazyFrame:
     """The net list dataset"""
+    df = await load_gsheet_data(OPS_SHEET_ID, net_list_sheet)
+    df_cccs_adjusted = await cccs_adjusted_records()
+    price = await price_list()
+    unloading_price = price.get("unloading_price")
+    stuffing_type_df = await stuffing_type()
 
-    return await (
+    iot_enum = await iot_soc_enum()
+
+    customer = await get_customer_by_type()
+    cargo = customer.get("cargo")
+
+    return (
         pl.concat(
             [
-                await load_gsheet_data(OPS_SHEET_ID, net_list_sheet)
-                .filter(~pl.col("Container (Destination)").str.contains(pl.lit("CCCS")))
-                .select(
-                    pl.col("Date").alias("date"),
+                df.filter(
+                    ~pl.col("Container (Destination)").str.contains(pl.lit("CCCS"))
+                ).select(
+                    pl.col("Date").str.to_date(format="%d/%m/%Y").alias("date"),
                     pl.col("Vessel").str.to_uppercase().alias("vessel"),
-                    pl.col("startTime").alias("start_time"),
+                    pl.col("startTime")
+                    .str.to_time(format="%H:%M:%S")
+                    .alias("start_time"),
                     pl.col("Container (Destination)").alias("destination"),
                     pl.col("overtime"),
                     pl.col("Storage")
                     .cast(dtype=pl.Enum(FISH_STORAGE))
                     .alias("storage_type"),
-                    pl.col("endTime").alias("end_time"),
+                    pl.col("endTime").str.to_time(format="%H:%M:%S").alias("end_time"),
                     pl.col("Total Tonnage").alias("total_tonnage"),
                 ),
-                await cccs_adjusted_records(),
+                df_cccs_adjusted,
             ],
             how="vertical",
         )
         .sort(by="date")
         .join(
-            other=stuffing_type,
+            other=stuffing_type_df,
             left_on=["destination", "date", "vessel"],
             right_on=["container_number", "date_plugged", "vessel_client"],
             how="left",
@@ -272,16 +291,12 @@ async def net_list() -> pl.LazyFrame:
                 | (pl.col("destination").str.contains("Unload to Quay"))
                 | (
                     pl.col("destination")
-                    .is_in(await iot_soc_enum())
+                    .is_in(iot_enum)
                     .and_(pl.col("customer").eq(pl.lit("IOT")))
                 )
             )
             .then(pl.lit("Unload to Quay"))
-            .when(
-                pl.col("destination")
-                .str.to_uppercase()
-                .is_in(await get_customer_by_type().get("cargo"))
-            )
+            .when(pl.col("destination").str.to_uppercase().is_in(cargo))
             .then(pl.lit("Transhipment"))
             .when(pl.col("destination").str.contains("CCCS"))
             .then(pl.lit("Unload to CCCS"))
@@ -300,7 +315,7 @@ async def net_list() -> pl.LazyFrame:
         )
         .with_columns(Service=pl.col("service") + " - " + pl.col("storage_type"))
         .join_asof(
-            await price_list().get("unloading_price"),
+            unloading_price,
             by="Service",
             on="date",
             strategy="backward",
@@ -321,17 +336,20 @@ async def net_list() -> pl.LazyFrame:
 # Maersk OSS stuffing list ; Separated between Full and Basic OSS
 async def oss() -> pl.LazyFrame:
     """oss dataset"""
-    return await (
-        await net_list()
-        .select(pl.all().exclude(["Price", "invoice_value"]))
+
+    df = await net_list()
+    price = await price_list()
+    oss_price = price.get("oss_stuffing_price")
+    return (
+        df.select(pl.all().exclude(["Price", "invoice_value"]))
         .filter(pl.col("service").str.contains("OSS"))
         .with_columns(
-            Service=pl.when(pl.col("service") == pl.lit("Full OSS"))
+            Service=pl.when(pl.col("service").eq(pl.lit("Full OSS")))
             .then(pl.lit("Container Stuffing") + " - " + pl.col("storage_type"))
             .otherwise(pl.lit("Stuffing"))
         )
         .join_asof(
-            await price_list().get("oss_stuffing_price"),
+            oss_price,
             by="Service",
             on="date",
             strategy="backward",
@@ -351,9 +369,10 @@ async def oss() -> pl.LazyFrame:
 # Create an IOT list of containers stuffed on IOT account.
 async def iot_coa() -> pl.LazyFrame:
     """IOT stuffing and plugin data set"""
-    await (
-        await coa()
-        .with_columns(
+
+    df = await coa()
+    return (
+        df.with_columns(
             pl.col("vessel_client").cast(pl.Utf8),
             pl.col("container_number").cast(pl.Utf8),
         )
@@ -379,18 +398,25 @@ async def iot_coa() -> pl.LazyFrame:
 async def iot_stuffing() -> pl.LazyFrame:
     """IOT SOC dataset"""
 
-    get_iot_containers: pl.Expr = pl.col("container_number").is_in(await iot_soc_enum())
+    df = await load_gsheet_data(OPS_SHEET_ID, net_list_sheet)
 
-    await (
-        await load_gsheet_data(OPS_SHEET_ID, net_list_sheet)
-        .select(
-            pl.col("Date").alias("date"),
+    iot_df = await iot_coa()
+
+    iot_soc = await iot_soc_enum()
+    price = await price_list()
+    stuffing_price = price.get("stuffing_price")
+
+    get_iot_containers: pl.Expr = pl.col("container_number").is_in(iot_soc)
+
+    return (
+        df.select(
+            pl.col("Date").str.to_date(format="%d/%m/%Y").alias("date"),
             pl.col("Vessel").str.to_uppercase().alias("vessel"),
-            pl.col("startTime").alias("start_time"),
+            pl.col("startTime").str.to_time(format="%H:%M:%S").alias("start_time"),
             pl.col("Container (Destination)").alias("container_number"),
             pl.col("overtime"),
             pl.col("Storage").alias("storage"),
-            pl.col("endTime").alias("end_time"),
+            pl.col("endTime").str.to_time(format="%H:%M:%S").alias("end_time"),
             pl.col("Total Tonnage").alias("total_tonnage"),
         )
         .filter(get_iot_containers)
@@ -401,10 +427,10 @@ async def iot_stuffing() -> pl.LazyFrame:
             Service=pl.lit("Stuffing"),
         )
         .join_asof(
-            await price_list().get("stuffing_price").lazy(),
+            stuffing_price,
             by=None,
             left_on="date",
-            right_on="Date",
+            right_on="date",
             strategy="backward",
         )
         .select(pl.all().exclude(["Service"]))
@@ -435,7 +461,7 @@ async def iot_stuffing() -> pl.LazyFrame:
             )
         )
         .join(
-            iot_coa,
+            iot_df,
             left_on=["date", "vessel", "container_number"],
             right_on=["date_plugged", "vessel_client", "container_number"],
             how="left",
