@@ -11193,3 +11193,292 @@ Ensure that all values in the input column are present in the categories of the 
 2025-07-13 14:50:53,978 - INFO - Starting application
 2025-07-13 14:50:53,979 - INFO - Clearing screen
 2025-07-13 14:50:56,094 - INFO - Exiting application
+2025-07-15 21:37:03,685 - DEBUG - Using selector: EpollSelector
+2025-07-15 21:37:03,685 - INFO - Starting application
+2025-07-15 21:37:03,685 - INFO - Clearing screen
+2025-07-15 21:37:06,452 - INFO - Selected: Save files
+2025-07-15 21:37:06,452 - INFO - Clearing screen
+2025-07-15 21:37:10,317 - INFO - Initiating save operation for all
+2025-07-15 21:37:16,900 - INFO - Using cached data for Price
+2025-07-15 21:37:17,061 - INFO - Using cached data for Price
+2025-07-15 21:37:17,062 - INFO - Using cached data for Price
+2025-07-15 21:37:17,066 - INFO - Using cached data for Price
+2025-07-15 21:37:17,066 - INFO - Using cached data for Price
+2025-07-15 21:37:17,071 - INFO - Using cached data for Price
+2025-07-15 21:37:17,071 - INFO - Using cached data for Price
+2025-07-15 21:37:17,139 - INFO - Loading container data from sheet
+2025-07-15 21:37:17,401 - INFO - Loading container data from sheet
+2025-07-15 21:37:17,552 - INFO - Using cached data for Price
+2025-07-15 21:37:17,553 - INFO - Using cached data for Price
+2025-07-15 21:37:17,856 - INFO - Loading container data from sheet
+2025-07-15 21:37:17,857 - INFO - Using cached data for Price
+2025-07-15 21:37:17,858 - INFO - Using cached data for Price
+2025-07-15 21:37:17,864 - INFO - Using cached data for PTI
+2025-07-15 21:37:17,864 - INFO - Using cached data for Price
+2025-07-15 21:37:17,864 - INFO - Using cached data for Price
+2025-07-15 21:37:17,866 - INFO - Using cached data for Price
+2025-07-15 21:37:17,867 - INFO - Using cached data for Price
+2025-07-15 21:37:17,869 - INFO - Loading container data from sheet
+2025-07-15 21:37:17,869 - INFO - Loading container data from sheet
+2025-07-15 21:37:19,333 - INFO - Using cached data for Price
+2025-07-15 21:37:19,334 - INFO - Using cached data for Price
+2025-07-15 21:37:19,341 - INFO - Using cached data for Client
+2025-07-15 21:37:19,343 - INFO - Using cached data for Client
+2025-07-15 21:37:19,344 - INFO - Using cached data for Client
+2025-07-15 21:37:19,348 - INFO - Using cached data for Client
+2025-07-15 21:37:19,351 - INFO - Using cached data for Client
+2025-07-15 21:37:19,354 - INFO - Using cached data for Client
+2025-07-15 21:37:19,383 - INFO - Using cached data for Client
+2025-07-15 21:37:19,384 - INFO - Using cached data for Client
+2025-07-15 21:37:19,385 - INFO - Using cached data for Client
+2025-07-15 21:37:19,386 - INFO - Using cached data for Client
+2025-07-15 21:37:19,387 - INFO - Using cached data for Client
+2025-07-15 21:37:19,387 - INFO - Using cached data for Client
+2025-07-15 21:37:19,388 - INFO - Using cached data for Client
+2025-07-15 21:37:20,108 - INFO - Using cached data for Client
+2025-07-15 21:37:20,332 - INFO - Loading container data from sheet
+2025-07-15 21:37:21,113 - INFO - Using cached data for Price
+2025-07-15 21:37:21,113 - INFO - Using cached data for Price
+2025-07-15 21:37:21,114 - INFO - Using cached data for Price
+2025-07-15 21:37:21,114 - INFO - Using cached data for Price
+2025-07-15 21:37:21,654 - INFO - Using cached data for Price
+2025-07-15 21:37:21,655 - INFO - Using cached data for Price
+2025-07-15 21:37:21,656 - INFO - Using cached data for Price
+2025-07-15 21:37:21,656 - INFO - Using cached data for Price
+2025-07-15 21:37:21,659 - INFO - Using cached data for CCCSReport
+2025-07-15 21:37:21,659 - INFO - Using cached data for Price
+2025-07-15 21:37:21,660 - INFO - Using cached data for Price
+2025-07-15 21:37:21,670 - INFO - Using cached data for containerOperations
+2025-07-15 21:37:21,670 - INFO - Loading container data from sheet
+2025-07-15 21:37:22,293 - INFO - Using cached data for Price
+2025-07-15 21:37:22,293 - INFO - Using cached data for Price
+2025-07-15 21:37:22,757 - INFO - Using cached data for CCCSReport
+2025-07-15 21:37:22,830 - INFO - Using cached data for Price
+2025-07-15 21:37:22,830 - INFO - Using cached data for Price
+2025-07-15 21:37:23,106 - INFO - Using cached data for Price
+2025-07-15 21:37:23,107 - INFO - Using cached data for Price
+2025-07-15 21:37:23,223 - INFO - Using cached data for Price
+2025-07-15 21:37:23,224 - INFO - Using cached data for Price
+2025-07-15 21:37:23,434 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-15 21:37:23,434 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-15 21:37:23,435 - INFO - Using cached data for CCCSReport
+2025-07-15 21:37:23,435 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-15 21:37:23,436 - INFO - Using cached data for Price
+2025-07-15 21:37:23,436 - INFO - Using cached data for Price
+2025-07-15 21:37:23,514 - INFO - Using cached data for Price
+2025-07-15 21:37:23,515 - INFO - Using cached data for Price
+2025-07-15 21:37:23,519 - INFO - Using cached data for Price
+2025-07-15 21:37:23,520 - INFO - Using cached data for Price
+2025-07-15 21:37:23,595 - INFO - Using cached data for Price
+2025-07-15 21:37:23,596 - INFO - Using cached data for Price
+2025-07-15 21:37:24,555 - INFO - Using cached data for CCCSReport
+2025-07-15 21:37:24,556 - INFO - Using cached data for Price
+2025-07-15 21:37:24,556 - INFO - Using cached data for Price
+2025-07-15 21:37:24,556 - INFO - Using cached data for containerOperations
+2025-07-15 21:37:24,558 - INFO - Using cached data for Price
+2025-07-15 21:37:24,558 - INFO - Using cached data for Price
+2025-07-15 21:37:24,736 - INFO - Using cached data for CCCSReport
+2025-07-15 21:37:24,737 - INFO - Using cached data for Price
+2025-07-15 21:37:24,737 - INFO - Using cached data for Price
+2025-07-15 21:37:24,737 - INFO - Using cached data for containerOperations
+2025-07-15 21:37:24,739 - INFO - Using cached data for Price
+2025-07-15 21:37:24,739 - INFO - Using cached data for Price
+2025-07-15 21:37:24,743 - INFO - Using cached data for Price
+2025-07-15 21:37:24,743 - INFO - Using cached data for Price
+2025-07-15 21:37:24,744 - INFO - Processing all dataframe categories concurrently
+2025-07-15 21:37:24,744 - INFO - Queueing category: emr
+2025-07-15 21:37:24,744 - INFO - Queueing category: operations
+2025-07-15 21:37:24,744 - INFO - Queueing category: netlist
+2025-07-15 21:37:24,744 - INFO - Queueing category: bin_dispatch
+2025-07-15 21:37:24,744 - INFO - Queueing category: shore_handling
+2025-07-15 21:37:24,744 - INFO - Queueing category: stuffing
+2025-07-15 21:37:24,744 - INFO - Queueing category: transport
+2025-07-15 21:37:24,744 - INFO - Queueing category: miscellaneous
+2025-07-15 21:37:24,744 - INFO - Processing dataframe shifting of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:24,744 - INFO - Collecting LazyFrame for shifting
+2025-07-15 21:37:24,980 - INFO - Successfully processed dataframe shifting
+2025-07-15 21:37:24,980 - INFO - Writing to output/csv/shifting.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:24,981 - INFO - Processing dataframe washing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:24,982 - INFO - Collecting LazyFrame for washing
+2025-07-15 21:37:25,076 - INFO - Successfully processed dataframe washing
+2025-07-15 21:37:25,077 - INFO - Writing to output/csv/washing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,077 - INFO - Processing dataframe pti of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,077 - INFO - Collecting LazyFrame for pti
+2025-07-15 21:37:25,410 - INFO - Successfully processed dataframe pti
+2025-07-15 21:37:25,411 - INFO - Writing to output/csv/pti.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,411 - INFO - Processing dataframe ops of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,411 - INFO - Collecting LazyFrame for ops
+2025-07-15 21:37:25,479 - INFO - Successfully processed dataframe ops
+2025-07-15 21:37:25,479 - INFO - Processing dataframe hatch_to_hatch of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,479 - INFO - Collecting LazyFrame for hatch_to_hatch
+2025-07-15 21:37:25,479 - INFO - Writing to output/csv/ops.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,570 - INFO - Successfully processed dataframe hatch_to_hatch
+2025-07-15 21:37:25,571 - INFO - Writing to output/csv/hatch_to_hatch.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,571 - INFO - Processing dataframe net_list of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,571 - INFO - Collecting LazyFrame for net_list
+2025-07-15 21:37:25,740 - INFO - Successfully processed dataframe net_list
+2025-07-15 21:37:25,741 - INFO - Writing to output/csv/net_list.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,741 - INFO - Processing dataframe iot_container_stuffing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,741 - INFO - Collecting LazyFrame for iot_container_stuffing
+2025-07-15 21:37:25,857 - INFO - Successfully processed dataframe iot_container_stuffing
+2025-07-15 21:37:25,858 - INFO - Writing to output/csv/iot_container_stuffing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,858 - INFO - Processing dataframe oss_stuffing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,858 - INFO - Collecting LazyFrame for oss_stuffing
+2025-07-15 21:37:25,946 - INFO - Successfully processed dataframe oss_stuffing
+2025-07-15 21:37:25,946 - INFO - Writing to output/csv/oss_stuffing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,947 - INFO - Processing dataframe full_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,947 - INFO - Collecting LazyFrame for full_scows_transfer
+2025-07-15 21:37:25,963 - ERROR - Error processing dataframe full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-15 21:37:25,963 - INFO - Processing dataframe empty_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,963 - INFO - Collecting LazyFrame for empty_scows_transfer
+2025-07-15 21:37:25,987 - INFO - Successfully processed dataframe empty_scows_transfer
+2025-07-15 21:37:25,988 - INFO - Writing to output/csv/empty_scows_transfer.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,989 - INFO - Processing dataframe salt of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,989 - INFO - Collecting LazyFrame for salt
+2025-07-15 21:37:25,994 - INFO - Successfully processed dataframe salt
+2025-07-15 21:37:25,995 - INFO - Writing to output/csv/salt.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:25,995 - INFO - Successfully wrote shifting to file
+2025-07-15 21:37:25,995 - INFO - Successfully wrote washing to file
+2025-07-15 21:37:25,995 - INFO - Successfully wrote pti to file
+2025-07-15 21:37:25,995 - INFO - Successfully wrote ops to file
+2025-07-15 21:37:25,996 - INFO - Successfully wrote hatch_to_hatch to file
+2025-07-15 21:37:25,996 - INFO - Successfully wrote net_list to file
+2025-07-15 21:37:25,996 - INFO - Successfully wrote iot_container_stuffing to file
+2025-07-15 21:37:25,996 - INFO - Successfully wrote oss_stuffing to file
+2025-07-15 21:37:25,997 - INFO - Successfully wrote empty_scows_transfer to file
+2025-07-15 21:37:25,997 - INFO - Processing dataframe forklift_salt of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:25,997 - INFO - Collecting LazyFrame for forklift_salt
+2025-07-15 21:37:26,060 - INFO - Successfully processed dataframe forklift_salt
+2025-07-15 21:37:26,061 - INFO - Writing to output/csv/forklift_salt.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,061 - INFO - Processing dataframe bin_tipping of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,061 - INFO - Collecting LazyFrame for bin_tipping
+2025-07-15 21:37:26,062 - INFO - Successfully processed dataframe bin_tipping
+2025-07-15 21:37:26,062 - INFO - Writing to output/csv/bin_tipping.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,062 - INFO - Processing dataframe pallet_liner of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,062 - INFO - Collecting LazyFrame for pallet_liner
+2025-07-15 21:37:26,069 - INFO - Successfully processed dataframe pallet_liner
+2025-07-15 21:37:26,069 - INFO - Writing to output/csv/pallet_liner.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,070 - INFO - Processing dataframe container_plugin of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,070 - INFO - Collecting LazyFrame for container_plugin
+2025-07-15 21:37:26,109 - INFO - Successfully processed dataframe container_plugin
+2025-07-15 21:37:26,109 - INFO - Writing to output/csv/container_plugin.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,110 - INFO - Processing dataframe shore_crane of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,110 - INFO - Collecting LazyFrame for shore_crane
+2025-07-15 21:37:26,114 - INFO - Successfully processed dataframe shore_crane
+2025-07-15 21:37:26,115 - INFO - Writing to output/csv/shore_crane.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,115 - INFO - Processing dataframe transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,137 - INFO - Collecting LazyFrame for transfer
+2025-07-15 21:37:26,143 - ERROR - Error processing dataframe transfer: conversion from `str` to `enum` failed in column 'destination' for 1 out of 130 values: ["HD Yard"]
+
+Ensure that all values in the input column are present in the categories of the enum datatype.
+2025-07-15 21:37:26,144 - INFO - Processing dataframe scow_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,144 - INFO - Collecting LazyFrame for scow_transfer
+2025-07-15 21:37:26,150 - INFO - Successfully processed dataframe scow_transfer
+2025-07-15 21:37:26,150 - INFO - Writing to output/csv/scow_transfer.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,150 - INFO - Processing dataframe static_loader of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,150 - INFO - Collecting LazyFrame for static_loader
+2025-07-15 21:37:26,151 - ERROR - Error in write_df_to_csv: datatype duration[ns] cannot be written to CSV
+
+Consider using JSON or a binary format.
+2025-07-15 21:37:26,156 - INFO - Successfully processed dataframe static_loader
+2025-07-15 21:37:26,156 - INFO - Writing to output/csv/static_loader.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,156 - INFO - Processing dataframe dispatch_to_cargo of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,156 - INFO - Collecting LazyFrame for dispatch_to_cargo
+2025-07-15 21:37:26,191 - INFO - Successfully processed dataframe dispatch_to_cargo
+2025-07-15 21:37:26,191 - INFO - Processing dataframe truck_to_cccs of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,191 - INFO - Collecting LazyFrame for truck_to_cccs
+2025-07-15 21:37:26,192 - INFO - Writing to output/csv/dispatch_to_cargo.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,213 - INFO - Successfully processed dataframe truck_to_cccs
+2025-07-15 21:37:26,214 - INFO - Successfully wrote salt to file
+2025-07-15 21:37:26,214 - INFO - Writing to output/csv/truck_to_cccs.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,215 - INFO - Successfully wrote forklift_salt to file
+2025-07-15 21:37:26,215 - INFO - Successfully wrote bin_tipping to file
+2025-07-15 21:37:26,216 - INFO - Successfully wrote pallet_liner to file
+2025-07-15 21:37:26,216 - INFO - Successfully wrote container_plugin to file
+2025-07-15 21:37:26,216 - INFO - Processing dataframe cross_stuffing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,216 - INFO - Collecting LazyFrame for cross_stuffing
+2025-07-15 21:37:26,224 - INFO - Successfully processed dataframe cross_stuffing
+2025-07-15 21:37:26,224 - ERROR - Error processing dataframe scow_transfer: datatype duration[ns] cannot be written to CSV
+
+Consider using JSON or a binary format.
+2025-07-15 21:37:26,224 - INFO - Successfully wrote static_loader to file
+2025-07-15 21:37:26,225 - INFO - Successfully wrote shore_crane to file
+2025-07-15 21:37:26,225 - INFO - Processing dataframe cccs_stuffing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,225 - INFO - Collecting LazyFrame for cccs_stuffing
+2025-07-15 21:37:26,224 - INFO - Writing to output/csv/cross_stuffing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,236 - INFO - Successfully processed dataframe cccs_stuffing
+2025-07-15 21:37:26,237 - INFO - Writing to output/csv/cccs_stuffing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,237 - INFO - Processing dataframe bycatch of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-15 21:37:26,237 - INFO - Collecting LazyFrame for bycatch
+2025-07-15 21:37:26,326 - INFO - Successfully processed dataframe bycatch
+2025-07-15 21:37:26,326 - INFO - Successfully wrote dispatch_to_cargo to file
+2025-07-15 21:37:26,326 - INFO - Writing to output/csv/bycatch.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-15 21:37:26,326 - INFO - Successfully wrote truck_to_cccs to file
+2025-07-15 21:37:26,327 - INFO - Successfully wrote cross_stuffing to file
+2025-07-15 21:37:26,327 - INFO - Successfully wrote cccs_stuffing to file
+2025-07-15 21:37:26,329 - INFO - Successfully wrote bycatch to file
+2025-07-15 21:37:26,329 - INFO - Successfully saved shifting
+2025-07-15 21:37:26,329 - INFO - Successfully saved washing
+2025-07-15 21:37:26,329 - INFO - Successfully saved pti
+2025-07-15 21:37:26,329 - INFO - Successfully saved ops
+2025-07-15 21:37:26,329 - INFO - Successfully saved hatch_to_hatch
+2025-07-15 21:37:26,329 - INFO - Successfully saved net_list
+2025-07-15 21:37:26,329 - INFO - Successfully saved iot_container_stuffing
+2025-07-15 21:37:26,329 - INFO - Successfully saved oss_stuffing
+2025-07-15 21:37:26,330 - ERROR - Error saving full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-15 21:37:26,330 - INFO - Successfully saved empty_scows_transfer
+2025-07-15 21:37:26,330 - INFO - Successfully saved salt
+2025-07-15 21:37:26,330 - INFO - Successfully saved forklift_salt
+2025-07-15 21:37:26,330 - INFO - Successfully saved bin_tipping
+2025-07-15 21:37:26,330 - INFO - Successfully saved pallet_liner
+2025-07-15 21:37:26,330 - INFO - Successfully saved container_plugin
+2025-07-15 21:37:26,330 - INFO - Successfully saved shore_crane
+2025-07-15 21:37:26,330 - ERROR - Error saving transfer: conversion from `str` to `enum` failed in column 'destination' for 1 out of 130 values: ["HD Yard"]
+
+Ensure that all values in the input column are present in the categories of the enum datatype.
+2025-07-15 21:37:26,330 - ERROR - Error saving scow_transfer: datatype duration[ns] cannot be written to CSV
+
+Consider using JSON or a binary format.
+2025-07-15 21:37:26,330 - INFO - Successfully saved static_loader
+2025-07-15 21:37:26,330 - INFO - Successfully saved dispatch_to_cargo
+2025-07-15 21:37:26,330 - INFO - Successfully saved truck_to_cccs
+2025-07-15 21:37:26,330 - INFO - Successfully saved cross_stuffing
+2025-07-15 21:37:26,330 - INFO - Successfully saved cccs_stuffing
+2025-07-15 21:37:26,330 - INFO - Successfully saved bycatch
+2025-07-15 21:37:26,331 - INFO - Save completed
+2025-07-15 21:37:26,331 - INFO - Successfully saved: 21 files
+2025-07-15 21:37:26,331 - ERROR - Failed to save: 3 files
+2025-07-15 21:37:26,331 - ERROR -   - full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-15 21:37:26,331 - ERROR -   - transfer: conversion from `str` to `enum` failed in column 'destination' for 1 out of 130 values: ["HD Yard"]
+
+Ensure that all values in the input column are present in the categories of the enum datatype.
+2025-07-15 21:37:26,331 - ERROR -   - scow_transfer: datatype duration[ns] cannot be written to CSV
+
+Consider using JSON or a binary format.

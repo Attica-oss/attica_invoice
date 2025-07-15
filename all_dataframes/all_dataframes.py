@@ -1,7 +1,6 @@
 
 """Stores all dataframes as organized collections with improved performance and structure"""
 
-"""Stores all dataframes as list and dicts"""
 
 from typing import Dict, Awaitable
 import asyncio
@@ -94,7 +93,6 @@ class DataFrameCollections:
         tasks = {
             "ops": operations.ops(),
             "hatch_to_hatch": operations.hatch_to_hatch(),
-            # TODO: Uncomment when ready
             # "extramen": operations.extramen(),
             # "additional_overtime": operations.additional(),
             # "tare_calibration": operations.tare()
@@ -356,8 +354,6 @@ class LazyDataFrameCollections:
 #         "transport_dataframes":transport_dataframes
 #     }
 
-    transport
-)
 
 # EMR Dataframes
 
@@ -384,17 +380,17 @@ miscellaneous_dataframes:dict[str,pl.LazyFrame] = {
 }
 
 netlist_dataframes :dict[str,pl.LazyFrame]={
-    "net_list":netlist.netList,
+    "net_list":netlist.net_list,
     "iot_container_stuffing":netlist.iot_stuffing,
     "oss_stuffing":netlist.oss
 }
 
 operations_dataframes: dict[str,pl.LazyFrame]={
     "ops":operations.ops,
-    "extramen":operations.extramen,
+    # "extramen":operations.extramen,
     "hatch_to_hatch":operations.hatch_to_hatch,
     # "additional_overtime":operations.additional,
-    "tare_calibration":operations.tare
+    # "tare_calibration":operations.tare
 }
 
 shore_handling_dataframes:dict[str,pl.LazyFrame]={
@@ -424,4 +420,3 @@ transport_dataframes:dict[str,pl.LazyFrame]={
 #     **bin_dispatch_dataframes,
 #     **shore_handling_dataframes
 # }
-

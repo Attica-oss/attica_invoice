@@ -3,7 +3,7 @@
 from datetime import date
 import polars as pl
 import polars.selectors as cs
-from .data.price import FREE, get_price
+from data.price import FREE, get_price
 from data_source.make_dataset import load_gsheet_data
 from data_source.sheet_ids import (
     TRANSPORT_SHEET_ID,
@@ -164,9 +164,11 @@ async def transfer() -> pl.LazyFrame:
         )
         .with_columns(
             shifting_price=pl.when(
-                (pl.col("type") == "Reefer")
+                ((pl.col("type") == "Reefer")
                 & (pl.col("remarks") != "IOT")
-                & (pl.col("status") == Status.full)
+                & (pl.col("status") == Status.full)) | (
+                    pl.col("remarks").eq("CCCS").and_(pl.col("driver").eq("NA"))
+                )
             )
             .then(FREE)
             .when(
