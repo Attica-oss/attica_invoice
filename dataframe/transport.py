@@ -17,6 +17,7 @@ from type_casting.dates import (
     SPECIAL_DAYS,
     UPPER_BOUND,
     UPPER_BOUND_SPECIAL_DAY,
+    CURRENT_YEAR,
     DayName,
 )
 from type_casting.containers import containers_enum
@@ -164,11 +165,12 @@ async def transfer() -> pl.LazyFrame:
         )
         .with_columns(
             shifting_price=pl.when(
-                ((pl.col("type") == "Reefer")
-                & (pl.col("remarks") != "IOT")
-                & (pl.col("status") == Status.full)) | (
-                    pl.col("remarks").eq("CCCS").and_(pl.col("driver").eq("NA"))
+                (
+                    (pl.col("type") == "Reefer")
+                    & (pl.col("remarks") != "IOT")
+                    & (pl.col("status") == Status.full)
                 )
+                | (pl.col("remarks").eq("CCCS").and_(pl.col("driver").eq("NA")))
             )
             .then(FREE)
             .when(
@@ -226,7 +228,9 @@ async def scow_transfer() -> pl.LazyFrame:
 
     df = await load_gsheet_data(TRANSPORT_SHEET_ID, scow_sheet)
 
-    return df.select(
+    return df.filter(
+        pl.col("date").str.to_date(format="%d/%m/%Y").dt.year().eq(CURRENT_YEAR)
+    ).select(
         pl.col("date").str.to_date(format="%d/%m/%Y"),
         pl.col("container_number").cast(dtype=pl.Enum(["STDU6536343", "STDU6536338"])),
         pl.col("customer").cast(
@@ -250,7 +254,15 @@ async def scow_transfer() -> pl.LazyFrame:
         pl.col("status").cast(dtype=pl.Enum(STATUS_TYPE)),
         pl.col("remarks"),
         pl.col("num_of_scows").cast(dtype=pl.Int64),
-    ).with_columns(duration=pl.col("time_in") - pl.col("time_out"))
+    ).with_columns(
+        duration=(pl.col("time_in") - pl.col("time_out"))
+        .dt.total_minutes()
+        .map_elements(
+            lambda mins: f"{int(mins // 60):02d}:{int(mins % 60):02d}",
+            return_dtype=pl.Utf8,
+        )
+        .str.to_time(format="%H:%M")
+    )
 
 
 async def forklift() -> pl.LazyFrame:

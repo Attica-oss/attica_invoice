@@ -11482,3 +11482,746 @@ Ensure that all values in the input column are present in the categories of the 
 2025-07-15 21:37:26,331 - ERROR -   - scow_transfer: datatype duration[ns] cannot be written to CSV
 
 Consider using JSON or a binary format.
+2025-07-23 18:50:29,864 - DEBUG - Using selector: EpollSelector
+2025-07-23 18:50:29,899 - INFO - Starting application
+2025-07-23 18:50:29,900 - INFO - Clearing screen
+2025-07-23 18:50:34,765 - INFO - Selected: Save files
+2025-07-23 18:50:34,765 - INFO - Clearing screen
+2025-07-23 18:50:41,012 - INFO - Initiating save operation for emr
+2025-07-23 18:50:45,931 - INFO - Loading container data from sheet
+2025-07-23 18:50:45,931 - INFO - Using cached data for Price
+2025-07-23 18:50:51,485 - INFO - Using cached data for Price
+2025-07-23 18:50:51,485 - INFO - Using cached data for Price
+2025-07-23 18:50:52,162 - INFO - Using cached data for Price
+2025-07-23 18:50:52,162 - INFO - Using cached data for Price
+2025-07-23 18:50:52,379 - INFO - Using cached data for Price
+2025-07-23 18:50:52,380 - INFO - Using cached data for Price
+2025-07-23 18:50:52,385 - INFO - Using cached data for Price
+2025-07-23 18:50:52,386 - INFO - Using cached data for Price
+2025-07-23 18:50:52,392 - INFO - Loading container data from sheet
+2025-07-23 18:50:52,393 - INFO - Loading container data from sheet
+2025-07-23 18:50:52,455 - INFO - Using cached data for Price
+2025-07-23 18:50:52,456 - INFO - Using cached data for Price
+2025-07-23 18:50:52,555 - INFO - Using cached data for Price
+2025-07-23 18:50:52,555 - INFO - Using cached data for Price
+2025-07-23 18:50:52,637 - INFO - Using cached data for Price
+2025-07-23 18:50:52,637 - INFO - Using cached data for Price
+2025-07-23 18:50:52,724 - INFO - Using cached data for Price
+2025-07-23 18:50:52,724 - INFO - Using cached data for Price
+2025-07-23 18:50:52,728 - INFO - Using cached data for Price
+2025-07-23 18:50:52,728 - INFO - Using cached data for Price
+2025-07-23 18:50:52,731 - INFO - Using cached data for Price
+2025-07-23 18:50:52,731 - INFO - Using cached data for Price
+2025-07-23 18:50:52,775 - INFO - Using cached data for PTI
+2025-07-23 18:50:52,776 - INFO - Using cached data for Price
+2025-07-23 18:50:52,777 - INFO - Using cached data for Price
+2025-07-23 18:50:52,784 - INFO - Using cached data for Price
+2025-07-23 18:50:52,784 - INFO - Using cached data for Price
+2025-07-23 18:50:52,789 - INFO - Loading container data from sheet
+2025-07-23 18:50:52,939 - INFO - Using cached data for Price
+2025-07-23 18:50:52,939 - INFO - Using cached data for Price
+2025-07-23 18:50:52,940 - INFO - Loading container data from sheet
+2025-07-23 18:50:52,940 - INFO - Using cached data for Transfer
+2025-07-23 18:50:53,388 - INFO - Using cached data for CCCSReport
+2025-07-23 18:50:53,390 - INFO - Using cached data for Price
+2025-07-23 18:50:53,390 - INFO - Using cached data for Price
+2025-07-23 18:50:53,473 - INFO - Using cached data for Client
+2025-07-23 18:50:53,474 - INFO - Using cached data for Client
+2025-07-23 18:50:53,474 - INFO - Using cached data for Client
+2025-07-23 18:50:53,474 - INFO - Using cached data for Client
+2025-07-23 18:50:53,474 - INFO - Using cached data for Client
+2025-07-23 18:50:53,475 - INFO - Using cached data for Client
+2025-07-23 18:50:53,475 - INFO - Using cached data for Client
+2025-07-23 18:50:53,475 - INFO - Using cached data for Client
+2025-07-23 18:50:53,475 - INFO - Using cached data for Client
+2025-07-23 18:50:53,476 - INFO - Using cached data for Client
+2025-07-23 18:50:53,476 - INFO - Using cached data for Client
+2025-07-23 18:50:53,476 - INFO - Using cached data for Client
+2025-07-23 18:50:53,476 - INFO - Using cached data for Client
+2025-07-23 18:50:53,748 - INFO - Using cached data for Price
+2025-07-23 18:50:53,749 - INFO - Using cached data for Price
+2025-07-23 18:50:53,769 - INFO - Using cached data for CCCSReport
+2025-07-23 18:50:53,772 - INFO - Using cached data for Client
+2025-07-23 18:50:54,067 - INFO - Using cached data for Price
+2025-07-23 18:50:54,067 - INFO - Using cached data for Price
+2025-07-23 18:50:54,080 - INFO - Using cached data for Price
+2025-07-23 18:50:54,080 - INFO - Using cached data for Price
+2025-07-23 18:50:54,397 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 18:50:54,399 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 18:50:54,401 - INFO - Using cached data for CCCSReport
+2025-07-23 18:50:54,403 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 18:50:54,405 - INFO - Using cached data for Price
+2025-07-23 18:50:54,406 - INFO - Using cached data for Price
+2025-07-23 18:50:56,503 - INFO - Using cached data for Price
+2025-07-23 18:50:56,503 - INFO - Using cached data for Price
+2025-07-23 18:50:57,228 - INFO - Using cached data for CCCSReport
+2025-07-23 18:50:57,230 - INFO - Using cached data for Price
+2025-07-23 18:50:57,230 - INFO - Using cached data for Price
+2025-07-23 18:50:57,231 - INFO - Using cached data for containerOperations
+2025-07-23 18:50:57,233 - INFO - Using cached data for Price
+2025-07-23 18:50:57,233 - INFO - Using cached data for Price
+2025-07-23 18:50:57,237 - INFO - Using cached data for Price
+2025-07-23 18:50:57,237 - INFO - Using cached data for Price
+2025-07-23 18:50:57,318 - INFO - Using cached data for Price
+2025-07-23 18:50:57,320 - INFO - Using cached data for Price
+2025-07-23 18:50:57,717 - INFO - Using cached data for CCCSReport
+2025-07-23 18:50:57,718 - INFO - Using cached data for Price
+2025-07-23 18:50:57,719 - INFO - Using cached data for Price
+2025-07-23 18:50:57,719 - INFO - Using cached data for containerOperations
+2025-07-23 18:50:57,723 - INFO - Using cached data for Price
+2025-07-23 18:50:57,723 - INFO - Using cached data for Price
+2025-07-23 18:50:59,898 - INFO - Using cached data for Price
+2025-07-23 18:50:59,898 - INFO - Using cached data for Price
+2025-07-23 18:51:00,530 - INFO - Processing dataframe category: emr
+2025-07-23 18:51:00,530 - INFO - Processing dataframes: ['shifting', 'washing', 'pti']
+2025-07-23 18:51:00,531 - INFO - Processing dataframe shifting of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 18:51:00,531 - INFO - Collecting LazyFrame for shifting
+2025-07-23 18:51:01,989 - INFO - Successfully processed dataframe shifting
+2025-07-23 18:51:01,991 - INFO - Writing to output/csv/shifting.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 18:51:01,991 - INFO - Processing dataframe washing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 18:51:01,993 - INFO - Collecting LazyFrame for washing
+2025-07-23 18:51:02,652 - INFO - Successfully processed dataframe washing
+2025-07-23 18:51:02,653 - INFO - Writing to output/csv/washing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 18:51:02,654 - INFO - Processing dataframe pti of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 18:51:02,654 - INFO - Collecting LazyFrame for pti
+2025-07-23 18:51:03,872 - INFO - Successfully processed dataframe pti
+2025-07-23 18:51:03,874 - INFO - Successfully wrote washing to file
+2025-07-23 18:51:03,874 - INFO - Successfully wrote shifting to file
+2025-07-23 18:51:03,875 - INFO - Writing to output/csv/pti.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 18:51:03,914 - INFO - Successfully wrote pti to file
+2025-07-23 18:51:03,915 - INFO - Successfully saved shifting
+2025-07-23 18:51:03,915 - INFO - Successfully saved washing
+2025-07-23 18:51:03,915 - INFO - Successfully saved pti
+2025-07-23 18:51:03,915 - INFO - Save completed
+2025-07-23 18:51:03,915 - INFO - Successfully saved: shifting, washing, pti
+2025-07-23 19:08:33,539 - DEBUG - Using selector: EpollSelector
+2025-07-23 19:08:33,539 - INFO - Starting application
+2025-07-23 19:08:33,539 - INFO - Clearing screen
+2025-07-23 19:08:35,251 - INFO - Selected: Save files
+2025-07-23 19:08:35,252 - INFO - Clearing screen
+2025-07-23 19:08:43,140 - INFO - Initiating save operation for operations
+2025-07-23 19:08:44,401 - INFO - Loading container data from sheet
+2025-07-23 19:08:44,944 - INFO - Using cached data for Price
+2025-07-23 19:08:45,005 - INFO - Using cached data for Price
+2025-07-23 19:08:45,005 - INFO - Using cached data for Price
+2025-07-23 19:08:45,014 - INFO - Using cached data for PTI
+2025-07-23 19:08:45,014 - INFO - Using cached data for Price
+2025-07-23 19:08:45,014 - INFO - Using cached data for Price
+2025-07-23 19:08:45,020 - INFO - Using cached data for Price
+2025-07-23 19:08:45,021 - INFO - Using cached data for Price
+2025-07-23 19:08:45,028 - INFO - Loading container data from sheet
+2025-07-23 19:08:45,040 - INFO - Using cached data for Price
+2025-07-23 19:08:45,041 - INFO - Using cached data for Price
+2025-07-23 19:08:45,047 - INFO - Using cached data for Price
+2025-07-23 19:08:45,048 - INFO - Using cached data for Price
+2025-07-23 19:08:45,059 - INFO - Using cached data for Price
+2025-07-23 19:08:45,059 - INFO - Using cached data for Price
+2025-07-23 19:08:45,103 - INFO - Using cached data for Price
+2025-07-23 19:08:45,103 - INFO - Using cached data for Price
+2025-07-23 19:08:45,147 - INFO - Loading container data from sheet
+2025-07-23 19:08:45,355 - INFO - Using cached data for Price
+2025-07-23 19:08:45,355 - INFO - Using cached data for Price
+2025-07-23 19:08:45,605 - INFO - Using cached data for Price
+2025-07-23 19:08:45,605 - INFO - Using cached data for Price
+2025-07-23 19:08:45,612 - INFO - Loading container data from sheet
+2025-07-23 19:08:45,658 - INFO - Using cached data for Price
+2025-07-23 19:08:45,659 - INFO - Using cached data for Price
+2025-07-23 19:08:45,675 - INFO - Using cached data for Price
+2025-07-23 19:08:45,676 - INFO - Using cached data for Price
+2025-07-23 19:08:45,788 - INFO - Loading container data from sheet
+2025-07-23 19:08:46,490 - INFO - Using cached data for Client
+2025-07-23 19:08:46,492 - INFO - Using cached data for Client
+2025-07-23 19:08:46,493 - INFO - Using cached data for Client
+2025-07-23 19:08:46,495 - INFO - Using cached data for Client
+2025-07-23 19:08:46,496 - INFO - Using cached data for Client
+2025-07-23 19:08:46,497 - INFO - Using cached data for Client
+2025-07-23 19:08:46,499 - INFO - Using cached data for Client
+2025-07-23 19:08:46,500 - INFO - Using cached data for Client
+2025-07-23 19:08:46,501 - INFO - Using cached data for Client
+2025-07-23 19:08:46,502 - INFO - Using cached data for Client
+2025-07-23 19:08:46,503 - INFO - Using cached data for Client
+2025-07-23 19:08:46,503 - INFO - Using cached data for Client
+2025-07-23 19:08:46,504 - INFO - Using cached data for Client
+2025-07-23 19:08:46,586 - INFO - Using cached data for Client
+2025-07-23 19:08:46,617 - INFO - Using cached data for CCCSReport
+2025-07-23 19:08:46,617 - INFO - Using cached data for Price
+2025-07-23 19:08:46,618 - INFO - Using cached data for Price
+2025-07-23 19:08:46,774 - INFO - Loading container data from sheet
+2025-07-23 19:08:46,972 - INFO - Using cached data for CCCSReport
+2025-07-23 19:08:47,501 - INFO - Using cached data for Price
+2025-07-23 19:08:47,501 - INFO - Using cached data for Price
+2025-07-23 19:08:47,548 - INFO - Using cached data for containerOperations
+2025-07-23 19:08:47,552 - INFO - Using cached data for Price
+2025-07-23 19:08:47,552 - INFO - Using cached data for Price
+2025-07-23 19:08:47,559 - INFO - Using cached data for Price
+2025-07-23 19:08:47,559 - INFO - Using cached data for Price
+2025-07-23 19:08:47,572 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:08:47,573 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:08:47,576 - INFO - Using cached data for CCCSReport
+2025-07-23 19:08:47,576 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:08:47,577 - INFO - Using cached data for Price
+2025-07-23 19:08:47,578 - INFO - Using cached data for Price
+2025-07-23 19:08:48,457 - INFO - Using cached data for Price
+2025-07-23 19:08:48,457 - INFO - Using cached data for Price
+2025-07-23 19:08:49,057 - INFO - Using cached data for Price
+2025-07-23 19:08:49,057 - INFO - Using cached data for Price
+2025-07-23 19:08:49,212 - INFO - Using cached data for Price
+2025-07-23 19:08:49,212 - INFO - Using cached data for Price
+2025-07-23 19:08:50,082 - INFO - Using cached data for Price
+2025-07-23 19:08:50,082 - INFO - Using cached data for Price
+2025-07-23 19:08:50,430 - INFO - Using cached data for CCCSReport
+2025-07-23 19:08:50,431 - INFO - Using cached data for Price
+2025-07-23 19:08:50,431 - INFO - Using cached data for Price
+2025-07-23 19:08:50,431 - INFO - Using cached data for containerOperations
+2025-07-23 19:08:50,433 - INFO - Using cached data for Price
+2025-07-23 19:08:50,433 - INFO - Using cached data for Price
+2025-07-23 19:08:50,889 - INFO - Using cached data for CCCSReport
+2025-07-23 19:08:50,891 - INFO - Using cached data for Price
+2025-07-23 19:08:50,891 - INFO - Using cached data for Price
+2025-07-23 19:08:50,892 - INFO - Using cached data for containerOperations
+2025-07-23 19:08:50,894 - INFO - Using cached data for Price
+2025-07-23 19:08:50,894 - INFO - Using cached data for Price
+2025-07-23 19:08:50,898 - INFO - Using cached data for Price
+2025-07-23 19:08:50,898 - INFO - Using cached data for Price
+2025-07-23 19:08:51,066 - INFO - Using cached data for Price
+2025-07-23 19:08:51,082 - INFO - Using cached data for Price
+2025-07-23 19:08:51,084 - INFO - Processing dataframe category: operations
+2025-07-23 19:08:51,085 - INFO - Processing dataframes: ['ops', 'hatch_to_hatch']
+2025-07-23 19:08:51,085 - INFO - Processing dataframe ops of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:08:51,085 - INFO - Collecting LazyFrame for ops
+2025-07-23 19:08:51,324 - INFO - Successfully processed dataframe ops
+2025-07-23 19:08:51,326 - INFO - Writing to output/csv/ops.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 19:08:51,327 - INFO - Processing dataframe hatch_to_hatch of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:08:51,327 - INFO - Collecting LazyFrame for hatch_to_hatch
+2025-07-23 19:08:51,499 - INFO - Successfully processed dataframe hatch_to_hatch
+2025-07-23 19:08:51,499 - INFO - Writing to output/csv/hatch_to_hatch.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 19:08:51,499 - INFO - Successfully wrote ops to file
+2025-07-23 19:08:51,501 - INFO - Successfully wrote hatch_to_hatch to file
+2025-07-23 19:08:51,501 - INFO - Successfully saved ops
+2025-07-23 19:08:51,501 - INFO - Successfully saved hatch_to_hatch
+2025-07-23 19:08:51,501 - INFO - Save completed
+2025-07-23 19:08:51,501 - INFO - Successfully saved: ops, hatch_to_hatch
+2025-07-23 19:09:47,891 - INFO - Starting application
+2025-07-23 19:09:47,892 - INFO - Clearing screen
+2025-07-23 19:09:50,954 - INFO - Selected: Save files
+2025-07-23 19:09:50,954 - INFO - Clearing screen
+2025-07-23 19:09:57,842 - INFO - Initiating save operation for netlist
+2025-07-23 19:09:57,843 - INFO - Using cached data for Price
+2025-07-23 19:09:57,843 - INFO - Using cached data for Price
+2025-07-23 19:09:57,848 - INFO - Using cached data for ContainerShifting
+2025-07-23 19:09:57,856 - INFO - Using cached data for ContainerCleaning
+2025-07-23 19:09:57,870 - INFO - Using cached data for Price
+2025-07-23 19:09:57,871 - INFO - Using cached data for Price
+2025-07-23 19:09:57,875 - INFO - Using cached data for PTI
+2025-07-23 19:09:57,875 - INFO - Using cached data for Price
+2025-07-23 19:09:57,875 - INFO - Using cached data for Price
+2025-07-23 19:09:57,878 - INFO - Using cached data for PTI
+2025-07-23 19:09:57,878 - INFO - Using cached data for Price
+2025-07-23 19:09:57,879 - INFO - Using cached data for Price
+2025-07-23 19:09:57,881 - INFO - Using cached data for Price
+2025-07-23 19:09:57,881 - INFO - Using cached data for Price
+2025-07-23 19:09:57,886 - INFO - Using cached data for ScowTransfer
+2025-07-23 19:09:57,886 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,888 - INFO - Using cached data for Price
+2025-07-23 19:09:57,888 - INFO - Using cached data for Price
+2025-07-23 19:09:57,889 - INFO - Using cached data for ScowTransfer
+2025-07-23 19:09:57,890 - INFO - Using cached data for Price
+2025-07-23 19:09:57,890 - INFO - Using cached data for Price
+2025-07-23 19:09:57,892 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,892 - INFO - Using cached data for Price
+2025-07-23 19:09:57,893 - INFO - Using cached data for Price
+2025-07-23 19:09:57,896 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,896 - INFO - Using cached data for Price
+2025-07-23 19:09:57,897 - INFO - Using cached data for Price
+2025-07-23 19:09:57,898 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,898 - INFO - Using cached data for Price
+2025-07-23 19:09:57,899 - INFO - Using cached data for Price
+2025-07-23 19:09:57,900 - INFO - Using cached data for CrossStuffing
+2025-07-23 19:09:57,900 - INFO - Using cached data for Price
+2025-07-23 19:09:57,901 - INFO - Using cached data for Price
+2025-07-23 19:09:57,902 - INFO - Using cached data for CCCSContainerStuffing
+2025-07-23 19:09:57,909 - INFO - Using cached data for Price
+2025-07-23 19:09:57,909 - INFO - Using cached data for Price
+2025-07-23 19:09:57,911 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,912 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,913 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:09:57,913 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:09:57,914 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:09:57,914 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,915 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:09:57,915 - INFO - Using cached data for Price
+2025-07-23 19:09:57,915 - INFO - Using cached data for Price
+2025-07-23 19:09:57,916 - INFO - Using cached data for UnloadingSummary
+2025-07-23 19:09:57,916 - INFO - Using cached data for RawData
+2025-07-23 19:09:57,916 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,917 - INFO - Using cached data for Price
+2025-07-23 19:09:57,917 - INFO - Using cached data for Price
+2025-07-23 19:09:57,918 - INFO - Using cached data for containerOperations
+2025-07-23 19:09:57,922 - INFO - Using cached data for Price
+2025-07-23 19:09:57,922 - INFO - Using cached data for Price
+2025-07-23 19:09:57,930 - INFO - Using cached data for UnloadingSummary
+2025-07-23 19:09:57,930 - INFO - Using cached data for containerOperations
+2025-07-23 19:09:57,934 - INFO - Using cached data for Price
+2025-07-23 19:09:57,935 - INFO - Using cached data for Price
+2025-07-23 19:09:57,948 - INFO - Using cached data for Price
+2025-07-23 19:09:57,948 - INFO - Using cached data for Price
+2025-07-23 19:09:57,949 - INFO - Using cached data for UnloadingSummary
+2025-07-23 19:09:57,949 - INFO - Using cached data for RawData
+2025-07-23 19:09:57,949 - INFO - Using cached data for CCCSReport
+2025-07-23 19:09:57,950 - INFO - Using cached data for Price
+2025-07-23 19:09:57,950 - INFO - Using cached data for Price
+2025-07-23 19:09:57,950 - INFO - Using cached data for containerOperations
+2025-07-23 19:09:57,954 - INFO - Using cached data for Price
+2025-07-23 19:09:57,954 - INFO - Using cached data for Price
+2025-07-23 19:09:57,960 - INFO - Using cached data for Price
+2025-07-23 19:09:57,960 - INFO - Using cached data for Price
+2025-07-23 19:09:57,961 - INFO - Using cached data for RawData
+2025-07-23 19:09:57,961 - INFO - Using cached data for WelltoWell
+2025-07-23 19:09:57,961 - INFO - Using cached data for Price
+2025-07-23 19:09:57,961 - INFO - Using cached data for Price
+2025-07-23 19:09:57,962 - INFO - Using cached data for SaltOperation
+2025-07-23 19:09:57,962 - INFO - Using cached data for Price
+2025-07-23 19:09:57,962 - INFO - Using cached data for Price
+2025-07-23 19:09:57,964 - INFO - Using cached data for Client
+2025-07-23 19:09:57,966 - INFO - Using cached data for SaltOperation
+2025-07-23 19:09:57,967 - INFO - Using cached data for Price
+2025-07-23 19:09:57,967 - INFO - Using cached data for Price
+2025-07-23 19:09:57,968 - INFO - Using cached data for Client
+2025-07-23 19:09:57,979 - INFO - Using cached data for BinTipping
+2025-07-23 19:09:57,979 - INFO - Using cached data for Price
+2025-07-23 19:09:57,979 - INFO - Using cached data for Price
+2025-07-23 19:09:57,981 - INFO - Using cached data for LinerPallet
+2025-07-23 19:09:57,985 - INFO - Using cached data for Price
+2025-07-23 19:09:57,987 - INFO - Using cached data for Price
+2025-07-23 19:09:58,001 - INFO - Using cached data for containerOperations
+2025-07-23 19:09:58,006 - INFO - Using cached data for Price
+2025-07-23 19:09:58,006 - INFO - Using cached data for Price
+2025-07-23 19:09:58,035 - INFO - Using cached data for ShoreCrane
+2025-07-23 19:09:58,036 - INFO - Using cached data for Transfer
+2025-07-23 19:09:58,036 - INFO - Using cached data for Price
+2025-07-23 19:09:58,036 - INFO - Using cached data for Price
+2025-07-23 19:09:58,042 - INFO - Using cached data for ScowTransfer
+2025-07-23 19:09:58,043 - INFO - Using cached data for ForkliftRecord
+2025-07-23 19:09:58,044 - INFO - Processing dataframe category: netlist
+2025-07-23 19:09:58,044 - INFO - Processing dataframes: ['net_list', 'iot_container_stuffing', 'oss_stuffing']
+2025-07-23 19:09:58,044 - INFO - Processing dataframe net_list of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:09:58,045 - INFO - Collecting LazyFrame for net_list
+2025-07-23 19:09:58,271 - INFO - Successfully processed dataframe net_list
+2025-07-23 19:09:58,272 - INFO - Writing to output/csv/net_list.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 19:09:58,272 - INFO - Processing dataframe iot_container_stuffing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:09:58,273 - INFO - Collecting LazyFrame for iot_container_stuffing
+2025-07-23 19:09:58,375 - INFO - Successfully processed dataframe iot_container_stuffing
+2025-07-23 19:09:58,376 - INFO - Writing to output/csv/iot_container_stuffing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 19:09:58,376 - INFO - Processing dataframe oss_stuffing of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:09:58,376 - INFO - Collecting LazyFrame for oss_stuffing
+2025-07-23 19:09:58,433 - INFO - Successfully processed dataframe oss_stuffing
+2025-07-23 19:09:58,433 - INFO - Successfully wrote net_list to file
+2025-07-23 19:09:58,434 - INFO - Successfully wrote iot_container_stuffing to file
+2025-07-23 19:09:58,434 - INFO - Writing to output/csv/oss_stuffing.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 19:09:58,434 - INFO - Successfully wrote oss_stuffing to file
+2025-07-23 19:09:58,434 - INFO - Successfully saved net_list
+2025-07-23 19:09:58,434 - INFO - Successfully saved iot_container_stuffing
+2025-07-23 19:09:58,434 - INFO - Successfully saved oss_stuffing
+2025-07-23 19:09:58,434 - INFO - Save completed
+2025-07-23 19:09:58,434 - INFO - Successfully saved: net_list, iot_container_stuffing, oss_stuffing
+2025-07-23 19:12:04,209 - INFO - Starting application
+2025-07-23 19:12:04,209 - INFO - Clearing screen
+2025-07-23 19:12:06,208 - INFO - Selected: Save files
+2025-07-23 19:12:06,209 - INFO - Clearing screen
+2025-07-23 19:12:14,688 - INFO - Initiating save operation for bin_dispatch
+2025-07-23 19:12:14,689 - INFO - Using cached data for Price
+2025-07-23 19:12:14,689 - INFO - Using cached data for Price
+2025-07-23 19:12:14,691 - INFO - Using cached data for ContainerShifting
+2025-07-23 19:12:14,714 - INFO - Using cached data for ContainerCleaning
+2025-07-23 19:12:14,718 - INFO - Using cached data for Price
+2025-07-23 19:12:14,719 - INFO - Using cached data for Price
+2025-07-23 19:12:14,724 - INFO - Using cached data for PTI
+2025-07-23 19:12:14,724 - INFO - Using cached data for Price
+2025-07-23 19:12:14,724 - INFO - Using cached data for Price
+2025-07-23 19:12:14,727 - INFO - Using cached data for PTI
+2025-07-23 19:12:14,727 - INFO - Using cached data for Price
+2025-07-23 19:12:14,727 - INFO - Using cached data for Price
+2025-07-23 19:12:14,729 - INFO - Using cached data for Price
+2025-07-23 19:12:14,729 - INFO - Using cached data for Price
+2025-07-23 19:12:14,735 - INFO - Using cached data for ScowTransfer
+2025-07-23 19:12:14,736 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,737 - INFO - Using cached data for Price
+2025-07-23 19:12:14,737 - INFO - Using cached data for Price
+2025-07-23 19:12:14,740 - INFO - Using cached data for ScowTransfer
+2025-07-23 19:12:14,741 - INFO - Using cached data for Price
+2025-07-23 19:12:14,741 - INFO - Using cached data for Price
+2025-07-23 19:12:14,742 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,743 - INFO - Using cached data for Price
+2025-07-23 19:12:14,743 - INFO - Using cached data for Price
+2025-07-23 19:12:14,745 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,746 - INFO - Using cached data for Price
+2025-07-23 19:12:14,746 - INFO - Using cached data for Price
+2025-07-23 19:12:14,749 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,749 - INFO - Using cached data for Price
+2025-07-23 19:12:14,749 - INFO - Using cached data for Price
+2025-07-23 19:12:14,753 - INFO - Using cached data for CrossStuffing
+2025-07-23 19:12:14,753 - INFO - Using cached data for Price
+2025-07-23 19:12:14,754 - INFO - Using cached data for Price
+2025-07-23 19:12:14,757 - INFO - Using cached data for CCCSContainerStuffing
+2025-07-23 19:12:14,762 - INFO - Using cached data for Price
+2025-07-23 19:12:14,762 - INFO - Using cached data for Price
+2025-07-23 19:12:14,764 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,764 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,765 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:12:14,766 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:12:14,767 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:12:14,769 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,770 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 19:12:14,772 - INFO - Using cached data for Price
+2025-07-23 19:12:14,772 - INFO - Using cached data for Price
+2025-07-23 19:12:14,776 - INFO - Using cached data for UnloadingSummary
+2025-07-23 19:12:14,776 - INFO - Using cached data for RawData
+2025-07-23 19:12:14,776 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,777 - INFO - Using cached data for Price
+2025-07-23 19:12:14,777 - INFO - Using cached data for Price
+2025-07-23 19:12:14,778 - INFO - Using cached data for containerOperations
+2025-07-23 19:12:14,783 - INFO - Using cached data for Price
+2025-07-23 19:12:14,783 - INFO - Using cached data for Price
+2025-07-23 19:12:14,794 - INFO - Using cached data for UnloadingSummary
+2025-07-23 19:12:14,794 - INFO - Using cached data for containerOperations
+2025-07-23 19:12:14,797 - INFO - Using cached data for Price
+2025-07-23 19:12:14,797 - INFO - Using cached data for Price
+2025-07-23 19:12:14,804 - INFO - Using cached data for Price
+2025-07-23 19:12:14,805 - INFO - Using cached data for Price
+2025-07-23 19:12:14,806 - INFO - Using cached data for UnloadingSummary
+2025-07-23 19:12:14,806 - INFO - Using cached data for RawData
+2025-07-23 19:12:14,806 - INFO - Using cached data for CCCSReport
+2025-07-23 19:12:14,808 - INFO - Using cached data for Price
+2025-07-23 19:12:14,808 - INFO - Using cached data for Price
+2025-07-23 19:12:14,808 - INFO - Using cached data for containerOperations
+2025-07-23 19:12:14,813 - INFO - Using cached data for Price
+2025-07-23 19:12:14,813 - INFO - Using cached data for Price
+2025-07-23 19:12:14,827 - INFO - Using cached data for Price
+2025-07-23 19:12:14,827 - INFO - Using cached data for Price
+2025-07-23 19:12:14,828 - INFO - Using cached data for RawData
+2025-07-23 19:12:14,828 - INFO - Using cached data for WelltoWell
+2025-07-23 19:12:14,828 - INFO - Using cached data for Price
+2025-07-23 19:12:14,828 - INFO - Using cached data for Price
+2025-07-23 19:12:14,829 - INFO - Using cached data for SaltOperation
+2025-07-23 19:12:14,829 - INFO - Using cached data for Price
+2025-07-23 19:12:14,829 - INFO - Using cached data for Price
+2025-07-23 19:12:14,830 - INFO - Using cached data for Client
+2025-07-23 19:12:14,831 - INFO - Using cached data for SaltOperation
+2025-07-23 19:12:14,831 - INFO - Using cached data for Price
+2025-07-23 19:12:14,831 - INFO - Using cached data for Price
+2025-07-23 19:12:14,833 - INFO - Using cached data for Client
+2025-07-23 19:12:14,841 - INFO - Using cached data for BinTipping
+2025-07-23 19:12:14,841 - INFO - Using cached data for Price
+2025-07-23 19:12:14,841 - INFO - Using cached data for Price
+2025-07-23 19:12:14,843 - INFO - Using cached data for LinerPallet
+2025-07-23 19:12:14,847 - INFO - Using cached data for Price
+2025-07-23 19:12:14,848 - INFO - Using cached data for Price
+2025-07-23 19:12:14,857 - INFO - Using cached data for containerOperations
+2025-07-23 19:12:14,862 - INFO - Using cached data for Price
+2025-07-23 19:12:14,862 - INFO - Using cached data for Price
+2025-07-23 19:12:14,871 - INFO - Using cached data for ShoreCrane
+2025-07-23 19:12:14,872 - INFO - Using cached data for Transfer
+2025-07-23 19:12:14,872 - INFO - Using cached data for Price
+2025-07-23 19:12:14,872 - INFO - Using cached data for Price
+2025-07-23 19:12:14,880 - INFO - Using cached data for ScowTransfer
+2025-07-23 19:12:14,881 - INFO - Using cached data for ForkliftRecord
+2025-07-23 19:12:14,882 - INFO - Processing dataframe category: bin_dispatch
+2025-07-23 19:12:14,882 - INFO - Processing dataframes: ['full_scows_transfer', 'empty_scows_transfer']
+2025-07-23 19:12:14,882 - INFO - Processing dataframe full_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:12:14,883 - INFO - Collecting LazyFrame for full_scows_transfer
+2025-07-23 19:12:14,961 - ERROR - Error processing dataframe full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-23 19:12:14,961 - INFO - Processing dataframe empty_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 19:12:14,961 - INFO - Collecting LazyFrame for empty_scows_transfer
+2025-07-23 19:12:15,006 - INFO - Successfully processed dataframe empty_scows_transfer
+2025-07-23 19:12:15,007 - INFO - Writing to output/csv/empty_scows_transfer.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 19:12:15,028 - INFO - Successfully wrote empty_scows_transfer to file
+2025-07-23 19:12:15,029 - ERROR - Error saving full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-23 19:12:15,029 - INFO - Successfully saved empty_scows_transfer
+2025-07-23 19:12:15,029 - INFO - Save completed
+2025-07-23 19:12:15,029 - INFO - Successfully saved: empty_scows_transfer
+2025-07-23 19:12:15,029 - ERROR - Failed to save: full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-23 20:17:57,217 - INFO - Starting application
+2025-07-23 20:17:57,232 - INFO - Clearing screen
+2025-07-23 20:17:59,801 - INFO - Selected: Save files
+2025-07-23 20:17:59,801 - INFO - Clearing screen
+2025-07-23 20:18:08,522 - INFO - Initiating save operation for bin_dispatch
+2025-07-23 20:18:08,524 - INFO - Using cached data for Price
+2025-07-23 20:18:08,524 - INFO - Using cached data for Price
+2025-07-23 20:18:08,527 - INFO - Using cached data for ContainerShifting
+2025-07-23 20:18:08,531 - INFO - Using cached data for ContainerCleaning
+2025-07-23 20:18:08,534 - INFO - Using cached data for Price
+2025-07-23 20:18:08,535 - INFO - Using cached data for Price
+2025-07-23 20:18:08,545 - INFO - Using cached data for PTI
+2025-07-23 20:18:08,546 - INFO - Using cached data for Price
+2025-07-23 20:18:08,546 - INFO - Using cached data for Price
+2025-07-23 20:18:08,549 - INFO - Using cached data for PTI
+2025-07-23 20:18:08,550 - INFO - Using cached data for Price
+2025-07-23 20:18:08,550 - INFO - Using cached data for Price
+2025-07-23 20:18:08,552 - INFO - Using cached data for Price
+2025-07-23 20:18:08,552 - INFO - Using cached data for Price
+2025-07-23 20:18:08,557 - INFO - Using cached data for ScowTransfer
+2025-07-23 20:18:08,558 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,558 - INFO - Using cached data for Price
+2025-07-23 20:18:08,558 - INFO - Using cached data for Price
+2025-07-23 20:18:08,559 - INFO - Using cached data for ScowTransfer
+2025-07-23 20:18:08,560 - INFO - Using cached data for Price
+2025-07-23 20:18:08,560 - INFO - Using cached data for Price
+2025-07-23 20:18:08,561 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,561 - INFO - Using cached data for Price
+2025-07-23 20:18:08,561 - INFO - Using cached data for Price
+2025-07-23 20:18:08,565 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,565 - INFO - Using cached data for Price
+2025-07-23 20:18:08,566 - INFO - Using cached data for Price
+2025-07-23 20:18:08,568 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,568 - INFO - Using cached data for Price
+2025-07-23 20:18:08,568 - INFO - Using cached data for Price
+2025-07-23 20:18:08,570 - INFO - Using cached data for CrossStuffing
+2025-07-23 20:18:08,570 - INFO - Using cached data for Price
+2025-07-23 20:18:08,570 - INFO - Using cached data for Price
+2025-07-23 20:18:08,571 - INFO - Using cached data for CCCSContainerStuffing
+2025-07-23 20:18:08,575 - INFO - Using cached data for Price
+2025-07-23 20:18:08,576 - INFO - Using cached data for Price
+2025-07-23 20:18:08,577 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,577 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,578 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:18:08,578 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:18:08,579 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:18:08,579 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,579 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:18:08,580 - INFO - Using cached data for Price
+2025-07-23 20:18:08,580 - INFO - Using cached data for Price
+2025-07-23 20:18:08,581 - INFO - Using cached data for UnloadingSummary
+2025-07-23 20:18:08,581 - INFO - Using cached data for RawData
+2025-07-23 20:18:08,581 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,582 - INFO - Using cached data for Price
+2025-07-23 20:18:08,582 - INFO - Using cached data for Price
+2025-07-23 20:18:08,582 - INFO - Using cached data for containerOperations
+2025-07-23 20:18:08,585 - INFO - Using cached data for Price
+2025-07-23 20:18:08,585 - INFO - Using cached data for Price
+2025-07-23 20:18:08,588 - INFO - Using cached data for UnloadingSummary
+2025-07-23 20:18:08,588 - INFO - Using cached data for containerOperations
+2025-07-23 20:18:08,590 - INFO - Using cached data for Price
+2025-07-23 20:18:08,590 - INFO - Using cached data for Price
+2025-07-23 20:18:08,593 - INFO - Using cached data for Price
+2025-07-23 20:18:08,593 - INFO - Using cached data for Price
+2025-07-23 20:18:08,594 - INFO - Using cached data for UnloadingSummary
+2025-07-23 20:18:08,594 - INFO - Using cached data for RawData
+2025-07-23 20:18:08,594 - INFO - Using cached data for CCCSReport
+2025-07-23 20:18:08,595 - INFO - Using cached data for Price
+2025-07-23 20:18:08,595 - INFO - Using cached data for Price
+2025-07-23 20:18:08,595 - INFO - Using cached data for containerOperations
+2025-07-23 20:18:08,609 - INFO - Using cached data for Price
+2025-07-23 20:18:08,609 - INFO - Using cached data for Price
+2025-07-23 20:18:08,620 - INFO - Using cached data for Price
+2025-07-23 20:18:08,620 - INFO - Using cached data for Price
+2025-07-23 20:18:08,622 - INFO - Using cached data for RawData
+2025-07-23 20:18:08,623 - INFO - Using cached data for WelltoWell
+2025-07-23 20:18:08,623 - INFO - Using cached data for Price
+2025-07-23 20:18:08,623 - INFO - Using cached data for Price
+2025-07-23 20:18:08,623 - INFO - Using cached data for SaltOperation
+2025-07-23 20:18:08,623 - INFO - Using cached data for Price
+2025-07-23 20:18:08,624 - INFO - Using cached data for Price
+2025-07-23 20:18:08,625 - INFO - Using cached data for Client
+2025-07-23 20:18:08,626 - INFO - Using cached data for SaltOperation
+2025-07-23 20:18:08,626 - INFO - Using cached data for Price
+2025-07-23 20:18:08,626 - INFO - Using cached data for Price
+2025-07-23 20:18:08,627 - INFO - Using cached data for Client
+2025-07-23 20:18:08,631 - INFO - Using cached data for BinTipping
+2025-07-23 20:18:08,631 - INFO - Using cached data for Price
+2025-07-23 20:18:08,631 - INFO - Using cached data for Price
+2025-07-23 20:18:08,633 - INFO - Using cached data for LinerPallet
+2025-07-23 20:18:08,635 - INFO - Using cached data for Price
+2025-07-23 20:18:08,635 - INFO - Using cached data for Price
+2025-07-23 20:18:08,637 - INFO - Using cached data for containerOperations
+2025-07-23 20:18:08,640 - INFO - Using cached data for Price
+2025-07-23 20:18:08,640 - INFO - Using cached data for Price
+2025-07-23 20:18:08,644 - INFO - Using cached data for ShoreCrane
+2025-07-23 20:18:08,644 - INFO - Using cached data for Transfer
+2025-07-23 20:18:08,644 - INFO - Using cached data for Price
+2025-07-23 20:18:08,644 - INFO - Using cached data for Price
+2025-07-23 20:18:08,667 - INFO - Using cached data for ScowTransfer
+2025-07-23 20:18:08,668 - INFO - Using cached data for ForkliftRecord
+2025-07-23 20:18:08,668 - INFO - Processing dataframe category: bin_dispatch
+2025-07-23 20:18:08,669 - INFO - Processing dataframes: ['full_scows_transfer', 'empty_scows_transfer']
+2025-07-23 20:18:08,669 - INFO - Processing dataframe full_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 20:18:08,669 - INFO - Collecting LazyFrame for full_scows_transfer
+2025-07-23 20:18:08,669 - ERROR - Error processing dataframe full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-23 20:18:08,669 - INFO - Processing dataframe empty_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 20:18:08,669 - INFO - Collecting LazyFrame for empty_scows_transfer
+2025-07-23 20:18:08,677 - INFO - Successfully processed dataframe empty_scows_transfer
+2025-07-23 20:18:08,677 - INFO - Writing to output/csv/empty_scows_transfer.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 20:18:08,766 - INFO - Successfully wrote empty_scows_transfer to file
+2025-07-23 20:18:08,766 - ERROR - Error saving full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-23 20:18:08,766 - INFO - Successfully saved empty_scows_transfer
+2025-07-23 20:18:08,766 - INFO - Save completed
+2025-07-23 20:18:08,766 - INFO - Successfully saved: empty_scows_transfer
+2025-07-23 20:18:08,766 - ERROR - Failed to save: full_scows_transfer: datatypes of join keys don't match - `customer`: enum on left does not match `customer`: enum on right
+
+Resolved plan until failure:
+
+	---> FAILED HERE RESOLVING 'sink' <---
+ WITH_COLUMNS:
+ [[(col("total_tonnage")) - (col("overtime_tonnage").cast(Float64))].alias("normal_tonnage")] 
+   SELECT [col("day").alias("day_name"), col("date").str.strptime([String(raise)]), col("movement_type").strict_cast(Enum(Some(local), Physical)), col("customer").strict_cast(Enum(Some(local), Physical)), col("operation_type"), col("total_tonnage").abs().strict_cast(Float64).round(), col("overtime_tonnage").str.replace([String(), String(0)]).strict_cast(Float32).round()] FROM
+    FILTER col("operation_type").is_in([Series]) FROM
+      DF ["date", "SUN/PH", "movement_type", "customer", ...]; PROJECT */16 COLUMNS
+2025-07-23 20:19:05,214 - INFO - Starting application
+2025-07-23 20:19:05,215 - INFO - Clearing screen
+2025-07-23 20:19:07,342 - INFO - Exiting application
+2025-07-23 20:19:15,198 - DEBUG - Using selector: EpollSelector
+2025-07-23 20:19:15,198 - INFO - Starting application
+2025-07-23 20:19:15,198 - INFO - Clearing screen
+2025-07-23 20:33:26,766 - INFO - Selected: Save files
+2025-07-23 20:33:26,767 - INFO - Clearing screen
+2025-07-23 20:33:40,660 - INFO - Initiating save operation for bin_dispatch
+2025-07-23 20:33:42,050 - INFO - Using cached data for Price
+2025-07-23 20:33:42,229 - INFO - Using cached data for Price
+2025-07-23 20:33:42,229 - INFO - Using cached data for Price
+2025-07-23 20:33:42,280 - INFO - Using cached data for Price
+2025-07-23 20:33:42,280 - INFO - Using cached data for Price
+2025-07-23 20:33:42,282 - INFO - Using cached data for Price
+2025-07-23 20:33:42,282 - INFO - Using cached data for Price
+2025-07-23 20:33:42,384 - INFO - Loading container data from sheet
+2025-07-23 20:33:42,389 - INFO - Using cached data for Price
+2025-07-23 20:33:42,389 - INFO - Using cached data for Price
+2025-07-23 20:33:42,421 - INFO - Loading container data from sheet
+2025-07-23 20:33:42,485 - INFO - Using cached data for Price
+2025-07-23 20:33:42,485 - INFO - Using cached data for Price
+2025-07-23 20:33:42,600 - INFO - Using cached data for Price
+2025-07-23 20:33:42,601 - INFO - Using cached data for Price
+2025-07-23 20:33:42,772 - INFO - Using cached data for Price
+2025-07-23 20:33:42,772 - INFO - Using cached data for Price
+2025-07-23 20:33:42,781 - INFO - Loading container data from sheet
+2025-07-23 20:33:42,848 - INFO - Using cached data for Price
+2025-07-23 20:33:42,848 - INFO - Using cached data for Price
+2025-07-23 20:33:42,871 - INFO - Using cached data for Client
+2025-07-23 20:33:42,873 - INFO - Using cached data for Client
+2025-07-23 20:33:42,873 - INFO - Using cached data for Client
+2025-07-23 20:33:42,874 - INFO - Using cached data for Client
+2025-07-23 20:33:42,876 - INFO - Using cached data for Client
+2025-07-23 20:33:42,894 - INFO - Using cached data for Client
+2025-07-23 20:33:42,895 - INFO - Using cached data for Client
+2025-07-23 20:33:42,898 - INFO - Using cached data for Client
+2025-07-23 20:33:42,899 - INFO - Using cached data for Client
+2025-07-23 20:33:42,901 - INFO - Using cached data for Client
+2025-07-23 20:33:42,901 - INFO - Using cached data for Client
+2025-07-23 20:33:42,902 - INFO - Using cached data for Client
+2025-07-23 20:33:42,902 - INFO - Using cached data for Client
+2025-07-23 20:33:42,941 - INFO - Using cached data for Client
+2025-07-23 20:33:42,990 - INFO - Using cached data for Price
+2025-07-23 20:33:42,990 - INFO - Using cached data for Price
+2025-07-23 20:33:42,995 - INFO - Using cached data for PTI
+2025-07-23 20:33:42,995 - INFO - Using cached data for Price
+2025-07-23 20:33:42,995 - INFO - Using cached data for Price
+2025-07-23 20:33:42,998 - INFO - Using cached data for Price
+2025-07-23 20:33:42,998 - INFO - Using cached data for Price
+2025-07-23 20:33:43,000 - INFO - Loading container data from sheet
+2025-07-23 20:33:43,111 - INFO - Using cached data for CCCSReport
+2025-07-23 20:33:43,712 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:33:43,715 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:33:43,716 - INFO - Using cached data for CCCSReport
+2025-07-23 20:33:43,719 - INFO - Using cached data for IPHSBycatchTransfer
+2025-07-23 20:33:43,721 - INFO - Using cached data for Price
+2025-07-23 20:33:43,721 - INFO - Using cached data for Price
+2025-07-23 20:33:44,290 - INFO - Loading container data from sheet
+2025-07-23 20:33:44,348 - INFO - Loading container data from sheet
+2025-07-23 20:33:44,454 - INFO - Loading container data from sheet
+2025-07-23 20:33:45,980 - INFO - Using cached data for CCCSReport
+2025-07-23 20:33:45,981 - INFO - Using cached data for Price
+2025-07-23 20:33:45,981 - INFO - Using cached data for Price
+2025-07-23 20:33:45,982 - INFO - Using cached data for containerOperations
+2025-07-23 20:33:45,982 - INFO - Loading container data from sheet
+2025-07-23 20:33:46,582 - INFO - Using cached data for Price
+2025-07-23 20:33:46,582 - INFO - Using cached data for Price
+2025-07-23 20:33:46,829 - INFO - Using cached data for CCCSReport
+2025-07-23 20:33:46,831 - INFO - Using cached data for Price
+2025-07-23 20:33:46,831 - INFO - Using cached data for Price
+2025-07-23 20:33:47,431 - INFO - Using cached data for CCCSReport
+2025-07-23 20:33:47,432 - INFO - Using cached data for Price
+2025-07-23 20:33:47,432 - INFO - Using cached data for Price
+2025-07-23 20:33:47,433 - INFO - Using cached data for containerOperations
+2025-07-23 20:33:47,435 - INFO - Using cached data for Price
+2025-07-23 20:33:47,435 - INFO - Using cached data for Price
+2025-07-23 20:33:47,589 - INFO - Using cached data for Price
+2025-07-23 20:33:47,590 - INFO - Using cached data for Price
+2025-07-23 20:33:49,605 - INFO - Using cached data for Price
+2025-07-23 20:33:49,606 - INFO - Using cached data for Price
+2025-07-23 20:33:52,019 - INFO - Using cached data for Price
+2025-07-23 20:33:52,020 - INFO - Using cached data for Price
+2025-07-23 20:33:53,788 - INFO - Using cached data for Price
+2025-07-23 20:33:53,788 - INFO - Using cached data for Price
+2025-07-23 20:33:54,900 - INFO - Using cached data for Price
+2025-07-23 20:33:54,900 - INFO - Using cached data for Price
+2025-07-23 20:33:54,913 - INFO - Using cached data for Price
+2025-07-23 20:33:54,913 - INFO - Using cached data for Price
+2025-07-23 20:33:54,966 - INFO - Using cached data for Price
+2025-07-23 20:33:54,967 - INFO - Using cached data for Price
+2025-07-23 20:33:56,000 - INFO - Using cached data for Price
+2025-07-23 20:33:56,000 - INFO - Using cached data for Price
+2025-07-23 20:33:56,014 - INFO - Using cached data for Price
+2025-07-23 20:33:56,015 - INFO - Using cached data for Price
+2025-07-23 20:33:56,018 - INFO - Processing dataframe category: bin_dispatch
+2025-07-23 20:33:56,019 - INFO - Processing dataframes: ['full_scows_transfer', 'empty_scows_transfer']
+2025-07-23 20:33:56,019 - INFO - Processing dataframe full_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 20:33:56,020 - INFO - Collecting LazyFrame for full_scows_transfer
+2025-07-23 20:33:56,038 - INFO - Successfully processed dataframe full_scows_transfer
+2025-07-23 20:33:56,040 - INFO - Writing to output/csv/full_scows_transfer.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 20:33:56,041 - INFO - Processing dataframe empty_scows_transfer of type <class 'polars.lazyframe.frame.LazyFrame'>
+2025-07-23 20:33:56,042 - INFO - Collecting LazyFrame for empty_scows_transfer
+2025-07-23 20:33:56,076 - INFO - Successfully processed dataframe empty_scows_transfer
+2025-07-23 20:33:56,077 - INFO - Writing to output/csv/empty_scows_transfer.csv, df type: <class 'polars.dataframe.frame.DataFrame'>
+2025-07-23 20:33:56,078 - INFO - Successfully wrote full_scows_transfer to file
+2025-07-23 20:33:56,079 - INFO - Successfully wrote empty_scows_transfer to file
+2025-07-23 20:33:56,079 - INFO - Successfully saved full_scows_transfer
+2025-07-23 20:33:56,079 - INFO - Successfully saved empty_scows_transfer
+2025-07-23 20:33:56,080 - INFO - Save completed
+2025-07-23 20:33:56,080 - INFO - Successfully saved: full_scows_transfer, empty_scows_transfer
+2025-07-23 20:53:21,245 - INFO - Starting application
+2025-07-23 20:53:21,259 - INFO - Clearing screen
+2025-07-23 20:53:26,315 - INFO - Selected: Save files
+2025-07-23 20:53:26,315 - INFO - Clearing screen

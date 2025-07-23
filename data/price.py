@@ -98,6 +98,7 @@ list_of_services = [
     "Haulage TEU"  # TRANSFER_PRICE
     "Container Stuffing - Brine",  # OSS_PRICE
     "Container Stuffing - Dry",  # OSS_PRICE
+    "Forklift Scow Handling"
 ]
 
 # ALL_PRICE = get_price(list_of_services)

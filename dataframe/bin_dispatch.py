@@ -53,13 +53,24 @@ async def bin_dispatch() -> pl.LazyFrame:
     return (
         df.filter(
             pl.col("operation_type").is_in(BIN_DISPATCH_SERVICE),
-            # pl.col("date").dt.year().ge(CURRENT_YEAR - 1),
+            pl.col("date").str.to_date(format="%d/%m/%Y").dt.year().eq(CURRENT_YEAR),
         )
         .select(
             pl.col("day").alias("day_name"),
             pl.col("date").str.to_date(format="%d/%m/%Y"),
             pl.col("movement_type").cast(dtype=pl.Enum(MOVEMENT_TYPE)),
-            pl.col("customer").cast(pl.Enum(["IOT", "AQUARIUS", "SAPMER","ISLAND CATCH", "INPESCA S.A"])),
+            pl.col("customer").cast(
+                pl.Enum(
+                    [
+                        "IOT",
+                        "AQUARIUS",
+                        "ECHEBASTAR",
+                        "SAPMER",
+                        "ISLAND CATCH",
+                        "INPESCA S.A",
+                    ]
+                )
+            ),
             pl.col("operation_type"),
             pl.col("total_tonnage").abs().cast(pl.Float64).round(3),
             pl.col("overtime_tonnage").str.replace("", "0").cast(pl.Float32).round(3),
@@ -151,9 +162,9 @@ async def full_scows() -> pl.LazyFrame:
             .when(pl.col("overtime").eq(Overtime.overtime_150_text))
             .then(pl.col("tonnage") * OVERTIME_150 * pl.col("Price"))
             .otherwise(pl.col("tonnage") * OVERTIME_200 * pl.col("Price")),
-            movement_type=pl.when(pl.col("movement_type") == MovementType.out)
+            movement_type=pl.when(pl.col("movement_type").eq(MovementType.out))
             .then(pl.lit("IPHS Delivery of Full Scows to IOT"))
-            .when(pl.col("movement_type") == MovementType.in_)
+            .when(pl.col("movement_type").eq(MovementType.in_))
             .then(pl.lit("IPHS Collection of Full Scows from IOT"))
             .otherwise(pl.lit("Err")),
         )
@@ -165,7 +176,7 @@ async def full_scows() -> pl.LazyFrame:
                 "movement_type",
                 "overtime",
                 "start_time",
-                "end_time",
+                "end_time", 
                 "num_of_scows",
                 "tonnage",
                 "Price",
@@ -187,7 +198,7 @@ async def empty_scows() -> pl.LazyFrame:
     return (
         df.filter(pl.col("status").eq(Status.empty))
         .with_columns(
-            movement_type=pl.when(pl.col("movement_type") == MovementType.delivery)
+            movement_type=pl.when(pl.col("movement_type").eq(MovementType.delivery))
             .then(pl.lit(MovementType.out))
             .otherwise(pl.lit(MovementType.in_))
             .cast(dtype=pl.Enum(MOVEMENT_TYPE)),
