@@ -10,6 +10,7 @@ with app.setup:
     import polars as pl
     from utils.load_google_sheet import load_google_sheet
     from utils.save.to_parquet import write_parquet_if_changed
+    from utils.price import load_price
 
 
 @app.cell
