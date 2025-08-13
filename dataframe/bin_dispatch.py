@@ -1,6 +1,5 @@
 "Bin dispatch to and from IOT"
 
-from datetime import date
 import polars as pl
 from data.price import get_price, OVERTIME_150, OVERTIME_200, NORMAL_HOUR
 
@@ -133,7 +132,7 @@ async def full_scows() -> pl.LazyFrame:
             )
             .then(pl.col("normal_tonnage"))
             .otherwise(pl.col("overtime_tonnage"))
-            .cast(pl.Float64)
+            .cast(pl.Float64).round(3)
         )
         .select(
             pl.all().exclude(

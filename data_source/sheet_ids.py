@@ -52,8 +52,8 @@ BIN_TIPPING_SHEET:str="BinTipping"
 
 
 # To change to the validation sheet
-INVOICING:str="1e1MZipsvEe5DxDaWaP2K2OBlCS_K0HEcPlFeyGzkG0s"
-invoice_status="InvoiceStatus"
+INVOICING:str="1xNh4SiP_xw8Ck1baLhFazBsmMLIbOHjF4tg_M89efvI"
+INVOICE_STATUS:str="invoice_status"
 additional_stevedores="AdditionalStevedores"
 
 

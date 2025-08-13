@@ -8,74 +8,110 @@ from polars import lit, LazyFrame, when, col, Enum, Utf8
 from data.price import OVERTIME_150, FREE, get_price
 from data_source.make_dataset import load_gsheet_data
 from data_source.sheet_ids import EMR_SHEET_ID, shifting_sheet, pti_sheet, washing_sheet
-from type_casting.dates import SPECIAL_DAYS, DayName
+from type_casting.dates import SPECIAL_DAYS, DayName, CURRENT_YEAR
 from type_casting.validations import SetPoint, SETPOINTS
 from type_casting.containers import containers_enum
 
 # Price
 
+# from functools import lru_cache
+# import asyncio
+
+# _price_cache = None
+
 
 async def price_list() -> dict[str, float]:
-    """price dictionary"""
-
-    price = await get_price(
+    """Loads the price"""
+    price_df = await get_price(
         [
             "PTI Magnum",
             "Plugin",
             "PTI S Freezer",
             "Shifting",
             "PTI Standard",
+            "PTI IOT SOC",
             "Container Cleaning",
         ]
     )
 
-    magnum_pti_electricity = (
-        price.filter(pl.col("Service").eq(pl.lit("PTI Magnum")))
-        .select(pl.col("Price"))
-        .collect()
-        .to_series()[0]
-    )
+    # Single collect operation
+    prices = price_df.collect()
 
-    plugin = (
-        price.filter(pl.col("Service").eq(pl.lit("Plugin")))
-        .select(pl.col("Price"))
-        .collect()
-        .to_series()[0]
-    )
-
-    s_freezer_pti_electricity = (
-        price.filter(pl.col("Service").eq(pl.lit("PTI S Freezer")))
-        .select(pl.col("Price"))
-        .collect()
-        .to_series()[0]
-    )
-    shifting_price = (
-        price.filter(pl.col("Service").eq(pl.lit("Shifting")))
-        .select(pl.col("Price"))
-        .collect()
-        .to_series()[0]
-    )
-    standard_pti_electricity = (
-        price.filter(pl.col("Service").eq(pl.lit("PTI Standard")))
-        .select(pl.col("Price"))
-        .collect()
-        .to_series()[0]
-    )
-    washing_price = (
-        price.filter(pl.col("Service").eq(pl.lit("Container Cleaning")))
-        .select(pl.col("Price"))
-        .collect()
-        .to_series()[0]
-    )
+    # Create lookup dictionary in one go
+    price_dict = dict(zip(prices["Service"].to_list(), prices["Price"].to_list()))
 
     return {
-        "washing_price": washing_price,
-        "standard_pti_electricity": standard_pti_electricity,
-        "s_freezer_pti_electricity": s_freezer_pti_electricity,
-        "magnum_pti_electricity": magnum_pti_electricity,
-        "shifting": shifting_price,
-        "plugin": plugin,
+        "washing_price": price_dict["Container Cleaning"],
+        "iot_pti_electricity": price_dict["PTI IOT SOC"],
+        "standard_pti_electricity": price_dict["PTI Standard"],
+        "s_freezer_pti_electricity": price_dict["PTI S Freezer"],
+        "magnum_pti_electricity": price_dict["PTI Magnum"],
+        "shifting": price_dict["Shifting"],
+        "plugin": price_dict["Plugin"],
     }
+
+
+# async def price_list() -> dict[str, float]:
+#     """price dictionary"""
+
+#     price = await get_price(
+#         [
+#             "PTI Magnum",
+#             "Plugin",
+#             "PTI S Freezer",
+#             "Shifting",
+#             "PTI Standard",
+#             "Container Cleaning",
+#         ]
+#     )
+
+#     magnum_pti_electricity = (
+#         price.filter(pl.col("Service").eq(pl.lit("PTI Magnum")))
+#         .select(pl.col("Price"))
+#         .collect()
+#         .to_series()[0]
+#     )
+
+#     plugin = (
+#         price.filter(pl.col("Service").eq(pl.lit("Plugin")))
+#         .select(pl.col("Price"))
+#         .collect()
+#         .to_series()[0]
+#     )
+
+#     s_freezer_pti_electricity = (
+#         price.filter(pl.col("Service").eq(pl.lit("PTI S Freezer")))
+#         .select(pl.col("Price"))
+#         .collect()
+#         .to_series()[0]
+#     )
+#     shifting_price = (
+#         price.filter(pl.col("Service").eq(pl.lit("Shifting")))
+#         .select(pl.col("Price"))
+#         .collect()
+#         .to_series()[0]
+#     )
+#     standard_pti_electricity = (
+#         price.filter(pl.col("Service").eq(pl.lit("PTI Standard")))
+#         .select(pl.col("Price"))
+#         .collect()
+#         .to_series()[0]
+#     )
+#     washing_price = (
+#         price.filter(pl.col("Service").eq(pl.lit("Container Cleaning")))
+#         .select(pl.col("Price"))
+#         .collect()
+#         .to_series()[0]
+#     )
+
+#     return {
+#         "washing_price": washing_price,
+#         "standard_pti_electricity": standard_pti_electricity,
+#         "s_freezer_pti_electricity": s_freezer_pti_electricity,
+#         "magnum_pti_electricity": magnum_pti_electricity,
+#         "shifting": shifting_price,
+#         "plugin": plugin,
+#     }
 
 
 # Shifting Data Set
@@ -133,9 +169,16 @@ async def _pti() -> LazyFrame:
     s_freezer_pti_electricity = price.get("s_freezer_pti_electricity")
     magnum_pti_electricity = price.get("magnum_pti_electricity")
     standard_pti_electricity = price.get("standard_pti_electricity")
+    iot_pti_electricity = price.get("iot_pti_electricity")
 
     return (
-        df.select(
+        df.filter(
+            pl.col("datetime_start")
+            .str.to_date(format="%d/%m/%Y %H:%M:%S")
+            .dt.year()
+            .eq(CURRENT_YEAR)
+        )
+        .select(
             col("datetime_start").str.to_datetime(format="%d/%m/%Y %H:%M:%S"),
             col("container_number"),
             col("set_point").cast(Utf8).cast(dtype=Enum(SETPOINTS)),
@@ -148,22 +191,31 @@ async def _pti() -> LazyFrame:
             col("plugged_on").alias("generator"),
         )
         .with_columns(
-            hours=(pl.col("datetime_end") - col("datetime_start")).dt.total_minutes()
-            / 60,
+            hours=pl.when(pl.col("invoice_to").eq("IOT"))
+            .then(
+                (col("datetime_end") - col("datetime_start")).dt.total_hours() / 24 + 1
+            )
+            .otherwise(
+                (
+                    (pl.col("datetime_end") - col("datetime_start")).dt.total_minutes()
+                    / 60
+                )
+            )
+            .cast(pl.Float64)
+            .round(2),
             plugin_price=plugin,
         )
         .with_columns(
-            above_8_hours=when(col("hours").gt(EIGHT_HOURS))
+            above_8_hours=when(col("invoice_to").eq("IOT"))
+            .then(col("hours").ceil())
+            .when(col("hours").gt(EIGHT_HOURS))
             .then(DOUBLE_PRICE)
             .otherwise(NORMAL_PRICE)
         )
         .with_columns(
             electricity_price=(
                 when(col("invoice_to").eq(lit("IOT")))
-                .then(
-                    (col("datetime_end") - col("datetime_start")).dt.total_hours() / 24
-                    + 1
-                )
+                .then(iot_pti_electricity)
                 .when(col("set_point").eq(SetPoint.s_freezer))
                 .then(s_freezer_pti_electricity)
                 .when(pl.col("set_point").eq(SetPoint.magnum))
@@ -186,33 +238,44 @@ async def _pti() -> LazyFrame:
 async def pti() -> LazyFrame:
     """Pre-Trip Inspection dataset"""
     df = await _pti()
-    df_2 = await _pti()
+    # df_2 = df.clone()
     price = await price_list()
     shifting_ = price.get("shifting")
 
     container_enum = await containers_enum()
 
+    one_day: pl.Duration = pl.duration(hours=24)
+
+    df_main = df.with_columns(
+        [
+            pl.col("container_number")
+            .cast(dtype=container_enum)
+            .alias("container_number"),
+            (pl.col("cum_count") - 1).alias("previous"),
+        ]
+    )
+
+    df_join = df.with_columns(pl.col("container_number").cast(dtype=container_enum))
+
     return (
-        df.with_columns(
-            container_number=pl.col("container_number").cast(dtype=container_enum),
-            previous=pl.col("cum_count") - 1,
-        )
-        .join(
-            df_2.with_columns(
-                container_number=pl.col("container_number").cast(dtype=container_enum)
-            ),
+        df_main.join(
+            df_join,
             left_on=["container_number", "previous"],
             right_on=["container_number", "cum_count"],
             how="left",
         )
         .with_columns(
-            no_shifting=(
+            [
                 (
-                    (pl.col("datetime_start") - pl.col("datetime_end_right"))
-                    > pl.duration(hours=24)
+                    (
+                        (pl.col("datetime_start") - pl.col("datetime_end_right")).gt(
+                            one_day
+                        )
+                    ).and_(pl.col("generator_right").eq(pl.col("generator")))
                 )
-                & (pl.col("generator_right") == pl.col("generator"))
-            ).fill_null(True)
+                .fill_null(True)
+                .alias("no_shifting")
+            ]
         )
         .select(
             pl.col(
@@ -232,16 +295,20 @@ async def pti() -> LazyFrame:
             )
         )
         .with_columns(
-            shifting_price=pl.when(pl.col("no_shifting"))
-            .then(shifting_)
-            .otherwise(FREE)
+            [
+                pl.when(pl.col("no_shifting"))
+                .then(shifting_)
+                .otherwise(FREE)
+                .alias("shifting_price"),
+            ]
         )
         .with_columns(
             (
                 pl.col("plugin_price")
                 + pl.col("electricity_price")
                 + pl.col("shifting_price")
-            ).alias("total_price")
+            ).alias("total_price"),
+            no_shifting=pl.col("no_shifting").cast(pl.Int8),
         )
     )
 
@@ -254,7 +321,7 @@ async def washing() -> LazyFrame:
     washing_ = price.get("washing_price")
 
     return df.select(
-        pl.col("date"),
+        pl.col("date").str.to_date(format="%d/%m/%Y"),
         pl.col("container_number").cast(dtype=container_enum),
         pl.col("invoice_to").cast(
             dtype=pl.Enum(

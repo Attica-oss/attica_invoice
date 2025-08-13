@@ -1,21 +1,35 @@
 """Pricing Module"""
 
-from typing import Union
+from typing import Union,Self
 import polars as pl
+from polars import DataType
+
 from data_source.make_dataset import load_gsheet_data
 from data_source.sheet_ids import MASTER_ID, price_sheet
-
-# from type_casting.dates import SPECIAL_DAYS
-
-# Overtime %
-OVERTIME_150: float = 1.5
-OVERTIME_200: float = 2.0
-NORMAL_HOUR: float = 1.0
-
 
 VALIDATION_ID: str = MASTER_ID
 PRICE_SHEET_NAME: str = price_sheet
 
+
+class Price(DataType):
+    """Price DataType"""
+    service_type:pl.Utf8
+    price:pl.Float64
+    effective_date: pl.Date
+    has_variant:pl.Boolean = True
+
+    def load_price(self:Self) ->pl.LazyFrame:
+        """load the price dataset"""
+        df = load_gsheet_data(VALIDATION_ID,PRICE_SHEET_NAME).select(
+            pl.col("Service").cast(dtype=pl.Utf8).alias("service"),
+            pl.col("Price").cast(dtype=pl.Float64).alias("price"),
+            pl.col("StartingDate").alias("effective_date")
+        )
+        return df
+
+    def save_price(self:Self,file_type="parquet")->None:
+        """save the price as parquet"""
+        
 
 # Function to load unique services
 async def __load_unique_services(sheet_id: str, sheet_name: str):

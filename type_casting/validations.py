@@ -1,6 +1,7 @@
 """Validations"""
 
 from dataclasses import dataclass
+import polars as pl
 
 # Stuffing Metrics
 PALLET_TYPE: list[str] = ["Pallet", "Liner & Pallet", "Liner"]
@@ -52,21 +53,37 @@ FISH_STORAGE:list[str] =[
     FishStorage.dry
 ]
 
-# Overtime Labels
+# # Overtime Labels
+# @dataclass
+# class Overtime:
+#     """Overtime Labels"""
+
+#     overtime_150_text:str = "overtime 150%"
+#     overtime_200_text:str = "overtime 200%"
+#     normal_hour_text:str = "normal hours"
+
+# @dataclass
+# class OvertimePerc:
+#     """Overtime Percentage rates"""
+#     overtime_150: pl.Float32 = 1.5
+#     overtime_200: pl.Float32 = 2.0
+#     normal_hour: pl.Float32 = 1.0
+
+
+
+@dataclass
+class OvertimeType:
+    """Individual overtime type with text and rate"""
+    text: str
+    rate: pl.Float32
+
 @dataclass
 class Overtime:
-    """Overtime Labels"""
+    """Overtime configuration"""
+    normal_hour: OvertimeType = OvertimeType("normal hours", pl.Float32(1.0))
+    overtime_150: OvertimeType = OvertimeType("overtime 150%", pl.Float32(1.5))
+    overtime_200: OvertimeType = OvertimeType("overtime 200%", pl.Float32(2.0))
 
-    overtime_150_text:str = "overtime 150%"
-    overtime_200_text:str = "overtime 200%"
-    normal_hour_text:str = "normal hours"
-
-@dataclass
-class OvertimePerc:
-    """Overtime Percentage rates"""
-    overtime_150: float = 1.5
-    overtime_200: float = 2.0
-    normal_hour: float = 1.0
 
 
 # Stuffing Validations

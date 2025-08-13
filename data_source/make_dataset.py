@@ -5,6 +5,7 @@ from io import StringIO
 from typing import Dict
 import aiohttp
 import polars as pl
+import requests
 
 # Configure logging
 logging.basicConfig(level=logging.ERROR)

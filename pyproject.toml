@@ -8,8 +8,10 @@ dependencies = [
     "aiohttp>=3.11.14",
     "fastexcel>=0.13.0",
     "ipykernel>=6.29.5",
+    "marimo[recommended]>=0.14.17",
     "polars>=1.25.2",
     "pretty-errors>=1.2.25",
     "python-dateutil>=2.9.0.post0",
+    "python-dotenv>=1.1.1",
     "requests>=2.32.3",
 ]

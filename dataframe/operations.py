@@ -63,21 +63,21 @@ async def ops() -> pl.LazyFrame:
     """Ops Activity"""
     df = await load_gsheet_data(sheet_id=OPS_SHEET_ID, sheet_name=raw_sheet)
     return df.select(
-        pl.col("Day"),
-        pl.col("Date"),
-        pl.col("Time"), # .str.to_time(format="%H:%M:%S")
-        pl.col("Vessel").str.to_uppercase(),
-        pl.col("Species").str.extract(r"^(.*?)(\s-\s)"),
-        pl.col("Details").str.to_uppercase(),
+        pl.col("Day").alias("day_name"),
+        pl.col("Date").str.to_date(format="%d/%m/%Y").alias("date"),
+        pl.col("Time").str.to_time(format="%H:%M:%S").alias("time"),
+        pl.col("Vessel").str.to_uppercase().alias("vessel"),
+        pl.col("Species").str.extract(r"^(.*?)(\s-\s)").alias("species"),
+        pl.col("Details").str.to_uppercase().alias("details"),
         pl.col("Scale Reading(-Fish Net) (Cal)")
         .str.replace(",", "")
         .cast(pl.Int64)
         .alias("tonnage")
         * 0.001,
-        pl.col("Storage").cast(dtype=pl.Enum(FISH_STORAGE)),
+        pl.col("Storage").cast(dtype=pl.Enum(FISH_STORAGE)).alias("storage_type"),
         pl.col("Container (Destination)").alias("destination"),
         pl.col("overtime"),
-        pl.col("Side Working").alias("side_working"),
+        pl.col("Side Working").cast(pl.Enum(["Front","Middle","Rear"])).alias("side_working"),
     )
 
 
